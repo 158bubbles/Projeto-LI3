@@ -1,0 +1,205 @@
+\hypertarget{produtos_8c}{}\section{Referência ao ficheiro produtos.\+c}
+\label{produtos_8c}\index{produtos.\+c@{produtos.\+c}}
+
+
+Ficheiro que contem funções utilizadas para os produtos.  
+
+
+{\ttfamily \#include \char`\"{}produtos.\+h\char`\"{}}\newline
+Diagrama de dependências de inclusão para produtos.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{produtos_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{produtos_8c_a3fd719b07970fa788d3ad51440484d1e}{valid\+\_\+\+Produtos} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Valida os produtos. \end{DoxyCompactList}\item 
+void \hyperlink{produtos_8c_ac0ee60ad5a3fab414fc2e7470e43e15f}{read\+\_\+\+Produtos} (Dados $\ast$produtos, char $\ast$file\+Path)
+\begin{DoxyCompactList}\small\item\em Função que lê um ficheiro .txt com a informacao relativa aos produtos. \end{DoxyCompactList}\item 
+int \hyperlink{produtos_8c_a7c722b918c15082ce56ff92ab07a47e5}{get\+OcupadosP} (Dados $\ast$produtos)
+\begin{DoxyCompactList}\small\item\em Função que devolve o espaço ocupado pelos produtos na string. \end{DoxyCompactList}\item 
+int \hyperlink{produtos_8c_a05943ed85340c50750c61a556ad205b7}{get\+LidasP} (Dados $\ast$produtos)
+\begin{DoxyCompactList}\small\item\em Função que devolve os produtos lidos. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{produtos_8c_a469255f6be632c57839aa91f2e5040d1}{get\+ProdutoP} (int i, Dados $\ast$produtos)
+\begin{DoxyCompactList}\small\item\em Função que devolve um array com os produtos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Ficheiro que contem funções utilizadas para os produtos. 
+
+
+
+\subsection{Documentação das funções}
+\mbox{\Hypertarget{produtos_8c_a05943ed85340c50750c61a556ad205b7}\label{produtos_8c_a05943ed85340c50750c61a556ad205b7}} 
+\index{produtos.\+c@{produtos.\+c}!get\+LidasP@{get\+LidasP}}
+\index{get\+LidasP@{get\+LidasP}!produtos.\+c@{produtos.\+c}}
+\subsubsection{\texorpdfstring{get\+Lidas\+P()}{getLidasP()}}
+{\footnotesize\ttfamily int get\+LidasP (\begin{DoxyParamCaption}\item[{Dados $\ast$}]{produtos }\end{DoxyParamCaption})}
+
+
+
+Função que devolve os produtos lidos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}produtos\mbox{]}} & Dados dos produtos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Produtos lidos 
+\end{DoxyReturn}
+
+
+Definido na linha 71 do ficheiro produtos.\+c.
+
+
+\begin{DoxyCode}
+71                                \{
+72   \textcolor{keywordflow}{return} produtos->lidas;
+73 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{produtos_8c_a7c722b918c15082ce56ff92ab07a47e5}\label{produtos_8c_a7c722b918c15082ce56ff92ab07a47e5}} 
+\index{produtos.\+c@{produtos.\+c}!get\+OcupadosP@{get\+OcupadosP}}
+\index{get\+OcupadosP@{get\+OcupadosP}!produtos.\+c@{produtos.\+c}}
+\subsubsection{\texorpdfstring{get\+Ocupados\+P()}{getOcupadosP()}}
+{\footnotesize\ttfamily int get\+OcupadosP (\begin{DoxyParamCaption}\item[{Dados $\ast$}]{produtos }\end{DoxyParamCaption})}
+
+
+
+Função que devolve o espaço ocupado pelos produtos na string. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}produtos\mbox{]}} & Dados dos produtos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Espaço ocupado pelos produtos na string 
+\end{DoxyReturn}
+
+
+Definido na linha 61 do ficheiro produtos.\+c.
+
+
+\begin{DoxyCode}
+61                                   \{
+62   \textcolor{keywordflow}{return} produtos->ocupados;
+63 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{produtos_8c_a469255f6be632c57839aa91f2e5040d1}\label{produtos_8c_a469255f6be632c57839aa91f2e5040d1}} 
+\index{produtos.\+c@{produtos.\+c}!get\+ProdutoP@{get\+ProdutoP}}
+\index{get\+ProdutoP@{get\+ProdutoP}!produtos.\+c@{produtos.\+c}}
+\subsubsection{\texorpdfstring{get\+Produto\+P()}{getProdutoP()}}
+{\footnotesize\ttfamily char$\ast$ get\+ProdutoP (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{Dados $\ast$}]{produtos }\end{DoxyParamCaption})}
+
+
+
+Função que devolve um array com os produtos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}i\mbox{]}} & Indíce do array str \\
+\hline
+{\em \mbox{[}produtos\mbox{]}} & Dados dos produtos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Array com os produtos 
+\end{DoxyReturn}
+
+
+Definido na linha 82 do ficheiro produtos.\+c.
+
+
+\begin{DoxyCode}
+82                                          \{
+83   \textcolor{keywordflow}{return} strdup(produtos->str[i]);
+84 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{produtos_8c_ac0ee60ad5a3fab414fc2e7470e43e15f}\label{produtos_8c_ac0ee60ad5a3fab414fc2e7470e43e15f}} 
+\index{produtos.\+c@{produtos.\+c}!read\+\_\+\+Produtos@{read\+\_\+\+Produtos}}
+\index{read\+\_\+\+Produtos@{read\+\_\+\+Produtos}!produtos.\+c@{produtos.\+c}}
+\subsubsection{\texorpdfstring{read\+\_\+\+Produtos()}{read\_Produtos()}}
+{\footnotesize\ttfamily void read\+\_\+\+Produtos (\begin{DoxyParamCaption}\item[{Dados $\ast$}]{produtos,  }\item[{char $\ast$}]{file\+Path }\end{DoxyParamCaption})}
+
+
+
+Função que lê um ficheiro .txt com a informacao relativa aos produtos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}produtos\mbox{]}} & Dados dos produtos \\
+\hline
+{\em \mbox{[}file\+Path\mbox{]}} & Caminho do ficheiro \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 34 do ficheiro produtos.\+c.
+
+
+\begin{DoxyCode}
+34                                                     \{
+35   FILE* f = fopen(filePath, \textcolor{stringliteral}{"r"});
+36   \textcolor{keywordflow}{if} (f == NULL)\{
+37     printf(\textcolor{stringliteral}{"Ficheiro produtos inexistente\(\backslash\)n"});
+38   \}
+39   \textcolor{keywordtype}{char} str[1024];
+40   \textcolor{keywordflow}{while}(fgets(str,1024,f))\{
+41     produtos->lidas++;
+42     \textcolor{keywordflow}{if}(\hyperlink{produtos_8c_a3fd719b07970fa788d3ad51440484d1e}{valid\_Produtos}(strtok(str,\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"})))\{
+43       \textcolor{keywordflow}{if}(produtos->size == produtos->ocupados)\{
+44         \hyperlink{clientes_8c_ab93f3f48a62ea57a21aa91347dc699c7}{reallocDados}(produtos);
+45       \}
+46       produtos->str[produtos->ocupados] = strdup(str);
+47       produtos->ocupados++;
+48 
+49     \}
+50   \}
+51   qsort(produtos->str,produtos->ocupados,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*),\hyperlink{clientes_8c_a6f76df6572f78ed7afe910732203b41f}{myCompare});
+52   fclose(f);
+53 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{produtos_8c_a3fd719b07970fa788d3ad51440484d1e}\label{produtos_8c_a3fd719b07970fa788d3ad51440484d1e}} 
+\index{produtos.\+c@{produtos.\+c}!valid\+\_\+\+Produtos@{valid\+\_\+\+Produtos}}
+\index{valid\+\_\+\+Produtos@{valid\+\_\+\+Produtos}!produtos.\+c@{produtos.\+c}}
+\subsubsection{\texorpdfstring{valid\+\_\+\+Produtos()}{valid\_Produtos()}}
+{\footnotesize\ttfamily int valid\+\_\+\+Produtos (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Valida os produtos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}str\mbox{]}} & Código de um produto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um r que nos diz se um produto é valido (r=1) ou invalido (r=0) 
+\end{DoxyReturn}
+
+
+Definido na linha 14 do ficheiro produtos.\+c.
+
+
+\begin{DoxyCode}
+14                               \{
+15   \textcolor{keywordtype}{int} i,r = 1;
+16   \textcolor{keywordtype}{int} l = strlen(str);
+17   \textcolor{keywordflow}{if} (l == 6 && (isupper(str[0])) > 0 && (isupper(str[1])) > 0) \{
+18     \textcolor{keywordflow}{for} (i = 2; i < l-2; i++)\{
+19       \textcolor{keywordflow}{if} (!(isdigit(str[i])))\{
+20           \textcolor{keywordflow}{return} 0;
+21       \}
+22     \}
+23   \}
+24   \textcolor{keywordflow}{else} r = 0;
+25   \textcolor{keywordflow}{return} r;
+26 \}
+\end{DoxyCode}

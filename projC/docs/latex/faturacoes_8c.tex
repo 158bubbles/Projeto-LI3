@@ -1,0 +1,348 @@
+\hypertarget{faturacoes_8c}{}\section{Referência ao ficheiro faturacoes.\+c}
+\label{faturacoes_8c}\index{faturacoes.\+c@{faturacoes.\+c}}
+
+
+Modulo que inicializa e insere as estruturas faturas numa estrutura A\+VL.  
+
+
+{\ttfamily \#include \char`\"{}faturacoes.\+h\char`\"{}}\newline
+Diagrama de dependências de inclusão para faturacoes.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{faturacoes_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{faturacoes_8c_aa5fa05d951aa26b59256eb8fd0cd23b4}{free\+A\+V\+L\+Fatura} (A\+VL $\ast$f)
+\begin{DoxyCompactList}\small\item\em Desaloca a memória ocupada por faturas em A\+VL. \end{DoxyCompactList}\item 
+A\+VL $\ast$ \hyperlink{faturacoes_8c_aa807d9f5269922f16e4c4c4747b94ad6}{insere\+Fatura\+A\+VL} (VT $\ast$v, A\+VL $\ast$t)
+\begin{DoxyCompactList}\small\item\em Insere a estrutura fatura numa A\+VL. \end{DoxyCompactList}\item 
+int \hyperlink{faturacoes_8c_ad0ab422afb76b46b337198cd6ac3d1dc}{get\+Numero\+T\+Vend\+A\+VL} (A\+VL $\ast$a, char $\ast$prod, int \hyperlink{structfilial}{filial}, int mes, int prom)
+\begin{DoxyCompactList}\small\item\em Obtem o numero total de vendas dado o mês, a filial e o tipo de promoção recorrendo a A\+VL. \end{DoxyCompactList}\item 
+int \hyperlink{faturacoes_8c_ace1cdc0f36557bd0b611ecfc71c987bb}{get\+Quantidade\+P\+Filial\+A\+VL} (A\+VL $\ast$a, char $\ast$prod, int \hyperlink{structfilial}{filial})
+\begin{DoxyCompactList}\small\item\em Obtem a quantidade total de produtos vendidos dado o mês, a filial e o tipo de promoção recorrendo a A\+VL. \end{DoxyCompactList}\item 
+int \hyperlink{faturacoes_8c_a43188dee2f6d08c9d153fb918bf28a33}{get\+Faturacao\+A\+VL} (A\+VL $\ast$a, char $\ast$prod, int \hyperlink{structfilial}{filial}, int mes, int prom)
+\begin{DoxyCompactList}\small\item\em Obtem a faturacao total de vendas dado o mês, a filial e o tipo de promoção recorrendo a A\+VL. \end{DoxyCompactList}\item 
+double \hyperlink{faturacoes_8c_af7fa5bf2aa878f4f9f9a7576ce7be824}{faturacao\+T\+A\+VL} (A\+VL $\ast$\hyperlink{structfatura}{fatura}, int min\+Month, int max\+Month)
+\begin{DoxyCompactList}\small\item\em Indica-\/nos a faturação dado um intervalo fechado de meses. \end{DoxyCompactList}\item 
+int \hyperlink{faturacoes_8c_a818fac565930eaab175228a1cf519e3e}{quantidade\+T\+A\+VL} (A\+VL $\ast$\hyperlink{structfatura}{fatura}, int min\+Month, int max\+Month)
+\begin{DoxyCompactList}\small\item\em Indica-\/nos a quantidade dado um intervalo fechado de meses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Modulo que inicializa e insere as estruturas faturas numa estrutura A\+VL. 
+
+
+
+\subsection{Documentação das funções}
+\mbox{\Hypertarget{faturacoes_8c_af7fa5bf2aa878f4f9f9a7576ce7be824}\label{faturacoes_8c_af7fa5bf2aa878f4f9f9a7576ce7be824}} 
+\index{faturacoes.\+c@{faturacoes.\+c}!faturacao\+T\+A\+VL@{faturacao\+T\+A\+VL}}
+\index{faturacao\+T\+A\+VL@{faturacao\+T\+A\+VL}!faturacoes.\+c@{faturacoes.\+c}}
+\subsubsection{\texorpdfstring{faturacao\+T\+A\+V\+L()}{faturacaoTAVL()}}
+{\footnotesize\ttfamily double faturacao\+T\+A\+VL (\begin{DoxyParamCaption}\item[{A\+VL $\ast$}]{fatura,  }\item[{int}]{min\+Month,  }\item[{int}]{max\+Month }\end{DoxyParamCaption})}
+
+
+
+Indica-\/nos a faturação dado um intervalo fechado de meses. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}fatura\mbox{]}} & Estrutura A\+VL \\
+\hline
+{\em \mbox{[}min\+Month\mbox{]}} & Limite inferior \\
+\hline
+{\em \mbox{[}max\+Month\mbox{]}} & Limite superior \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a faturacao total no intervalo fechado de meses 
+\end{DoxyReturn}
+
+
+Definido na linha 129 do ficheiro faturacoes.\+c.
+
+
+\begin{DoxyCode}
+129                                                              \{
+130   \textcolor{keywordtype}{double} valor = 0;
+131   \textcolor{keywordtype}{int} j,k;
+132   \textcolor{keywordflow}{if} (\hyperlink{structfatura}{fatura} != NULL)\{
+133     \textcolor{keywordflow}{for}(j = minMonth; j <= maxMonth; j++)\{
+134       \textcolor{keywordflow}{for}(k = 0; k < 2; k++)
+135         valor += \hyperlink{faturacao_8c_a23224f16d2f9428fbff8de49592c0f9e}{getFaturacao}(\hyperlink{tree_8c_a1c2789a702672b4fb99d2c622181f949}{getEquals}(\hyperlink{structfatura}{fatura}),0,j,k);
+136     \}
+137     \textcolor{keywordflow}{return} valor + \hyperlink{faturacoes_8c_af7fa5bf2aa878f4f9f9a7576ce7be824}{faturacaoTAVL}(\hyperlink{tree_8c_a055813fad18fbe1331c4568fbb9b53ca}{getLeft}(\hyperlink{structfatura}{fatura}),minMonth,maxMonth) + 
+      \hyperlink{faturacoes_8c_af7fa5bf2aa878f4f9f9a7576ce7be824}{faturacaoTAVL}(\hyperlink{tree_8c_aa92a92ff16f40e2381b0452982b620b3}{getRight}(\hyperlink{structfatura}{fatura}),minMonth,maxMonth);
+138   \}
+139   \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0;
+140 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacoes_8c_aa5fa05d951aa26b59256eb8fd0cd23b4}\label{faturacoes_8c_aa5fa05d951aa26b59256eb8fd0cd23b4}} 
+\index{faturacoes.\+c@{faturacoes.\+c}!free\+A\+V\+L\+Fatura@{free\+A\+V\+L\+Fatura}}
+\index{free\+A\+V\+L\+Fatura@{free\+A\+V\+L\+Fatura}!faturacoes.\+c@{faturacoes.\+c}}
+\subsubsection{\texorpdfstring{free\+A\+V\+L\+Fatura()}{freeAVLFatura()}}
+{\footnotesize\ttfamily void free\+A\+V\+L\+Fatura (\begin{DoxyParamCaption}\item[{A\+VL $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Desaloca a memória ocupada por faturas em A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}f\mbox{]}} & Estrutura A\+VL que vai ser desalocada \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 12 do ficheiro faturacoes.\+c.
+
+
+\begin{DoxyCode}
+12                            \{
+13   \textcolor{keywordflow}{if}(f)\{
+14     free(\hyperlink{tree_8c_af043329377f4d9303267455cd353fd83}{getKey}(f));
+15     freeNodoAVLFatura((Fatura*)(\hyperlink{tree_8c_a1c2789a702672b4fb99d2c622181f949}{getEquals}(f)));
+16     \hyperlink{faturacoes_8c_aa5fa05d951aa26b59256eb8fd0cd23b4}{freeAVLFatura}(\hyperlink{tree_8c_aa92a92ff16f40e2381b0452982b620b3}{getRight}(f));
+17     \hyperlink{faturacoes_8c_aa5fa05d951aa26b59256eb8fd0cd23b4}{freeAVLFatura}(\hyperlink{tree_8c_a055813fad18fbe1331c4568fbb9b53ca}{getLeft}(f));
+18     free(f);
+19     f = NULL;
+20   \}
+21 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacoes_8c_a43188dee2f6d08c9d153fb918bf28a33}\label{faturacoes_8c_a43188dee2f6d08c9d153fb918bf28a33}} 
+\index{faturacoes.\+c@{faturacoes.\+c}!get\+Faturacao\+A\+VL@{get\+Faturacao\+A\+VL}}
+\index{get\+Faturacao\+A\+VL@{get\+Faturacao\+A\+VL}!faturacoes.\+c@{faturacoes.\+c}}
+\subsubsection{\texorpdfstring{get\+Faturacao\+A\+V\+L()}{getFaturacaoAVL()}}
+{\footnotesize\ttfamily int get\+Faturacao\+A\+VL (\begin{DoxyParamCaption}\item[{A\+VL $\ast$}]{a,  }\item[{char $\ast$}]{prod,  }\item[{int}]{filial,  }\item[{int}]{mes,  }\item[{int}]{prom }\end{DoxyParamCaption})}
+
+
+
+Obtem a faturacao total de vendas dado o mês, a filial e o tipo de promoção recorrendo a A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}a\mbox{]}} & Estrutura A\+VL utilizada para obter a faturacao total \\
+\hline
+{\em \mbox{[}prod\mbox{]}} & Produto na qual desejamos saber o numero de vendas \\
+\hline
+{\em \mbox{[}filial\mbox{]}} & Filial desejada \\
+\hline
+{\em \mbox{[}mes\mbox{]}} & Mes desejado \\
+\hline
+{\em \mbox{[}prom\mbox{]}} & Promocao desejada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a faturacao total 
+\end{DoxyReturn}
+
+
+Definido na linha 106 do ficheiro faturacoes.\+c.
+
+
+\begin{DoxyCode}
+106                                                                       \{
+107   \textcolor{keywordflow}{if}(\hyperlink{tree_8c_a56e7dddb3c67ac22f3373a010c1c9e21}{searchAVL}(a,prod))\{
+108     AVL* tmp = a;
+109     \textcolor{keywordflow}{while}(strcmp(\hyperlink{tree_8c_af043329377f4d9303267455cd353fd83}{getKey}(tmp),prod)!=0)\{
+110       \textcolor{keywordflow}{if}((strcmp(\hyperlink{tree_8c_af043329377f4d9303267455cd353fd83}{getKey}(tmp),prod)) < 0)\{
+111         tmp = \hyperlink{tree_8c_aa92a92ff16f40e2381b0452982b620b3}{getRight}(tmp);
+112       \}
+113       \textcolor{keywordflow}{else}\{
+114         tmp = \hyperlink{tree_8c_a055813fad18fbe1331c4568fbb9b53ca}{getLeft}(tmp);
+115       \}
+116     \}
+117     \textcolor{keywordflow}{return} \hyperlink{faturacao_8c_a23224f16d2f9428fbff8de49592c0f9e}{getFaturacao}(\hyperlink{tree_8c_a1c2789a702672b4fb99d2c622181f949}{getEquals}(tmp),\hyperlink{structfilial}{filial},mes,prom);
+118   \}
+119   \textcolor{keywordflow}{return} 0;
+120 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacoes_8c_ad0ab422afb76b46b337198cd6ac3d1dc}\label{faturacoes_8c_ad0ab422afb76b46b337198cd6ac3d1dc}} 
+\index{faturacoes.\+c@{faturacoes.\+c}!get\+Numero\+T\+Vend\+A\+VL@{get\+Numero\+T\+Vend\+A\+VL}}
+\index{get\+Numero\+T\+Vend\+A\+VL@{get\+Numero\+T\+Vend\+A\+VL}!faturacoes.\+c@{faturacoes.\+c}}
+\subsubsection{\texorpdfstring{get\+Numero\+T\+Vend\+A\+V\+L()}{getNumeroTVendAVL()}}
+{\footnotesize\ttfamily int get\+Numero\+T\+Vend\+A\+VL (\begin{DoxyParamCaption}\item[{A\+VL $\ast$}]{a,  }\item[{char $\ast$}]{prod,  }\item[{int}]{filial,  }\item[{int}]{mes,  }\item[{int}]{prom }\end{DoxyParamCaption})}
+
+
+
+Obtem o numero total de vendas dado o mês, a filial e o tipo de promoção recorrendo a A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}a\mbox{]}} & Estrutura A\+VL utilizada para obter o numero total de vendas \\
+\hline
+{\em \mbox{[}prod\mbox{]}} & Produto na qual desejamos saber o numero de vendas \\
+\hline
+{\em \mbox{[}filial\mbox{]}} & Filial desejada \\
+\hline
+{\em \mbox{[}mes\mbox{]}} & Mes desejado \\
+\hline
+{\em \mbox{[}prom\mbox{]}} & Promocao desejada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o numero total de vendas 
+\end{DoxyReturn}
+
+
+Definido na linha 58 do ficheiro faturacoes.\+c.
+
+
+\begin{DoxyCode}
+58                                                                       \{
+59   \textcolor{keywordflow}{if}(\hyperlink{tree_8c_a56e7dddb3c67ac22f3373a010c1c9e21}{searchAVL}(a,prod))\{
+60     AVL* tmp = a;
+61     \textcolor{keywordflow}{while}(strcmp(\hyperlink{tree_8c_af043329377f4d9303267455cd353fd83}{getKey}(tmp),prod)!=0)\{
+62       \textcolor{keywordflow}{if}((strcmp(\hyperlink{tree_8c_af043329377f4d9303267455cd353fd83}{getKey}(tmp),prod)) < 0)\{
+63         tmp = \hyperlink{tree_8c_aa92a92ff16f40e2381b0452982b620b3}{getRight}(tmp);
+64       \}
+65       \textcolor{keywordflow}{else}\{
+66         tmp = \hyperlink{tree_8c_a055813fad18fbe1331c4568fbb9b53ca}{getLeft}(tmp);
+67       \}
+68     \}
+69     \textcolor{keywordflow}{return} \hyperlink{faturacao_8c_afb82689eef0b05cad519049a05d50eeb}{getNumeroTotalVendas}(\hyperlink{tree_8c_a1c2789a702672b4fb99d2c622181f949}{getEquals}(tmp),
+      \hyperlink{structfilial}{filial},mes,prom);
+70   \}
+71   \textcolor{keywordflow}{return} 0;
+72 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacoes_8c_ace1cdc0f36557bd0b611ecfc71c987bb}\label{faturacoes_8c_ace1cdc0f36557bd0b611ecfc71c987bb}} 
+\index{faturacoes.\+c@{faturacoes.\+c}!get\+Quantidade\+P\+Filial\+A\+VL@{get\+Quantidade\+P\+Filial\+A\+VL}}
+\index{get\+Quantidade\+P\+Filial\+A\+VL@{get\+Quantidade\+P\+Filial\+A\+VL}!faturacoes.\+c@{faturacoes.\+c}}
+\subsubsection{\texorpdfstring{get\+Quantidade\+P\+Filial\+A\+V\+L()}{getQuantidadePFilialAVL()}}
+{\footnotesize\ttfamily int get\+Quantidade\+P\+Filial\+A\+VL (\begin{DoxyParamCaption}\item[{A\+VL $\ast$}]{a,  }\item[{char $\ast$}]{prod,  }\item[{int}]{filial }\end{DoxyParamCaption})}
+
+
+
+Obtem a quantidade total de produtos vendidos dado o mês, a filial e o tipo de promoção recorrendo a A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}a\mbox{]}} & Estrutura A\+VL utilizada para obter a quantidade total de produtos vendidos \\
+\hline
+{\em \mbox{[}prod\mbox{]}} & Produto na qual desejamos saber o numero de vendas \\
+\hline
+{\em \mbox{[}filial\mbox{]}} & Filial desejada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a quantidade total de produtos vendidos 
+\end{DoxyReturn}
+
+
+Definido na linha 81 do ficheiro faturacoes.\+c.
+
+
+\begin{DoxyCode}
+81                                                            \{
+82   \textcolor{keywordflow}{if}(\hyperlink{tree_8c_a56e7dddb3c67ac22f3373a010c1c9e21}{searchAVL}(a,prod))\{
+83     AVL* tmp = a;
+84     \textcolor{keywordflow}{while}(strcmp(\hyperlink{tree_8c_af043329377f4d9303267455cd353fd83}{getKey}(tmp),prod)!=0)\{
+85       \textcolor{keywordflow}{if}((strcmp(\hyperlink{tree_8c_af043329377f4d9303267455cd353fd83}{getKey}(tmp),prod)) < 0)\{
+86         tmp = \hyperlink{tree_8c_aa92a92ff16f40e2381b0452982b620b3}{getRight}(tmp);
+87       \}
+88       \textcolor{keywordflow}{else}\{
+89         tmp = \hyperlink{tree_8c_a055813fad18fbe1331c4568fbb9b53ca}{getLeft}(tmp);
+90       \}
+91     \}
+92     \textcolor{keywordflow}{return} \hyperlink{faturacao_8c_a5e2ddbc2467f7b0df879e5f0e84878ef}{getQuantidadePFilial}(\hyperlink{tree_8c_a1c2789a702672b4fb99d2c622181f949}{getEquals}(tmp),
+      \hyperlink{structfilial}{filial});
+93   \}
+94   \textcolor{keywordflow}{return} 0;
+95 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacoes_8c_aa807d9f5269922f16e4c4c4747b94ad6}\label{faturacoes_8c_aa807d9f5269922f16e4c4c4747b94ad6}} 
+\index{faturacoes.\+c@{faturacoes.\+c}!insere\+Fatura\+A\+VL@{insere\+Fatura\+A\+VL}}
+\index{insere\+Fatura\+A\+VL@{insere\+Fatura\+A\+VL}!faturacoes.\+c@{faturacoes.\+c}}
+\subsubsection{\texorpdfstring{insere\+Fatura\+A\+V\+L()}{insereFaturaAVL()}}
+{\footnotesize\ttfamily A\+VL$\ast$ insere\+Fatura\+A\+VL (\begin{DoxyParamCaption}\item[{VT $\ast$}]{v,  }\item[{A\+VL $\ast$}]{t }\end{DoxyParamCaption})}
+
+
+
+Insere a estrutura fatura numa A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}v\mbox{]}} & Estrutura VT que irá fornecer as vendas para inicializar a estrutura faturas \\
+\hline
+{\em \mbox{[}t\mbox{]}} & Estrutura A\+VL onde vão ser inseridas as faturas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a estrutura A\+VL com as faturas 
+\end{DoxyReturn}
+
+
+Definido na linha 29 do ficheiro faturacoes.\+c.
+
+
+\begin{DoxyCode}
+29                                     \{
+30   \textcolor{keywordtype}{int} i;
+31   \textcolor{keywordflow}{for}(i = 0; i < \hyperlink{vendas_8c_aba67c7ea52fab81d42a891082b59ef72}{getOcupadosV}(v); i++)\{
+32     Venda* vendas = \hyperlink{vendas_8c_ab7121d1c08c763f3f6f3ab5902682ecd}{getVenda}(v,i);
+33     \textcolor{keywordtype}{char}* prod = \hyperlink{vendas_8c_a44aa4bbfb64f14bb33fefaeb575c00e1}{getProduto}(vendas);
+34     AVL* tmp = searchAVLTMP(t,prod);
+35     \textcolor{keywordflow}{if}(tmp != NULL)\{
+36       Fatura* e = (Fatura*)\hyperlink{tree_8c_a1c2789a702672b4fb99d2c622181f949}{getEquals}(tmp);
+37       \hyperlink{faturacao_8c_a4ac6ba9606cd84ea8d0b137b059f8756}{insereFatura}(e,vendas);
+38     \}
+39     \textcolor{keywordflow}{else} \{
+40       Fatura* f = \hyperlink{faturacao_8c_abb686b9175c00f86f3bce095854aa18a}{initFatura}();
+41       \hyperlink{faturacao_8c_a4ac6ba9606cd84ea8d0b137b059f8756}{insereFatura}(f,vendas);
+42       t = \hyperlink{tree_8c_a8792d9847f06c27e4955b63f63239305}{insert}(t,strdup(prod),f);
+43     \}
+44     free(prod);
+45   \}
+46   \textcolor{keywordflow}{return} t;
+47 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacoes_8c_a818fac565930eaab175228a1cf519e3e}\label{faturacoes_8c_a818fac565930eaab175228a1cf519e3e}} 
+\index{faturacoes.\+c@{faturacoes.\+c}!quantidade\+T\+A\+VL@{quantidade\+T\+A\+VL}}
+\index{quantidade\+T\+A\+VL@{quantidade\+T\+A\+VL}!faturacoes.\+c@{faturacoes.\+c}}
+\subsubsection{\texorpdfstring{quantidade\+T\+A\+V\+L()}{quantidadeTAVL()}}
+{\footnotesize\ttfamily int quantidade\+T\+A\+VL (\begin{DoxyParamCaption}\item[{A\+VL $\ast$}]{fatura,  }\item[{int}]{min\+Month,  }\item[{int}]{max\+Month }\end{DoxyParamCaption})}
+
+
+
+Indica-\/nos a quantidade dado um intervalo fechado de meses. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}fatura\mbox{]}} & Estrutura A\+VL \\
+\hline
+{\em \mbox{[}min\+Month\mbox{]}} & Limite inferior \\
+\hline
+{\em \mbox{[}max\+Month\mbox{]}} & Limite superior \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a quantidade total no intervalo fechado de meses. 
+\end{DoxyReturn}
+
+
+Definido na linha 149 do ficheiro faturacoes.\+c.
+
+
+\begin{DoxyCode}
+149                                                            \{
+150   \textcolor{keywordtype}{int} valor = 0;
+151   \textcolor{keywordtype}{int} i,j,k;
+152   \textcolor{keywordflow}{if} (\hyperlink{structfatura}{fatura} != NULL)\{
+153     \textcolor{keywordflow}{for}(i = 1; i <= 3; i++)\{
+154       \textcolor{keywordflow}{for}(j = minMonth; j <= maxMonth; j++)\{
+155         \textcolor{keywordflow}{for}(k = 0; k < 2; k++)
+156           valor += \hyperlink{faturacao_8c_afb82689eef0b05cad519049a05d50eeb}{getNumeroTotalVendas}(\hyperlink{tree_8c_a1c2789a702672b4fb99d2c622181f949}{getEquals}(
+      \hyperlink{structfatura}{fatura}),i,j,k);
+157       \}
+158     \}
+159     \textcolor{keywordflow}{return} valor + \hyperlink{faturacoes_8c_a818fac565930eaab175228a1cf519e3e}{quantidadeTAVL}(\hyperlink{tree_8c_a055813fad18fbe1331c4568fbb9b53ca}{getLeft}(\hyperlink{structfatura}{fatura}),minMonth,maxMonth) + 
+      \hyperlink{faturacoes_8c_a818fac565930eaab175228a1cf519e3e}{quantidadeTAVL}(\hyperlink{tree_8c_aa92a92ff16f40e2381b0452982b620b3}{getRight}(\hyperlink{structfatura}{fatura}),minMonth,maxMonth);
+160   \}
+161   \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0;
+162 \}
+\end{DoxyCode}

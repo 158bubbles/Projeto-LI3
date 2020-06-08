@@ -1,0 +1,855 @@
+\hypertarget{vendas_8c}{}\section{Referência ao ficheiro vendas.\+c}
+\label{vendas_8c}\index{vendas.\+c@{vendas.\+c}}
+
+
+Ficheiro que contem funções utilizadas para as vendas.  
+
+
+{\ttfamily \#include \char`\"{}vendas.\+h\char`\"{}}\newline
+Diagrama de dependências de inclusão para vendas.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{vendas_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structvenda}{venda}
+\item 
+struct \hyperlink{structvt}{vt}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+VT $\ast$ \hyperlink{vendas_8c_a2e874e42b7b9192295e9d78409212f12}{init\+Vendas} ()
+\begin{DoxyCompactList}\small\item\em Inicialização dos dados das vendas. \end{DoxyCompactList}\item 
+void \hyperlink{vendas_8c_a3a676f1271229cc890ba52aaba7d56d3}{free\+Vendas} (VT $\ast$v)
+\begin{DoxyCompactList}\small\item\em Função que desaloca a memória ocupada pelas Vendas. \end{DoxyCompactList}\item 
+void \hyperlink{vendas_8c_a25285041e9e1c908308ef567fc4b4d33}{realloc\+Vendas} (VT $\ast$v)
+\begin{DoxyCompactList}\small\item\em Função que realoca a memoria ocupada pelas Vendas. \end{DoxyCompactList}\item 
+int \hyperlink{vendas_8c_af6a785d1d84f6615746c6fcc1143145a}{binary\+Search} (char $\ast$$\ast$total, int i, int t, char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Função que efetua a procura binária. \end{DoxyCompactList}\item 
+int \hyperlink{vendas_8c_a1c768f74950721cd51fbc852da5cd724}{product} (char $\ast$prod, Dados $\ast$produtos)
+\begin{DoxyCompactList}\small\item\em Valida a componente produto. \end{DoxyCompactList}\item 
+int \hyperlink{vendas_8c_a80f8707201f9b5119865530aeb3515fe}{price} (double preco)
+\begin{DoxyCompactList}\small\item\em Valida a componente preço. \end{DoxyCompactList}\item 
+int \hyperlink{vendas_8c_a22147cd1e2e6a4da0d9a7b78f1936e30}{quantity} (int quant)
+\begin{DoxyCompactList}\small\item\em Valida a componente quantidade. \end{DoxyCompactList}\item 
+int \hyperlink{vendas_8c_a4d8bdada7a6ca4234e17a0f4c958ffdc}{promotion} (char prom)
+\begin{DoxyCompactList}\small\item\em Valida a componente promoção. \end{DoxyCompactList}\item 
+int \hyperlink{vendas_8c_ab5f658c9a3766364fea66a37c7d355d6}{client} (char $\ast$cli, Dados $\ast$clientes)
+\begin{DoxyCompactList}\small\item\em Valida a componente cliente. \end{DoxyCompactList}\item 
+int \hyperlink{vendas_8c_a0b4bbe164a873e171e9758176de52d7f}{month} (int mes)
+\begin{DoxyCompactList}\small\item\em Valida a componente mês. \end{DoxyCompactList}\item 
+int \hyperlink{vendas_8c_a8f8279380cac3393546f9d2d54b55493}{market} (int super)
+\begin{DoxyCompactList}\small\item\em Valida a componente filial. \end{DoxyCompactList}\item 
+int \hyperlink{vendas_8c_a27df57465f246def8fbfe1b822b996fb}{valid\+\_\+\+Venda} (char $\ast$prod, double preco, int quant, char prom, char $\ast$cli, int mes, int super, Dados $\ast$produtos, Dados $\ast$clientes)
+\begin{DoxyCompactList}\small\item\em Valida a componente venda. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{vendas_8c_a44aa4bbfb64f14bb33fefaeb575c00e1}{get\+Produto} (Venda $\ast$v)
+\begin{DoxyCompactList}\small\item\em Acesso à componente produto. \end{DoxyCompactList}\item 
+double \hyperlink{vendas_8c_a9cde304721e7cf45c51ec95bcf625de4}{get\+Preco} (Venda $\ast$v)
+\begin{DoxyCompactList}\small\item\em Acesso à componente preço. \end{DoxyCompactList}\item 
+int \hyperlink{vendas_8c_ae3196cffdcf5289440c1ee56ed5ee0d7}{get\+Quantidade} (Venda $\ast$v)
+\begin{DoxyCompactList}\small\item\em Acesso à componente quantidade. \end{DoxyCompactList}\item 
+int \hyperlink{vendas_8c_ac48ab849f5af46f09394a208f41029e6}{get\+Promocao} (Venda $\ast$v)
+\begin{DoxyCompactList}\small\item\em Acesso à componente promoção. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{vendas_8c_a6a66082eb395bd8876be3504c51aa264}{get\+Cliente} (Venda $\ast$v)
+\begin{DoxyCompactList}\small\item\em Acesso à componente cliente. \end{DoxyCompactList}\item 
+int \hyperlink{vendas_8c_a1178cf1dea33bcb6c9612d46f7534f33}{get\+Data} (Venda $\ast$v)
+\begin{DoxyCompactList}\small\item\em Acesso à componente data. \end{DoxyCompactList}\item 
+int \hyperlink{vendas_8c_a7381c97aa7302d679514ddbeabb1753f}{get\+Filial} (Venda $\ast$v)
+\begin{DoxyCompactList}\small\item\em Acesso à componente filial. \end{DoxyCompactList}\item 
+void \hyperlink{vendas_8c_a46d5e820149ab77e7379f18e9dd5658f}{read\+\_\+\+Vendas} (VT $\ast$vendas, Dados $\ast$produtos, Dados $\ast$clientes, char $\ast$file\+Path)
+\begin{DoxyCompactList}\small\item\em Função que lê um ficheiro .txt com a informacao relativa às vendas. \end{DoxyCompactList}\item 
+int \hyperlink{vendas_8c_aba67c7ea52fab81d42a891082b59ef72}{get\+OcupadosV} (VT $\ast$vendas)
+\begin{DoxyCompactList}\small\item\em Função que devolve o espaço ocupado pelas vendas na string. \end{DoxyCompactList}\item 
+int \hyperlink{vendas_8c_a370fea8a0d2e5993f27e8f79ca016f07}{get\+LidasV} (VT $\ast$vendas)
+\begin{DoxyCompactList}\small\item\em Função que devolve as vendas lidas. \end{DoxyCompactList}\item 
+Venda $\ast$ \hyperlink{vendas_8c_ab7121d1c08c763f3f6f3ab5902682ecd}{get\+Venda} (VT $\ast$vendas, int i)
+\begin{DoxyCompactList}\small\item\em Função que devolve um array com as vendas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Ficheiro que contem funções utilizadas para as vendas. 
+
+
+
+\subsection{Documentação das funções}
+\mbox{\Hypertarget{vendas_8c_af6a785d1d84f6615746c6fcc1143145a}\label{vendas_8c_af6a785d1d84f6615746c6fcc1143145a}} 
+\index{vendas.\+c@{vendas.\+c}!binary\+Search@{binary\+Search}}
+\index{binary\+Search@{binary\+Search}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{binary\+Search()}{binarySearch()}}
+{\footnotesize\ttfamily int binary\+Search (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{total,  }\item[{int}]{i,  }\item[{int}]{t,  }\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Função que efetua a procura binária. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}total\mbox{]}} & char$\ast$$\ast$ onde queremos fazer a procura \\
+\hline
+{\em \mbox{[}i\mbox{]}} & Indice i \\
+\hline
+{\em \mbox{[}t\mbox{]}} & Indice t \\
+\hline
+{\em \mbox{[}str\mbox{]}} & char$\ast$ que queremos encontrar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna -\/1 caso a procura falhe 
+\end{DoxyReturn}
+
+
+Definido na linha 94 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+95 \{
+96     \textcolor{keywordflow}{while} (i <= t) \{
+97         \textcolor{keywordtype}{int} m = i + (t - i) / 2;
+98 
+99         \textcolor{keywordflow}{if} (strcmp(total[m],str) == 0)
+100             \textcolor{keywordflow}{return} m;
+101         \textcolor{keywordflow}{if} (strcmp(total[m],str) < 0)
+102             i = m + 1;
+103         \textcolor{keywordflow}{else}
+104             t = m - 1;
+105     \}
+106     \textcolor{keywordflow}{return} -1;
+107 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_ab5f658c9a3766364fea66a37c7d355d6}\label{vendas_8c_ab5f658c9a3766364fea66a37c7d355d6}} 
+\index{vendas.\+c@{vendas.\+c}!client@{client}}
+\index{client@{client}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{client()}{client()}}
+{\footnotesize\ttfamily int client (\begin{DoxyParamCaption}\item[{char $\ast$}]{cli,  }\item[{Dados $\ast$}]{clientes }\end{DoxyParamCaption})}
+
+
+
+Valida a componente cliente. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}prod\mbox{]}} & Cliente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um r que nos diz se um cliente é validado (r=1) ou não (r=0) 
+\end{DoxyReturn}
+
+
+Definido na linha 165 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+165                                        \{
+166   \textcolor{keywordtype}{int} r = 0;
+167   \textcolor{keywordflow}{if} ((\hyperlink{vendas_8c_af6a785d1d84f6615746c6fcc1143145a}{binarySearch}(clientes->str,0,(clientes->ocupados)-1,cli)) != -1)\{
+168     r = 1;
+169   \}
+170   \textcolor{keywordflow}{return} r;
+171 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_a3a676f1271229cc890ba52aaba7d56d3}\label{vendas_8c_a3a676f1271229cc890ba52aaba7d56d3}} 
+\index{vendas.\+c@{vendas.\+c}!free\+Vendas@{free\+Vendas}}
+\index{free\+Vendas@{free\+Vendas}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{free\+Vendas()}{freeVendas()}}
+{\footnotesize\ttfamily void free\+Vendas (\begin{DoxyParamCaption}\item[{VT $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Função que desaloca a memória ocupada pelas Vendas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}d\mbox{]}} & uma venda \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 44 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+44                       \{
+45   \textcolor{keywordtype}{int} i = 0;
+46   \textcolor{keywordflow}{for}(i = 0; i < v->ocupados; i++)\{
+47     free(v->str[i].produto);
+48     v->str[i].produto = NULL;
+49     free(v->str[i].cliente);
+50     v->str[i].cliente = NULL;
+51   \}
+52   free(v->str);
+53   v->str = NULL;
+54   free(v);
+55   v = NULL;
+56 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_a6a66082eb395bd8876be3504c51aa264}\label{vendas_8c_a6a66082eb395bd8876be3504c51aa264}} 
+\index{vendas.\+c@{vendas.\+c}!get\+Cliente@{get\+Cliente}}
+\index{get\+Cliente@{get\+Cliente}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{get\+Cliente()}{getCliente()}}
+{\footnotesize\ttfamily char$\ast$ get\+Cliente (\begin{DoxyParamCaption}\item[{Venda $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Acesso à componente cliente. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}v\mbox{]}} & Uma venda \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um cliente 
+\end{DoxyReturn}
+
+
+Definido na linha 283 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+283                           \{
+284   \textcolor{keywordflow}{return} strdup(v->cliente);
+285 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_a1178cf1dea33bcb6c9612d46f7534f33}\label{vendas_8c_a1178cf1dea33bcb6c9612d46f7534f33}} 
+\index{vendas.\+c@{vendas.\+c}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{get\+Data()}{getData()}}
+{\footnotesize\ttfamily int get\+Data (\begin{DoxyParamCaption}\item[{Venda $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Acesso à componente data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}v\mbox{]}} & Uma venda \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Uma data 
+\end{DoxyReturn}
+
+
+Definido na linha 293 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+293                       \{
+294   \textcolor{keywordflow}{return} v->data;
+295 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_a7381c97aa7302d679514ddbeabb1753f}\label{vendas_8c_a7381c97aa7302d679514ddbeabb1753f}} 
+\index{vendas.\+c@{vendas.\+c}!get\+Filial@{get\+Filial}}
+\index{get\+Filial@{get\+Filial}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{get\+Filial()}{getFilial()}}
+{\footnotesize\ttfamily int get\+Filial (\begin{DoxyParamCaption}\item[{Venda $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Acesso à componente filial. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}v\mbox{]}} & Uma venda \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Uma filial 
+\end{DoxyReturn}
+
+
+Definido na linha 303 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+303                         \{
+304   \textcolor{keywordflow}{return} v->filial;
+305 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_a370fea8a0d2e5993f27e8f79ca016f07}\label{vendas_8c_a370fea8a0d2e5993f27e8f79ca016f07}} 
+\index{vendas.\+c@{vendas.\+c}!get\+LidasV@{get\+LidasV}}
+\index{get\+LidasV@{get\+LidasV}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{get\+Lidas\+V()}{getLidasV()}}
+{\footnotesize\ttfamily int get\+LidasV (\begin{DoxyParamCaption}\item[{VT $\ast$}]{vendas }\end{DoxyParamCaption})}
+
+
+
+Função que devolve as vendas lidas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}produtos\mbox{]}} & Vendas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Vendas lidas 
+\end{DoxyReturn}
+
+
+Definido na linha 366 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+366                           \{
+367   \textcolor{keywordflow}{return} vendas->lidas;
+368 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_aba67c7ea52fab81d42a891082b59ef72}\label{vendas_8c_aba67c7ea52fab81d42a891082b59ef72}} 
+\index{vendas.\+c@{vendas.\+c}!get\+OcupadosV@{get\+OcupadosV}}
+\index{get\+OcupadosV@{get\+OcupadosV}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{get\+Ocupados\+V()}{getOcupadosV()}}
+{\footnotesize\ttfamily int get\+OcupadosV (\begin{DoxyParamCaption}\item[{VT $\ast$}]{vendas }\end{DoxyParamCaption})}
+
+
+
+Função que devolve o espaço ocupado pelas vendas na string. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}produtos\mbox{]}} & Vendas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Espaço ocupado pelas vendas na string 
+\end{DoxyReturn}
+
+
+Definido na linha 356 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+356                              \{
+357   \textcolor{keywordflow}{return} vendas->ocupados;
+358 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_a9cde304721e7cf45c51ec95bcf625de4}\label{vendas_8c_a9cde304721e7cf45c51ec95bcf625de4}} 
+\index{vendas.\+c@{vendas.\+c}!get\+Preco@{get\+Preco}}
+\index{get\+Preco@{get\+Preco}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{get\+Preco()}{getPreco()}}
+{\footnotesize\ttfamily double get\+Preco (\begin{DoxyParamCaption}\item[{Venda $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Acesso à componente preço. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}v\mbox{]}} & Uma venda \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um preço 
+\end{DoxyReturn}
+
+
+Definido na linha 248 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+248                          \{
+249   \textcolor{keywordflow}{return} v->preco;
+250 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_a44aa4bbfb64f14bb33fefaeb575c00e1}\label{vendas_8c_a44aa4bbfb64f14bb33fefaeb575c00e1}} 
+\index{vendas.\+c@{vendas.\+c}!get\+Produto@{get\+Produto}}
+\index{get\+Produto@{get\+Produto}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{get\+Produto()}{getProduto()}}
+{\footnotesize\ttfamily char$\ast$ get\+Produto (\begin{DoxyParamCaption}\item[{Venda $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Acesso à componente produto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}v\mbox{]}} & Uma venda \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um produto 
+\end{DoxyReturn}
+
+
+Definido na linha 238 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+238                          \{
+239   \textcolor{keywordflow}{return} strdup(v->produto);
+240 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_ac48ab849f5af46f09394a208f41029e6}\label{vendas_8c_ac48ab849f5af46f09394a208f41029e6}} 
+\index{vendas.\+c@{vendas.\+c}!get\+Promocao@{get\+Promocao}}
+\index{get\+Promocao@{get\+Promocao}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{get\+Promocao()}{getPromocao()}}
+{\footnotesize\ttfamily int get\+Promocao (\begin{DoxyParamCaption}\item[{Venda $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Acesso à componente promoção. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}v\mbox{]}} & Uma venda \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um r que nos diz se uma promoção é do tipo P (r=1) ou do tipo N (r=0) 
+\end{DoxyReturn}
+
+
+Definido na linha 268 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+268                          \{
+269   \textcolor{keywordtype}{int} r = 0;
+270   \textcolor{keywordflow}{if} (v->promocao == \textcolor{charliteral}{'N'})
+271     r = 0;
+272   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(v->promocao == \textcolor{charliteral}{'P'})
+273     r = 1;
+274   \textcolor{keywordflow}{return} r;
+275 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_ae3196cffdcf5289440c1ee56ed5ee0d7}\label{vendas_8c_ae3196cffdcf5289440c1ee56ed5ee0d7}} 
+\index{vendas.\+c@{vendas.\+c}!get\+Quantidade@{get\+Quantidade}}
+\index{get\+Quantidade@{get\+Quantidade}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{get\+Quantidade()}{getQuantidade()}}
+{\footnotesize\ttfamily int get\+Quantidade (\begin{DoxyParamCaption}\item[{Venda $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Acesso à componente quantidade. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}v\mbox{]}} & Uma venda \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Uma quantidade 
+\end{DoxyReturn}
+
+
+Definido na linha 258 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+258                            \{
+259   \textcolor{keywordflow}{return} v->quantidade;
+260 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_ab7121d1c08c763f3f6f3ab5902682ecd}\label{vendas_8c_ab7121d1c08c763f3f6f3ab5902682ecd}} 
+\index{vendas.\+c@{vendas.\+c}!get\+Venda@{get\+Venda}}
+\index{get\+Venda@{get\+Venda}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{get\+Venda()}{getVenda()}}
+{\footnotesize\ttfamily Venda$\ast$ get\+Venda (\begin{DoxyParamCaption}\item[{VT $\ast$}]{vendas,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Função que devolve um array com as vendas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}produtos\mbox{]}} & Vendas \\
+\hline
+{\em \mbox{[}i\mbox{]}} & Indíce do array str \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Array com as vendas 
+\end{DoxyReturn}
+
+
+Definido na linha 377 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+377                                   \{
+378   \textcolor{keywordflow}{return} &vendas->str[i];
+379 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_a2e874e42b7b9192295e9d78409212f12}\label{vendas_8c_a2e874e42b7b9192295e9d78409212f12}} 
+\index{vendas.\+c@{vendas.\+c}!init\+Vendas@{init\+Vendas}}
+\index{init\+Vendas@{init\+Vendas}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{init\+Vendas()}{initVendas()}}
+{\footnotesize\ttfamily VT$\ast$ init\+Vendas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicialização dos dados das vendas. 
+
+\begin{DoxyReturn}{Retorna}
+Nova venda 
+\end{DoxyReturn}
+
+
+Definido na linha 30 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+30                  \{
+31   VT* v = malloc(\textcolor{keyword}{sizeof}(VT));
+32   v->size = 0;
+33   v->ocupados = 0;
+34   v->lidas = 0;
+35   v->str = NULL;
+36   \textcolor{keywordflow}{return} v;
+37 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_a8f8279380cac3393546f9d2d54b55493}\label{vendas_8c_a8f8279380cac3393546f9d2d54b55493}} 
+\index{vendas.\+c@{vendas.\+c}!market@{market}}
+\index{market@{market}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{market()}{market()}}
+{\footnotesize\ttfamily int market (\begin{DoxyParamCaption}\item[{int}]{super }\end{DoxyParamCaption})}
+
+
+
+Valida a componente filial. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}prod\mbox{]}} & Filial \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um r que nos diz se uma filial é validada (r=1) ou não (r=0) 
+\end{DoxyReturn}
+
+
+Definido na linha 202 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+202                       \{
+203   \textcolor{keywordtype}{int} r = 0;
+204   \textcolor{keywordflow}{if} (super == 1 || super == 2 || super == 3) r = 1;
+205   \textcolor{keywordflow}{return} r;
+206 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_a0b4bbe164a873e171e9758176de52d7f}\label{vendas_8c_a0b4bbe164a873e171e9758176de52d7f}} 
+\index{vendas.\+c@{vendas.\+c}!month@{month}}
+\index{month@{month}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{month()}{month()}}
+{\footnotesize\ttfamily int month (\begin{DoxyParamCaption}\item[{int}]{mes }\end{DoxyParamCaption})}
+
+
+
+Valida a componente mês. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}prod\mbox{]}} & Mês \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um r que nos diz se um mês é validado (r=1) ou não (r=0) 
+\end{DoxyReturn}
+
+
+Definido na linha 179 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+179                    \{
+180   \textcolor{keywordtype}{int} r = 0;
+181   \textcolor{keywordflow}{if} (mes == 1 ||
+182       mes == 2 ||
+183       mes == 3 ||
+184       mes == 4 ||
+185       mes == 5 ||
+186       mes == 6 ||
+187       mes == 7 ||
+188       mes == 8 ||
+189       mes == 9 ||
+190       mes == 10 ||
+191       mes == 11 ||
+192       mes == 12) r = 1;
+193   \textcolor{keywordflow}{return} r;
+194 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_a80f8707201f9b5119865530aeb3515fe}\label{vendas_8c_a80f8707201f9b5119865530aeb3515fe}} 
+\index{vendas.\+c@{vendas.\+c}!price@{price}}
+\index{price@{price}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{price()}{price()}}
+{\footnotesize\ttfamily int price (\begin{DoxyParamCaption}\item[{double}]{preco }\end{DoxyParamCaption})}
+
+
+
+Valida a componente preço. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}prod\mbox{]}} & Preço \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um r que nos diz se um preço é validado (r=1) ou não (r=0) 
+\end{DoxyReturn}
+
+
+Definido na linha 130 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+130                         \{
+131   \textcolor{keywordtype}{int} r = 0;
+132   \textcolor{keywordflow}{if} (preco >= 0) r = 1;
+133   \textcolor{keywordflow}{return} r;
+134 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_a1c768f74950721cd51fbc852da5cd724}\label{vendas_8c_a1c768f74950721cd51fbc852da5cd724}} 
+\index{vendas.\+c@{vendas.\+c}!product@{product}}
+\index{product@{product}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{product()}{product()}}
+{\footnotesize\ttfamily int product (\begin{DoxyParamCaption}\item[{char $\ast$}]{prod,  }\item[{Dados $\ast$}]{produtos }\end{DoxyParamCaption})}
+
+
+
+Valida a componente produto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}prod\mbox{]}} & Um produto \\
+\hline
+{\em \mbox{[}produto\mbox{]}} & Dados dos produtos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um r que nos diz se um produto é validado (r=1) ou não (r=0) 
+\end{DoxyReturn}
+
+
+Definido na linha 116 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+116                                          \{
+117   \textcolor{keywordtype}{int} r = 0;
+118   \textcolor{keywordflow}{if} ((\hyperlink{vendas_8c_af6a785d1d84f6615746c6fcc1143145a}{binarySearch}(produtos->str,0,(produtos->ocupados)-1,prod)) != -1)\{
+119       r = 1;
+120   \}
+121   \textcolor{keywordflow}{return} r;
+122 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_a4d8bdada7a6ca4234e17a0f4c958ffdc}\label{vendas_8c_a4d8bdada7a6ca4234e17a0f4c958ffdc}} 
+\index{vendas.\+c@{vendas.\+c}!promotion@{promotion}}
+\index{promotion@{promotion}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{promotion()}{promotion()}}
+{\footnotesize\ttfamily int promotion (\begin{DoxyParamCaption}\item[{char}]{prom }\end{DoxyParamCaption})}
+
+
+
+Valida a componente promoção. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}prod\mbox{]}} & Promoção \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um r que nos diz se uma promoção é validada (r=1) ou não (r=0) 
+\end{DoxyReturn}
+
+
+Definido na linha 153 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+153                          \{
+154   \textcolor{keywordtype}{int} r = 0;
+155   \textcolor{keywordflow}{if}(prom == \textcolor{charliteral}{'N'} || prom == \textcolor{charliteral}{'P'}) r = 1;
+156   \textcolor{keywordflow}{return} r;
+157 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_a22147cd1e2e6a4da0d9a7b78f1936e30}\label{vendas_8c_a22147cd1e2e6a4da0d9a7b78f1936e30}} 
+\index{vendas.\+c@{vendas.\+c}!quantity@{quantity}}
+\index{quantity@{quantity}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{quantity()}{quantity()}}
+{\footnotesize\ttfamily int quantity (\begin{DoxyParamCaption}\item[{int}]{quant }\end{DoxyParamCaption})}
+
+
+
+Valida a componente quantidade. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}prod\mbox{]}} & Quantidade \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um r que nos diz se uma quantidade é validada (r=1) ou não (r=0) 
+\end{DoxyReturn}
+
+
+Definido na linha 141 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+141                         \{
+142   \textcolor{keywordtype}{int} r = 1;
+143   \textcolor{keywordflow}{if} (quant >= 0) r = 1;
+144   \textcolor{keywordflow}{return} r;
+145 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_a46d5e820149ab77e7379f18e9dd5658f}\label{vendas_8c_a46d5e820149ab77e7379f18e9dd5658f}} 
+\index{vendas.\+c@{vendas.\+c}!read\+\_\+\+Vendas@{read\+\_\+\+Vendas}}
+\index{read\+\_\+\+Vendas@{read\+\_\+\+Vendas}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{read\+\_\+\+Vendas()}{read\_Vendas()}}
+{\footnotesize\ttfamily void read\+\_\+\+Vendas (\begin{DoxyParamCaption}\item[{VT $\ast$}]{vendas,  }\item[{Dados $\ast$}]{produtos,  }\item[{Dados $\ast$}]{clientes,  }\item[{char $\ast$}]{file\+Path }\end{DoxyParamCaption})}
+
+
+
+Função que lê um ficheiro .txt com a informacao relativa às vendas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}vendas\mbox{]}} & Vendas \\
+\hline
+{\em \mbox{[}produtos\mbox{]}} & Dados dos produtos \\
+\hline
+{\em \mbox{[}clientes\mbox{]}} & Dados dos clientes \\
+\hline
+{\em \mbox{[}file\+Path\mbox{]}} & Caminho do ficheiro \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 315 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+315                                                                              \{
+316   FILE* f = fopen(filePath, \textcolor{stringliteral}{"r"});
+317   \textcolor{keywordflow}{if} (f == NULL)\{
+318     printf(\textcolor{stringliteral}{"Ficheiro vendas inexistente\(\backslash\)n"});
+319   \}
+320   \textcolor{keywordtype}{char} str[64];
+321 
+322   \textcolor{keywordflow}{while}(fgets(str,64,f))\{
+323     vendas->lidas++;
+324     \textcolor{keywordtype}{char}* aux = strdup(str);
+325     \textcolor{keywordtype}{char}* prod = strtok(aux,\textcolor{stringliteral}{" "});
+326     \textcolor{keywordtype}{double} pre = atof(strtok(NULL,\textcolor{stringliteral}{" "}));
+327     \textcolor{keywordtype}{int} quant = atoi(strtok(NULL,\textcolor{stringliteral}{" "}));
+328     \textcolor{keywordtype}{char}* prom = strtok(NULL,\textcolor{stringliteral}{" "});
+329     \textcolor{keywordtype}{char}* cli = strtok(NULL,\textcolor{stringliteral}{" "});
+330     \textcolor{keywordtype}{int} mes = atoi(strtok(NULL,\textcolor{stringliteral}{" "}));
+331     \textcolor{keywordtype}{int} super = atoi(strtok(NULL,\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"}));
+332     \textcolor{keywordflow}{if}(\hyperlink{vendas_8c_a27df57465f246def8fbfe1b822b996fb}{valid\_Venda}(prod,pre,quant,prom[0],cli,mes,super,produtos,clientes))\{
+333       \textcolor{keywordflow}{if}(vendas->size == vendas->ocupados)\{
+334         \hyperlink{vendas_8c_a25285041e9e1c908308ef567fc4b4d33}{reallocVendas}(vendas);
+335       \}
+336       vendas->str[vendas->ocupados].produto = strdup(prod);
+337       vendas->str[vendas->ocupados].preco = pre;
+338       vendas->str[vendas->ocupados].quantidade = quant;
+339       vendas->str[vendas->ocupados].promocao = prom[0];
+340       vendas->str[vendas->ocupados].cliente = strdup(cli);
+341       vendas->str[vendas->ocupados].data = mes;
+342       vendas->str[vendas->ocupados].filial= super;
+343       vendas->ocupados++;
+344     \}
+345     free(aux);
+346   \}
+347   fclose(f);
+348 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_a25285041e9e1c908308ef567fc4b4d33}\label{vendas_8c_a25285041e9e1c908308ef567fc4b4d33}} 
+\index{vendas.\+c@{vendas.\+c}!realloc\+Vendas@{realloc\+Vendas}}
+\index{realloc\+Vendas@{realloc\+Vendas}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{realloc\+Vendas()}{reallocVendas()}}
+{\footnotesize\ttfamily void realloc\+Vendas (\begin{DoxyParamCaption}\item[{VT $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Função que realoca a memoria ocupada pelas Vendas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}d\mbox{]}} & Uma venda \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 63 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+63                           \{
+64   v->size  = 2 * v->size +1;
+65   v->str =realloc(v->str,\textcolor{keyword}{sizeof}(Venda)*v->size);
+66   \textcolor{comment}{/*Venda* aux = malloc(sizeof(Venda)*v->size);}
+67 \textcolor{comment}{  int t;}
+68 \textcolor{comment}{  for(t = 0; t < (v->size-1)/2; t++)\{}
+69 \textcolor{comment}{    aux[t].produto = strdup(v->str[t].produto);}
+70 \textcolor{comment}{    free(v->str[t].produto);}
+71 \textcolor{comment}{    aux[t].preco = v->str[t].preco;}
+72 \textcolor{comment}{    aux[t].quantidade = v->str[t].quantidade;}
+73 \textcolor{comment}{    aux[t].promocao = v->str[t].promocao;}
+74 \textcolor{comment}{    aux[t].cliente = strdup(v->str[t].cliente);}
+75 \textcolor{comment}{    free(v->str[t].cliente);}
+76 \textcolor{comment}{    aux[t].data = v->str[t].data;}
+77 \textcolor{comment}{    aux[t].filial= v->str[t].filial;}
+78 \textcolor{comment}{    free(v->str[t]);}
+79 \textcolor{comment}{  \}}
+80 \textcolor{comment}{  free(v->str);}
+81 \textcolor{comment}{  v->str = aux;*/}
+82 
+83 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{vendas_8c_a27df57465f246def8fbfe1b822b996fb}\label{vendas_8c_a27df57465f246def8fbfe1b822b996fb}} 
+\index{vendas.\+c@{vendas.\+c}!valid\+\_\+\+Venda@{valid\+\_\+\+Venda}}
+\index{valid\+\_\+\+Venda@{valid\+\_\+\+Venda}!vendas.\+c@{vendas.\+c}}
+\subsubsection{\texorpdfstring{valid\+\_\+\+Venda()}{valid\_Venda()}}
+{\footnotesize\ttfamily int valid\+\_\+\+Venda (\begin{DoxyParamCaption}\item[{char $\ast$}]{prod,  }\item[{double}]{preco,  }\item[{int}]{quant,  }\item[{char}]{prom,  }\item[{char $\ast$}]{cli,  }\item[{int}]{mes,  }\item[{int}]{super,  }\item[{Dados $\ast$}]{produtos,  }\item[{Dados $\ast$}]{clientes }\end{DoxyParamCaption})}
+
+
+
+Valida a componente venda. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}prod\mbox{]}} & Produto \\
+\hline
+{\em \mbox{[}preco\mbox{]}} & Preço \\
+\hline
+{\em \mbox{[}quant\mbox{]}} & Quantidade \\
+\hline
+{\em \mbox{[}prom\mbox{]}} & Promoção \\
+\hline
+{\em \mbox{[}cli\mbox{]}} & Cliente \\
+\hline
+{\em \mbox{[}produtos\mbox{]}} & Dados dos produtos \\
+\hline
+{\em \mbox{[}clientes\mbox{]}} & Dados dos clientes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um r que nos diz se uma venda é validada (r=1) ou não (r=0) 
+\end{DoxyReturn}
+
+
+Definido na linha 220 do ficheiro vendas.\+c.
+
+
+\begin{DoxyCode}
+220                                                                                                            
+                          \{
+221   \textcolor{keywordtype}{int} r = 1;
+222   \textcolor{keywordflow}{if} (!\hyperlink{vendas_8c_a1c768f74950721cd51fbc852da5cd724}{product}(prod,produtos) ||
+223       !\hyperlink{vendas_8c_a80f8707201f9b5119865530aeb3515fe}{price}(preco) ||
+224       !\hyperlink{vendas_8c_a22147cd1e2e6a4da0d9a7b78f1936e30}{quantity}(quant) ||
+225       !\hyperlink{vendas_8c_a4d8bdada7a6ca4234e17a0f4c958ffdc}{promotion}(prom) ||
+226       !\hyperlink{vendas_8c_ab5f658c9a3766364fea66a37c7d355d6}{client}(cli,clientes) ||
+227       !\hyperlink{vendas_8c_a0b4bbe164a873e171e9758176de52d7f}{month}(mes) ||
+228       !\hyperlink{vendas_8c_a8f8279380cac3393546f9d2d54b55493}{market}(super)) r = 0;
+229   \textcolor{keywordflow}{return} r;
+230 \}
+\end{DoxyCode}

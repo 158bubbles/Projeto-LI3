@@ -1,0 +1,367 @@
+\hypertarget{clientes_8c}{}\section{Referência ao ficheiro clientes.\+c}
+\label{clientes_8c}\index{clientes.\+c@{clientes.\+c}}
+
+
+Ficheiro que contem funções utilizadas para os clientes.  
+
+
+{\ttfamily \#include \char`\"{}clientes.\+h\char`\"{}}\newline
+Diagrama de dependências de inclusão para clientes.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{clientes_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+Dados $\ast$ \hyperlink{clientes_8c_ab5e7eab04f090f920f5ea98c6cb1a505}{init\+Dados} ()
+\begin{DoxyCompactList}\small\item\em Inicialização dos dados dos clientes. \end{DoxyCompactList}\item 
+void \hyperlink{clientes_8c_ab0e31c59339ab5320753ed2e47b91a86}{free\+Dados} (Dados $\ast$l)
+\begin{DoxyCompactList}\small\item\em Função que desaloca a memória ocupada pelos Dados. \end{DoxyCompactList}\item 
+void \hyperlink{clientes_8c_ab93f3f48a62ea57a21aa91347dc699c7}{realloc\+Dados} (Dados $\ast$lista)
+\begin{DoxyCompactList}\small\item\em Função que realoca a memoria ocupada pelos Dados. \end{DoxyCompactList}\item 
+int \hyperlink{clientes_8c_a6f76df6572f78ed7afe910732203b41f}{my\+Compare} (const void $\ast$a, const void $\ast$b)
+\begin{DoxyCompactList}\small\item\em Função que compara duas constantes. \end{DoxyCompactList}\item 
+int \hyperlink{clientes_8c_a5d64af1341f9530f382d2fd3d0fc9dde}{valid\+\_\+\+Clientes} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Valida os clientes. \end{DoxyCompactList}\item 
+void \hyperlink{clientes_8c_a39d3b1a8a7a80fa0eb72d05c9d638110}{read\+\_\+\+Clientes} (Dados $\ast$clientes, char $\ast$file\+Path)
+\begin{DoxyCompactList}\small\item\em Função que lê um ficheiro .txt com a informacao relativa aos clientes. \end{DoxyCompactList}\item 
+int \hyperlink{clientes_8c_a6750303c5f269b2426b738337b1d7801}{get\+OcupadosC} (Dados $\ast$clientes)
+\begin{DoxyCompactList}\small\item\em Função que devolve o espaço ocupado pelos clientes na string. \end{DoxyCompactList}\item 
+int \hyperlink{clientes_8c_a1d7c66163d12b2ea478a59f0ba366388}{get\+SizeC} (Dados $\ast$clientes)
+\begin{DoxyCompactList}\small\item\em Função que obtem o tamanho da string. \end{DoxyCompactList}\item 
+int \hyperlink{clientes_8c_ab90d042b32e5c60ef85c6b1341b8a1b5}{get\+LidasC} (Dados $\ast$clientes)
+\begin{DoxyCompactList}\small\item\em Função que devolve os clientes lidos. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{clientes_8c_a606370124e1d3d3b932d857296710829}{get\+ClienteC} (int i, Dados $\ast$clientes)
+\begin{DoxyCompactList}\small\item\em Função que devolve um array com os clientes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{clientes_8c_a00913187525d42aa3bb739d35000a2f5}\label{clientes_8c_a00913187525d42aa3bb739d35000a2f5}} 
+char $\ast$$\ast$ {\bfseries get\+S\+T\+Rdos\+Clientes} (Dados $\ast$clientes)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Ficheiro que contem funções utilizadas para os clientes. 
+
+Ficheiro utilizado para imprimir os outputs das funçóes.
+
+\subsection{Documentação das funções}
+\mbox{\Hypertarget{clientes_8c_ab0e31c59339ab5320753ed2e47b91a86}\label{clientes_8c_ab0e31c59339ab5320753ed2e47b91a86}} 
+\index{clientes.\+c@{clientes.\+c}!free\+Dados@{free\+Dados}}
+\index{free\+Dados@{free\+Dados}!clientes.\+c@{clientes.\+c}}
+\subsubsection{\texorpdfstring{free\+Dados()}{freeDados()}}
+{\footnotesize\ttfamily void free\+Dados (\begin{DoxyParamCaption}\item[{Dados $\ast$}]{l }\end{DoxyParamCaption})}
+
+
+
+Função que desaloca a memória ocupada pelos Dados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}d\mbox{]}} & Dados \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 37 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}
+37                         \{
+38     \textcolor{keywordtype}{int} i;
+39     \textcolor{keywordflow}{for}(i = 0;i<l->ocupados;i++)
+40         free(l->str[i]);
+41     free(l->str);
+42     free(l);
+43 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{clientes_8c_a606370124e1d3d3b932d857296710829}\label{clientes_8c_a606370124e1d3d3b932d857296710829}} 
+\index{clientes.\+c@{clientes.\+c}!get\+ClienteC@{get\+ClienteC}}
+\index{get\+ClienteC@{get\+ClienteC}!clientes.\+c@{clientes.\+c}}
+\subsubsection{\texorpdfstring{get\+Cliente\+C()}{getClienteC()}}
+{\footnotesize\ttfamily char$\ast$ get\+ClienteC (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{Dados $\ast$}]{clientes }\end{DoxyParamCaption})}
+
+
+
+Função que devolve um array com os clientes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}i\mbox{]}} & Indíce do array str \\
+\hline
+{\em \mbox{[}clientes\mbox{]}} & Dados dos clientes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Array com os clientes 
+\end{DoxyReturn}
+
+
+Definido na linha 168 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}
+168                                          \{
+169   \textcolor{keywordflow}{return} strdup(clientes->str[i]);
+170 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{clientes_8c_ab90d042b32e5c60ef85c6b1341b8a1b5}\label{clientes_8c_ab90d042b32e5c60ef85c6b1341b8a1b5}} 
+\index{clientes.\+c@{clientes.\+c}!get\+LidasC@{get\+LidasC}}
+\index{get\+LidasC@{get\+LidasC}!clientes.\+c@{clientes.\+c}}
+\subsubsection{\texorpdfstring{get\+Lidas\+C()}{getLidasC()}}
+{\footnotesize\ttfamily int get\+LidasC (\begin{DoxyParamCaption}\item[{Dados $\ast$}]{clientes }\end{DoxyParamCaption})}
+
+
+
+Função que devolve os clientes lidos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}produtos\mbox{]}} & Dados dos clientes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Clientes lidos 
+\end{DoxyReturn}
+
+
+Definido na linha 158 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}
+158                                \{
+159   \textcolor{keywordflow}{return} clientes->lidas;
+160 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{clientes_8c_a6750303c5f269b2426b738337b1d7801}\label{clientes_8c_a6750303c5f269b2426b738337b1d7801}} 
+\index{clientes.\+c@{clientes.\+c}!get\+OcupadosC@{get\+OcupadosC}}
+\index{get\+OcupadosC@{get\+OcupadosC}!clientes.\+c@{clientes.\+c}}
+\subsubsection{\texorpdfstring{get\+Ocupados\+C()}{getOcupadosC()}}
+{\footnotesize\ttfamily int get\+OcupadosC (\begin{DoxyParamCaption}\item[{Dados $\ast$}]{clientes }\end{DoxyParamCaption})}
+
+
+
+Função que devolve o espaço ocupado pelos clientes na string. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}produtos\mbox{]}} & Dados dos clientes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Espaço ocupado pelos produtos na string 
+\end{DoxyReturn}
+
+
+Definido na linha 140 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}
+140                                   \{
+141   \textcolor{keywordflow}{return} clientes->ocupados;
+142 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{clientes_8c_a1d7c66163d12b2ea478a59f0ba366388}\label{clientes_8c_a1d7c66163d12b2ea478a59f0ba366388}} 
+\index{clientes.\+c@{clientes.\+c}!get\+SizeC@{get\+SizeC}}
+\index{get\+SizeC@{get\+SizeC}!clientes.\+c@{clientes.\+c}}
+\subsubsection{\texorpdfstring{get\+Size\+C()}{getSizeC()}}
+{\footnotesize\ttfamily int get\+SizeC (\begin{DoxyParamCaption}\item[{Dados $\ast$}]{clientes }\end{DoxyParamCaption})}
+
+
+
+Função que obtem o tamanho da string. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}clientes\mbox{]}} & Dados dos clientes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Tamanho da string 
+\end{DoxyReturn}
+
+
+Definido na linha 149 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}
+149                               \{
+150   \textcolor{keywordflow}{return} clientes->ocupados;
+151 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{clientes_8c_ab5e7eab04f090f920f5ea98c6cb1a505}\label{clientes_8c_ab5e7eab04f090f920f5ea98c6cb1a505}} 
+\index{clientes.\+c@{clientes.\+c}!init\+Dados@{init\+Dados}}
+\index{init\+Dados@{init\+Dados}!clientes.\+c@{clientes.\+c}}
+\subsubsection{\texorpdfstring{init\+Dados()}{initDados()}}
+{\footnotesize\ttfamily Dados$\ast$ init\+Dados (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicialização dos dados dos clientes. 
+
+\begin{DoxyReturn}{Retorna}
+Novo dado 
+\end{DoxyReturn}
+
+
+Definido na linha 12 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}
+12                    \{
+13   Dados* d = malloc(\textcolor{keyword}{sizeof}(Dados));
+14   d->size = 1;
+15   d->ocupados = 0;
+16   d->lidas = 0;
+17   d->str = malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));
+18   \textcolor{keywordflow}{return} d;
+19 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{clientes_8c_a6f76df6572f78ed7afe910732203b41f}\label{clientes_8c_a6f76df6572f78ed7afe910732203b41f}} 
+\index{clientes.\+c@{clientes.\+c}!my\+Compare@{my\+Compare}}
+\index{my\+Compare@{my\+Compare}!clientes.\+c@{clientes.\+c}}
+\subsubsection{\texorpdfstring{my\+Compare()}{myCompare()}}
+{\footnotesize\ttfamily int my\+Compare (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Função que compara duas constantes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}a\mbox{]}} & Uma constante \\
+\hline
+{\em \mbox{[}b\mbox{]}} & Uma constante \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Resultado desta comparação 
+\end{DoxyReturn}
+
+
+Definido na linha 81 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}
+81                                                 \{
+82     \textcolor{keyword}{const} \textcolor{keywordtype}{char} *pa = *(\textcolor{keyword}{const} \textcolor{keywordtype}{char}**)a;
+83     \textcolor{keyword}{const} \textcolor{keywordtype}{char} *pb = *(\textcolor{keyword}{const} \textcolor{keywordtype}{char}**)b;
+84 
+85     \textcolor{keywordflow}{return} strcmp(pa,pb);
+86 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{clientes_8c_a39d3b1a8a7a80fa0eb72d05c9d638110}\label{clientes_8c_a39d3b1a8a7a80fa0eb72d05c9d638110}} 
+\index{clientes.\+c@{clientes.\+c}!read\+\_\+\+Clientes@{read\+\_\+\+Clientes}}
+\index{read\+\_\+\+Clientes@{read\+\_\+\+Clientes}!clientes.\+c@{clientes.\+c}}
+\subsubsection{\texorpdfstring{read\+\_\+\+Clientes()}{read\_Clientes()}}
+{\footnotesize\ttfamily void read\+\_\+\+Clientes (\begin{DoxyParamCaption}\item[{Dados $\ast$}]{clientes,  }\item[{char $\ast$}]{file\+Path }\end{DoxyParamCaption})}
+
+
+
+Função que lê um ficheiro .txt com a informacao relativa aos clientes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}clientes\mbox{]}} & Dados dos clientes \\
+\hline
+{\em \mbox{[}file\+Path\mbox{]}} & Caminho do ficheiro \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 112 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}
+112                                                     \{
+113   FILE* f = fopen(filePath, \textcolor{stringliteral}{"r"});
+114   \textcolor{keywordflow}{if} (f == NULL)\{
+115     printf(\textcolor{stringliteral}{"Ficheiro clientes inexistente\(\backslash\)n"});
+116   \}
+117   \textcolor{keywordtype}{char} str[1024];
+118 
+119   \textcolor{keywordflow}{while}(fgets(str,1024,f))\{
+120     clientes->lidas++;
+121     \textcolor{keywordflow}{if}(\hyperlink{clientes_8c_a5d64af1341f9530f382d2fd3d0fc9dde}{valid\_Clientes}(strtok(str,\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"})) == 1)\{
+122       \textcolor{keywordflow}{if}(clientes->size == clientes->ocupados)\{
+123         \hyperlink{clientes_8c_ab93f3f48a62ea57a21aa91347dc699c7}{reallocDados}(clientes);
+124       \}
+125       clientes->str[clientes->ocupados] = strdup(str);
+126       clientes->ocupados++;
+127 
+128     \}
+129   \}
+130   qsort(clientes->str,clientes->ocupados,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*),\hyperlink{clientes_8c_a6f76df6572f78ed7afe910732203b41f}{myCompare});
+131   fclose(f);
+132 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{clientes_8c_ab93f3f48a62ea57a21aa91347dc699c7}\label{clientes_8c_ab93f3f48a62ea57a21aa91347dc699c7}} 
+\index{clientes.\+c@{clientes.\+c}!realloc\+Dados@{realloc\+Dados}}
+\index{realloc\+Dados@{realloc\+Dados}!clientes.\+c@{clientes.\+c}}
+\subsubsection{\texorpdfstring{realloc\+Dados()}{reallocDados()}}
+{\footnotesize\ttfamily void realloc\+Dados (\begin{DoxyParamCaption}\item[{Dados $\ast$}]{lista }\end{DoxyParamCaption})}
+
+
+
+Função que realoca a memoria ocupada pelos Dados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}d\mbox{]}} & Dados \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 63 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}
+63                                \{
+64     \textcolor{keywordtype}{int} i;
+65     \textcolor{keywordtype}{char} **tmp = malloc(2*lista->size*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));
+66     \textcolor{keywordflow}{for}(i = 0;i<lista->size;i++)\{
+67         tmp[i] = lista->str[i];
+68     \}
+69     free(lista->str);
+70     lista->str = tmp;
+71     lista->size *=2;
+72 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{clientes_8c_a5d64af1341f9530f382d2fd3d0fc9dde}\label{clientes_8c_a5d64af1341f9530f382d2fd3d0fc9dde}} 
+\index{clientes.\+c@{clientes.\+c}!valid\+\_\+\+Clientes@{valid\+\_\+\+Clientes}}
+\index{valid\+\_\+\+Clientes@{valid\+\_\+\+Clientes}!clientes.\+c@{clientes.\+c}}
+\subsubsection{\texorpdfstring{valid\+\_\+\+Clientes()}{valid\_Clientes()}}
+{\footnotesize\ttfamily int valid\+\_\+\+Clientes (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Valida os clientes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}str\mbox{]}} & Código de um cliente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um r que nos diz se um cliente é valido (r=1) ou invalido (r=0) 
+\end{DoxyReturn}
+
+
+Definido na linha 94 do ficheiro clientes.\+c.
+
+
+\begin{DoxyCode}
+94                               \{
+95   \textcolor{keywordtype}{int} i,r = 1;
+96   \textcolor{keywordtype}{int} l = strlen(str);
+97   \textcolor{keywordflow}{if} (l == 5 && (isupper(str[0])) > 0) \{
+98     \textcolor{keywordflow}{for} (i = 1; i < l-1 && r == 1; i++)\{
+99       \textcolor{keywordflow}{if} (!(isdigit(str[i]))) r = 0;
+100     \}
+101   \}
+102   \textcolor{keywordflow}{else} r = 0;
+103   \textcolor{keywordflow}{return} r;
+104 \}
+\end{DoxyCode}

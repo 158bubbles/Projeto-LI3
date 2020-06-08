@@ -1,0 +1,542 @@
+\hypertarget{tree_8c}{}\section{Referência ao ficheiro tree.\+c}
+\label{tree_8c}\index{tree.\+c@{tree.\+c}}
+
+
+Ficheiro que contem funções utilizadas na construção da A\+VL utilizada e em todas as funcionalidades por esta suportadas.  
+
+
+{\ttfamily \#include \char`\"{}tree.\+h\char`\"{}}\newline
+Diagrama de dependências de inclusão para tree.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=121pt]{tree_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structNode}{Node}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{tree_8c_a104bddcadd9707197019259239c1a58b}{height} (struct \hyperlink{structNode}{Node} $\ast$N)
+\begin{DoxyCompactList}\small\item\em Função que calcula a altura de um nodo. \end{DoxyCompactList}\item 
+int \hyperlink{tree_8c_af082905f7eac6d03e92015146bbc1925}{max} (int a, int b)
+\begin{DoxyCompactList}\small\item\em Função que devolve o máximo de dois inteiros. \end{DoxyCompactList}\item 
+struct \hyperlink{structNode}{Node} $\ast$ \hyperlink{tree_8c_a6ef0036e40936f1377e0774df4a14fa2}{init\+A\+VL} ()
+\begin{DoxyCompactList}\small\item\em Inicializa uma A\+VL. \end{DoxyCompactList}\item 
+int \hyperlink{tree_8c_afc35ee30a700f9c8eae2a186d262169e}{num\+Node} (A\+VL $\ast$nodo)
+\begin{DoxyCompactList}\small\item\em Função que devolve o número de nodos da árvore. \end{DoxyCompactList}\item 
+struct \hyperlink{structNode}{Node} $\ast$ \hyperlink{tree_8c_a1c8db440cd3383e117d2b840c00da573}{new\+Node} (char $\ast$key, void $\ast$a)
+\begin{DoxyCompactList}\small\item\em Funcao que cria um novo nodo. \end{DoxyCompactList}\item 
+struct \hyperlink{structNode}{Node} $\ast$ \hyperlink{tree_8c_a21652fe3310af35bb6d05cc64be6c958}{right\+Rotate} (struct \hyperlink{structNode}{Node} $\ast$y)
+\begin{DoxyCompactList}\small\item\em Função que efetua uma rotação da árvore para a direita. \end{DoxyCompactList}\item 
+struct \hyperlink{structNode}{Node} $\ast$ \hyperlink{tree_8c_aa14c3e3be03cd95fa83ddf927846ca72}{left\+Rotate} (struct \hyperlink{structNode}{Node} $\ast$x)
+\begin{DoxyCompactList}\small\item\em Função que efetua uma rotação da árvore para a esquerda. \end{DoxyCompactList}\item 
+int \hyperlink{tree_8c_aa40aa29ef5169ee7f528ea7b7beab43c}{get\+Balance} (struct \hyperlink{structNode}{Node} $\ast$N)
+\begin{DoxyCompactList}\small\item\em Função que vê se a arvore é balanceada. \end{DoxyCompactList}\item 
+struct \hyperlink{structNode}{Node} $\ast$ \hyperlink{tree_8c_a8792d9847f06c27e4955b63f63239305}{insert} (struct \hyperlink{structNode}{Node} $\ast$node, char $\ast$key, void $\ast$equals)
+\begin{DoxyCompactList}\small\item\em Função que insere um elemento na árvore. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tree_8c_a35c2e83613567d89cecfdd11be4683a5}\label{tree_8c_a35c2e83613567d89cecfdd11be4683a5}} 
+A\+VL $\ast$ {\bfseries search\+A\+V\+L\+T\+MP} (A\+VL $\ast$node, char $\ast$key)
+\item 
+int \hyperlink{tree_8c_a56e7dddb3c67ac22f3373a010c1c9e21}{search\+A\+VL} (A\+VL $\ast$node, char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Função que procura um elemento na árvore. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{tree_8c_af043329377f4d9303267455cd353fd83}{get\+Key} (A\+VL $\ast$a)
+\begin{DoxyCompactList}\small\item\em Função que devolve a key de a. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{tree_8c_a1c2789a702672b4fb99d2c622181f949}{get\+Equals} (A\+VL $\ast$a)
+\begin{DoxyCompactList}\small\item\em Função que devolve o equals de a. \end{DoxyCompactList}\item 
+A\+VL $\ast$ \hyperlink{tree_8c_a055813fad18fbe1331c4568fbb9b53ca}{get\+Left} (A\+VL $\ast$a)
+\begin{DoxyCompactList}\small\item\em Função que devolve a esquerda de a. \end{DoxyCompactList}\item 
+A\+VL $\ast$ \hyperlink{tree_8c_aa92a92ff16f40e2381b0452982b620b3}{get\+Right} (A\+VL $\ast$a)
+\begin{DoxyCompactList}\small\item\em Função que devolve a direita de a. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Ficheiro que contem funções utilizadas na construção da A\+VL utilizada e em todas as funcionalidades por esta suportadas. 
+
+
+
+\subsection{Documentação das funções}
+\mbox{\Hypertarget{tree_8c_aa40aa29ef5169ee7f528ea7b7beab43c}\label{tree_8c_aa40aa29ef5169ee7f528ea7b7beab43c}} 
+\index{tree.\+c@{tree.\+c}!get\+Balance@{get\+Balance}}
+\index{get\+Balance@{get\+Balance}!tree.\+c@{tree.\+c}}
+\subsubsection{\texorpdfstring{get\+Balance()}{getBalance()}}
+{\footnotesize\ttfamily int get\+Balance (\begin{DoxyParamCaption}\item[{struct \hyperlink{structNode}{Node} $\ast$}]{N }\end{DoxyParamCaption})}
+
+
+
+Função que vê se a arvore é balanceada. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}\+N\mbox{]}} & Apontador para o nodo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Árvore balanceada 
+\end{DoxyReturn}
+
+
+Definido na linha 134 do ficheiro tree.\+c.
+
+
+\begin{DoxyCode}
+135 \{
+136     \textcolor{keywordflow}{if} (N == NULL)
+137         \textcolor{keywordflow}{return} 0;
+138     \textcolor{keywordflow}{return} \hyperlink{tree_8c_a104bddcadd9707197019259239c1a58b}{height}(N->left) - \hyperlink{tree_8c_a104bddcadd9707197019259239c1a58b}{height}(N->right);
+139 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tree_8c_a1c2789a702672b4fb99d2c622181f949}\label{tree_8c_a1c2789a702672b4fb99d2c622181f949}} 
+\index{tree.\+c@{tree.\+c}!get\+Equals@{get\+Equals}}
+\index{get\+Equals@{get\+Equals}!tree.\+c@{tree.\+c}}
+\subsubsection{\texorpdfstring{get\+Equals()}{getEquals()}}
+{\footnotesize\ttfamily void$\ast$ get\+Equals (\begin{DoxyParamCaption}\item[{A\+VL $\ast$}]{a }\end{DoxyParamCaption})}
+
+
+
+Função que devolve o equals de a. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}a\mbox{]}} & a é um apontador do tipo A\+VL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Equals de a 
+\end{DoxyReturn}
+
+
+Definido na linha 236 do ficheiro tree.\+c.
+
+
+\begin{DoxyCode}
+236                        \{
+237   \textcolor{keywordflow}{return} (\textcolor{keywordtype}{void}*)a->equals;
+238 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tree_8c_af043329377f4d9303267455cd353fd83}\label{tree_8c_af043329377f4d9303267455cd353fd83}} 
+\index{tree.\+c@{tree.\+c}!get\+Key@{get\+Key}}
+\index{get\+Key@{get\+Key}!tree.\+c@{tree.\+c}}
+\subsubsection{\texorpdfstring{get\+Key()}{getKey()}}
+{\footnotesize\ttfamily char$\ast$ get\+Key (\begin{DoxyParamCaption}\item[{A\+VL $\ast$}]{a }\end{DoxyParamCaption})}
+
+
+
+Função que devolve a key de a. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}a\mbox{]}} & a é um apontador do tipo A\+VL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Key de a 
+\end{DoxyReturn}
+
+
+Definido na linha 227 do ficheiro tree.\+c.
+
+
+\begin{DoxyCode}
+227                     \{
+228   \textcolor{keywordflow}{return} a->key;
+229 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tree_8c_a055813fad18fbe1331c4568fbb9b53ca}\label{tree_8c_a055813fad18fbe1331c4568fbb9b53ca}} 
+\index{tree.\+c@{tree.\+c}!get\+Left@{get\+Left}}
+\index{get\+Left@{get\+Left}!tree.\+c@{tree.\+c}}
+\subsubsection{\texorpdfstring{get\+Left()}{getLeft()}}
+{\footnotesize\ttfamily A\+VL$\ast$ get\+Left (\begin{DoxyParamCaption}\item[{A\+VL $\ast$}]{a }\end{DoxyParamCaption})}
+
+
+
+Função que devolve a esquerda de a. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}a\mbox{]}} & a é um apontador do tipo A\+VL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Esquerda de a 
+\end{DoxyReturn}
+
+
+Definido na linha 245 do ficheiro tree.\+c.
+
+
+\begin{DoxyCode}
+245                      \{
+246   \textcolor{keywordflow}{return} a->left;
+247 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tree_8c_aa92a92ff16f40e2381b0452982b620b3}\label{tree_8c_aa92a92ff16f40e2381b0452982b620b3}} 
+\index{tree.\+c@{tree.\+c}!get\+Right@{get\+Right}}
+\index{get\+Right@{get\+Right}!tree.\+c@{tree.\+c}}
+\subsubsection{\texorpdfstring{get\+Right()}{getRight()}}
+{\footnotesize\ttfamily A\+VL$\ast$ get\+Right (\begin{DoxyParamCaption}\item[{A\+VL $\ast$}]{a }\end{DoxyParamCaption})}
+
+
+
+Função que devolve a direita de a. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}a\mbox{]}} & a é um apontador do tipo A\+VL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Direita de a 
+\end{DoxyReturn}
+
+
+Definido na linha 254 do ficheiro tree.\+c.
+
+
+\begin{DoxyCode}
+254                       \{
+255   \textcolor{keywordflow}{return} a->right;
+256 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tree_8c_a104bddcadd9707197019259239c1a58b}\label{tree_8c_a104bddcadd9707197019259239c1a58b}} 
+\index{tree.\+c@{tree.\+c}!height@{height}}
+\index{height@{height}!tree.\+c@{tree.\+c}}
+\subsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily int height (\begin{DoxyParamCaption}\item[{struct \hyperlink{structNode}{Node} $\ast$}]{N }\end{DoxyParamCaption})}
+
+
+
+Função que calcula a altura de um nodo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}\+N\mbox{]}} & Apontador para o nodo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Altura de um nodo 
+\end{DoxyReturn}
+
+
+Definido na linha 22 do ficheiro tree.\+c.
+
+
+\begin{DoxyCode}
+23 \{
+24     \textcolor{keywordflow}{if} (N == NULL)
+25         \textcolor{keywordflow}{return} 0;
+26     \textcolor{keywordflow}{return} N->height;
+27 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tree_8c_a6ef0036e40936f1377e0774df4a14fa2}\label{tree_8c_a6ef0036e40936f1377e0774df4a14fa2}} 
+\index{tree.\+c@{tree.\+c}!init\+A\+VL@{init\+A\+VL}}
+\index{init\+A\+VL@{init\+A\+VL}!tree.\+c@{tree.\+c}}
+\subsubsection{\texorpdfstring{init\+A\+V\+L()}{initAVL()}}
+{\footnotesize\ttfamily struct \hyperlink{structNode}{Node}$\ast$ init\+A\+VL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa uma A\+VL. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna a A\+VL inicializada 
+\end{DoxyReturn}
+
+
+Definido na linha 46 do ficheiro tree.\+c.
+
+
+\begin{DoxyCode}
+46                        \{
+47   AVL* a = malloc(\textcolor{keyword}{sizeof}(AVL));
+48   a->key = NULL;
+49   a->left = NULL;
+50   a->height = 0;
+51   a->right = NULL;
+52   a->equals = NULL;
+53   \textcolor{keywordflow}{return} a;
+54 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tree_8c_a8792d9847f06c27e4955b63f63239305}\label{tree_8c_a8792d9847f06c27e4955b63f63239305}} 
+\index{tree.\+c@{tree.\+c}!insert@{insert}}
+\index{insert@{insert}!tree.\+c@{tree.\+c}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily struct \hyperlink{structNode}{Node}$\ast$ insert (\begin{DoxyParamCaption}\item[{struct \hyperlink{structNode}{Node} $\ast$}]{node,  }\item[{char $\ast$}]{key,  }\item[{void $\ast$}]{equals }\end{DoxyParamCaption})}
+
+
+
+Função que insere um elemento na árvore. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}node\mbox{]}} & \hyperlink{structNode}{Node} é um apontador para a struct \\
+\hline
+{\em \mbox{[}key\mbox{]}} & Key é um apontador de um char \\
+\hline
+{\em \mbox{[}equals\mbox{]}} & Equals é um apontador de um void \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Apontador para a estrutura após ter sido inserido o valor 
+\end{DoxyReturn}
+
+
+Definido na linha 149 do ficheiro tree.\+c.
+
+
+\begin{DoxyCode}
+150 \{
+151 
+152     \textcolor{keywordflow}{if} (node == NULL)
+153         \textcolor{keywordflow}{return}(\hyperlink{tree_8c_a1c8db440cd3383e117d2b840c00da573}{newNode}(key,equals));
+154 
+155     \textcolor{keywordflow}{if} ((strcmp(key, node->key)) < 0)
+156         node->left  = \hyperlink{tree_8c_a8792d9847f06c27e4955b63f63239305}{insert}(node->left, key,equals);
+157     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(key, node->key) > 0)
+158         node->right = \hyperlink{tree_8c_a8792d9847f06c27e4955b63f63239305}{insert}(node->right, key,equals);
+159 
+160     node->height = 1 + \hyperlink{tree_8c_af082905f7eac6d03e92015146bbc1925}{max}(\hyperlink{tree_8c_a104bddcadd9707197019259239c1a58b}{height}(node->left),
+161                            \hyperlink{tree_8c_a104bddcadd9707197019259239c1a58b}{height}(node->right));
+162 
+163 
+164 
+165     \textcolor{keywordtype}{int} balance = \hyperlink{tree_8c_aa40aa29ef5169ee7f528ea7b7beab43c}{getBalance}(node);
+166 
+167     \textcolor{keywordflow}{if} (balance > 1 && strcmp(key, node->left->key) < 0)
+168         \textcolor{keywordflow}{return} \hyperlink{tree_8c_a21652fe3310af35bb6d05cc64be6c958}{rightRotate}(node);
+169 
+170     \textcolor{keywordflow}{if} (balance < -1 && strcmp(key, node->right->key) >= 0)
+171         \textcolor{keywordflow}{return} \hyperlink{tree_8c_aa14c3e3be03cd95fa83ddf927846ca72}{leftRotate}(node);
+172 
+173     \textcolor{keywordflow}{if} (balance > 1 && strcmp(key, node->left->key) >= 0)
+174     \{
+175         node->left =  \hyperlink{tree_8c_aa14c3e3be03cd95fa83ddf927846ca72}{leftRotate}(node->left);
+176         \textcolor{keywordflow}{return} \hyperlink{tree_8c_a21652fe3310af35bb6d05cc64be6c958}{rightRotate}(node);
+177     \}
+178 
+179     \textcolor{keywordflow}{if} (balance < -1 && strcmp(key, node->right->key) < 0)
+180     \{
+181         node->right = \hyperlink{tree_8c_a21652fe3310af35bb6d05cc64be6c958}{rightRotate}(node->right);
+182         \textcolor{keywordflow}{return} \hyperlink{tree_8c_aa14c3e3be03cd95fa83ddf927846ca72}{leftRotate}(node);
+183     \}
+184 
+185     \textcolor{keywordflow}{return} node;
+186 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tree_8c_aa14c3e3be03cd95fa83ddf927846ca72}\label{tree_8c_aa14c3e3be03cd95fa83ddf927846ca72}} 
+\index{tree.\+c@{tree.\+c}!left\+Rotate@{left\+Rotate}}
+\index{left\+Rotate@{left\+Rotate}!tree.\+c@{tree.\+c}}
+\subsubsection{\texorpdfstring{left\+Rotate()}{leftRotate()}}
+{\footnotesize\ttfamily struct \hyperlink{structNode}{Node}$\ast$ left\+Rotate (\begin{DoxyParamCaption}\item[{struct \hyperlink{structNode}{Node} $\ast$}]{x }\end{DoxyParamCaption})}
+
+
+
+Função que efetua uma rotação da árvore para a esquerda. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}x\mbox{]}} & Apontador para o nodo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Árvore após ser rodada para a esquerda 
+\end{DoxyReturn}
+
+
+Definido na linha 114 do ficheiro tree.\+c.
+
+
+\begin{DoxyCode}
+115 \{
+116     \textcolor{keyword}{struct }\hyperlink{structNode}{Node} *y = x->right;
+117     \textcolor{keyword}{struct }\hyperlink{structNode}{Node} *T2 = y->left;
+118 
+119     y->left = x;
+120     x->right = T2;
+121 
+122     x->height = \hyperlink{tree_8c_af082905f7eac6d03e92015146bbc1925}{max}(\hyperlink{tree_8c_a104bddcadd9707197019259239c1a58b}{height}(x->left), \hyperlink{tree_8c_a104bddcadd9707197019259239c1a58b}{height}(x->right))+1;
+123     y->height = \hyperlink{tree_8c_af082905f7eac6d03e92015146bbc1925}{max}(\hyperlink{tree_8c_a104bddcadd9707197019259239c1a58b}{height}(y->left), \hyperlink{tree_8c_a104bddcadd9707197019259239c1a58b}{height}(y->right))+1;
+124 
+125     \textcolor{keywordflow}{return} y;
+126 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tree_8c_af082905f7eac6d03e92015146bbc1925}\label{tree_8c_af082905f7eac6d03e92015146bbc1925}} 
+\index{tree.\+c@{tree.\+c}!max@{max}}
+\index{max@{max}!tree.\+c@{tree.\+c}}
+\subsubsection{\texorpdfstring{max()}{max()}}
+{\footnotesize\ttfamily int max (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+Função que devolve o máximo de dois inteiros. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}a\mbox{]}} & Um dos inteiros para comparação \\
+\hline
+{\em \mbox{[}b\mbox{]}} & Um dos inteiros para comparação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Máximo entre dois inteiros 
+\end{DoxyReturn}
+
+
+Definido na linha 36 do ficheiro tree.\+c.
+
+
+\begin{DoxyCode}
+37 \{
+38     \textcolor{keywordflow}{return} (a > b)? a : b;
+39 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tree_8c_a1c8db440cd3383e117d2b840c00da573}\label{tree_8c_a1c8db440cd3383e117d2b840c00da573}} 
+\index{tree.\+c@{tree.\+c}!new\+Node@{new\+Node}}
+\index{new\+Node@{new\+Node}!tree.\+c@{tree.\+c}}
+\subsubsection{\texorpdfstring{new\+Node()}{newNode()}}
+{\footnotesize\ttfamily struct \hyperlink{structNode}{Node}$\ast$ new\+Node (\begin{DoxyParamCaption}\item[{char $\ast$}]{key,  }\item[{void $\ast$}]{a }\end{DoxyParamCaption})}
+
+
+
+Funcao que cria um novo nodo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}key\mbox{]}} & Char$\ast$ utilizado para a key da arvore \\
+\hline
+{\em \mbox{[}equals\mbox{]}} & Parametro void que será inserido no equals da A\+VL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o novo nodo 
+\end{DoxyReturn}
+
+
+Definido na linha 76 do ficheiro tree.\+c.
+
+
+\begin{DoxyCode}
+77 \{
+78     \textcolor{keyword}{struct }\hyperlink{structNode}{Node}* node = (\textcolor{keyword}{struct }\hyperlink{structNode}{Node}*)
+79                         malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \hyperlink{structNode}{Node}));
+80     node->key = key;
+81     node->left = NULL;
+82     node->right = NULL;
+83     node->height = 1;
+84     node->equals = a;
+85 
+86     \textcolor{keywordflow}{return}(node);
+87 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tree_8c_afc35ee30a700f9c8eae2a186d262169e}\label{tree_8c_afc35ee30a700f9c8eae2a186d262169e}} 
+\index{tree.\+c@{tree.\+c}!num\+Node@{num\+Node}}
+\index{num\+Node@{num\+Node}!tree.\+c@{tree.\+c}}
+\subsubsection{\texorpdfstring{num\+Node()}{numNode()}}
+{\footnotesize\ttfamily int num\+Node (\begin{DoxyParamCaption}\item[{A\+VL $\ast$}]{nodo }\end{DoxyParamCaption})}
+
+
+
+Função que devolve o número de nodos da árvore. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}nodo\mbox{]}} & Nodo é um apontador do tipo A\+VL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Numero de nodos da árvore 
+\end{DoxyReturn}
+
+
+Definido na linha 62 do ficheiro tree.\+c.
+
+
+\begin{DoxyCode}
+62                       \{
+63   \textcolor{keywordflow}{if} (nodo)\{
+64     \textcolor{keywordflow}{return} 1 + \hyperlink{tree_8c_afc35ee30a700f9c8eae2a186d262169e}{numNode}(nodo->left) + \hyperlink{tree_8c_afc35ee30a700f9c8eae2a186d262169e}{numNode}(nodo->right);
+65   \}
+66   \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0;
+67 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tree_8c_a21652fe3310af35bb6d05cc64be6c958}\label{tree_8c_a21652fe3310af35bb6d05cc64be6c958}} 
+\index{tree.\+c@{tree.\+c}!right\+Rotate@{right\+Rotate}}
+\index{right\+Rotate@{right\+Rotate}!tree.\+c@{tree.\+c}}
+\subsubsection{\texorpdfstring{right\+Rotate()}{rightRotate()}}
+{\footnotesize\ttfamily struct \hyperlink{structNode}{Node}$\ast$ right\+Rotate (\begin{DoxyParamCaption}\item[{struct \hyperlink{structNode}{Node} $\ast$}]{y }\end{DoxyParamCaption})}
+
+
+
+Função que efetua uma rotação da árvore para a direita. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}y\mbox{]}} & Apontador para o nodo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Árvore após ser rodada para a direita 
+\end{DoxyReturn}
+
+
+Definido na linha 94 do ficheiro tree.\+c.
+
+
+\begin{DoxyCode}
+95 \{
+96     \textcolor{keyword}{struct }\hyperlink{structNode}{Node} *x = y->left;
+97     \textcolor{keyword}{struct }\hyperlink{structNode}{Node} *T2 = x->right;
+98 
+99     x->right = y;
+100     y->left = T2;
+101 
+102     y->height = \hyperlink{tree_8c_af082905f7eac6d03e92015146bbc1925}{max}(\hyperlink{tree_8c_a104bddcadd9707197019259239c1a58b}{height}(y->left), \hyperlink{tree_8c_a104bddcadd9707197019259239c1a58b}{height}(y->right))+1;
+103     x->height = \hyperlink{tree_8c_af082905f7eac6d03e92015146bbc1925}{max}(\hyperlink{tree_8c_a104bddcadd9707197019259239c1a58b}{height}(x->left), \hyperlink{tree_8c_a104bddcadd9707197019259239c1a58b}{height}(x->right))+1;
+104 
+105     \textcolor{keywordflow}{return} x;
+106 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tree_8c_a56e7dddb3c67ac22f3373a010c1c9e21}\label{tree_8c_a56e7dddb3c67ac22f3373a010c1c9e21}} 
+\index{tree.\+c@{tree.\+c}!search\+A\+VL@{search\+A\+VL}}
+\index{search\+A\+VL@{search\+A\+VL}!tree.\+c@{tree.\+c}}
+\subsubsection{\texorpdfstring{search\+A\+V\+L()}{searchAVL()}}
+{\footnotesize\ttfamily int search\+A\+VL (\begin{DoxyParamCaption}\item[{A\+VL $\ast$}]{node,  }\item[{char $\ast$}]{key }\end{DoxyParamCaption})}
+
+
+
+Função que procura um elemento na árvore. 
+
+\} 
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}node\mbox{]}} & Nodo é um apontador do tipo A\+VL \\
+\hline
+{\em \mbox{[}key\mbox{]}} & Key é um apontador de um char \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Resultado da procura, retornando 0 caso essa procura falhe 
+\end{DoxyReturn}
+
+
+Definido na linha 208 do ficheiro tree.\+c.
+
+
+\begin{DoxyCode}
+208                                     \{
+209 
+210     \textcolor{keywordflow}{if}(node == NULL)
+211         \textcolor{keywordflow}{return} 0;
+212     \textcolor{keywordflow}{if}(strcmp(node->key,key) == 0)
+213         \textcolor{keywordflow}{return} 1;
+214     \textcolor{keywordflow}{if}(strcmp(node->key,key) < 0)
+215         \textcolor{keywordflow}{return} \hyperlink{tree_8c_a56e7dddb3c67ac22f3373a010c1c9e21}{searchAVL}(node->right,key);
+216     \textcolor{keywordflow}{else}
+217         \textcolor{keywordflow}{return} \hyperlink{tree_8c_a56e7dddb3c67ac22f3373a010c1c9e21}{searchAVL}(node->left,key);
+218 
+219 \}
+\end{DoxyCode}

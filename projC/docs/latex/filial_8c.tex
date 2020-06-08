@@ -1,0 +1,901 @@
+\hypertarget{filial_8c}{}\section{Referência ao ficheiro filial.\+c}
+\label{filial_8c}\index{filial.\+c@{filial.\+c}}
+
+
+Modulo filial Que inicializa e controi a estrutura.  
+
+
+{\ttfamily \#include \char`\"{}filial.\+h\char`\"{}}\newline
+Diagrama de dependências de inclusão para filial.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=122pt]{filial_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structfilial}{filial}
+\item 
+struct \hyperlink{structcodigoProdutosP}{codigo\+ProdutosP}
+\item 
+struct \hyperlink{structprodutosPorCliente}{produtos\+Por\+Cliente}
+\item 
+struct \hyperlink{structcodigoClientes}{codigo\+Clientes}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+ProdP $\ast$ \hyperlink{filial_8c_a8edbe2744a9bab627599f1b7bbd0a23c}{init\+Codigo\+Produto} ()
+\begin{DoxyCompactList}\small\item\em Inicialização da estrutura ProdP e da estrutura dados. \end{DoxyCompactList}\item 
+void \hyperlink{filial_8c_aa9b7e4c3da81187ae211e029ae7abfb8}{insere\+ClienteP} (Venda $\ast$v, ProdP $\ast$p)
+\begin{DoxyCompactList}\small\item\em Insere os dados referentes à struct ProdP. \end{DoxyCompactList}\item 
+PpC $\ast$ \hyperlink{filial_8c_a0cb138d733f904c8b89a81c0becda750}{init\+Produto\+Cliente} ()
+\begin{DoxyCompactList}\small\item\em Inicializa a estrutura PpC. \end{DoxyCompactList}\item 
+void \hyperlink{filial_8c_a0f9d16e5faca61b0081bc8fd43e8f984}{insere\+Produto\+Cliente} (Venda $\ast$v, PpC $\ast$p)
+\begin{DoxyCompactList}\small\item\em Insere uma venda na estrutura PpC. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{filial_8c_af1df915ae2399e2fbbf0b8aab4f81b55}{get\+Nome\+PpC} (PpC $\ast$p)
+\begin{DoxyCompactList}\small\item\em Funcao que retorna o nome de um dado PpC. \end{DoxyCompactList}\item 
+int \hyperlink{filial_8c_a614abd74004225a52fb5fb43ad07ac33}{get\+Quantidade\+PpC} (PpC $\ast$p, int mes)
+\begin{DoxyCompactList}\small\item\em Funcao que retorna a quantidade total de um dado mes. \end{DoxyCompactList}\item 
+int \hyperlink{filial_8c_ae7d0235c998eeafc6972fdca030937a5}{get\+Faturacao\+PpC} (PpC $\ast$p, int mes)
+\begin{DoxyCompactList}\small\item\em Funcao que retorna a faturacao total de um dado mes. \end{DoxyCompactList}\item 
+ClieP $\ast$ \hyperlink{filial_8c_abfa50b3106ed7468daf928e3fede1c03}{init\+Codigo\+Clientes} ()
+\begin{DoxyCompactList}\small\item\em Inicialização da estrutura ClieP. \end{DoxyCompactList}\item 
+void \hyperlink{filial_8c_a69eb0edc8e3ec7640d317a251ed115c2}{update\+Codigo\+Cliente} (Venda $\ast$v, PpC $\ast$p)
+\begin{DoxyCompactList}\small\item\em Atualizacao dos dados da estrutura PpC utilizando uma venda. \end{DoxyCompactList}\item 
+void \hyperlink{filial_8c_a92a7bc5d0f5d99498afa909eaffe2ef8}{insere\+Codigo\+Cliente} (Venda $\ast$v, ClieP $\ast$c)
+\begin{DoxyCompactList}\small\item\em Funcao que insere os dados uma venda numa estrutura ClieP. \end{DoxyCompactList}\item 
+int \hyperlink{filial_8c_a5fc5839f7bc4f8514af51e42e1d14f3d}{get\+Ocupados\+ClieP} (ClieP $\ast$c)
+\begin{DoxyCompactList}\small\item\em Funcao que obtem o numero de ocupados da estrutura Pp\+C$\ast$$\ast$ na estrutura ClieP. \end{DoxyCompactList}\item 
+int \hyperlink{filial_8c_add54712c6a4b7c3b1119c443443c99b7}{get\+Quantidade\+ClieP} (ClieP $\ast$c, int mes)
+\begin{DoxyCompactList}\small\item\em Funcao que obtem a quantidade total de produtos comprados num dado mes de um dado cliente. \end{DoxyCompactList}\item 
+PpC $\ast$ \hyperlink{filial_8c_aa975b8bb76ccf055ec06abf0a10b43d2}{get\+Pp\+C\+ClieP} (ClieP $\ast$c, int i)
+\begin{DoxyCompactList}\small\item\em Funcao que obtem uma estrutura PpC a partir de uma estrutura ClieP. \end{DoxyCompactList}\item 
+Filial $\ast$ \hyperlink{filial_8c_a5727000000ceab10ee0e17bcad54b96e}{init\+Filial} ()
+\begin{DoxyCompactList}\small\item\em Funcao que inicializa uma estrutura Filial. \end{DoxyCompactList}\item 
+Filial $\ast$ \hyperlink{filial_8c_a6b81df6ede58686e2c36a56486cd56e4}{insere\+Filial} (Filial $\ast$f, Venda $\ast$v)
+\begin{DoxyCompactList}\small\item\em Funcao que insere todos os valores da estrutura filial dada uma venda. \end{DoxyCompactList}\item 
+int \hyperlink{filial_8c_ae174c41861edf4c914c7af7ad1d47c90}{get\+Quant\+Prod\+Mes\+Cliente} (A\+VL $\ast$f, char $\ast$cliente, int mes)
+\begin{DoxyCompactList}\small\item\em Obtem a quantidade de produtos comprados dado o cliente e o mês. \end{DoxyCompactList}\item 
+Dados $\ast$ \hyperlink{filial_8c_a0922d9ad281ff82fb29d30ef315e40a4}{get\+Codigos\+ClientsN} (A\+VL $\ast$f, char $\ast$product\+ID)
+\begin{DoxyCompactList}\small\item\em Obtem os clientes que compraram o produto correspondente ao codigo dado em promoção tipo N. \end{DoxyCompactList}\item 
+Dados $\ast$ \hyperlink{filial_8c_ac5196dc8257c2d5205b5e9b8361da483}{get\+Codigos\+ClientsP} (A\+VL $\ast$f, char $\ast$product\+ID)
+\begin{DoxyCompactList}\small\item\em Obtem os clientes que compraram o produto correspondente ao codigo dado em promoção tipo P. \end{DoxyCompactList}\item 
+A\+VL $\ast$ \hyperlink{filial_8c_a3ee1ffa99747304fdf7aa19e1ff58ad5}{get\+A\+V\+L\+Produtos} (Filial $\ast$f)
+\begin{DoxyCompactList}\small\item\em Funcao que obtem a A\+VL de produtos. \end{DoxyCompactList}\item 
+A\+VL $\ast$ \hyperlink{filial_8c_a33d812a6f723a8fe3db03a2dc8c73110}{get\+A\+V\+L\+Clientes} (Filial $\ast$f)
+\begin{DoxyCompactList}\small\item\em Funcao que obtem a A\+VL de cliente. \end{DoxyCompactList}\item 
+void \hyperlink{filial_8c_a43e361699bd8afee43475f3cb2159368}{free\+ProdP} (ProdP $\ast$p)
+\begin{DoxyCompactList}\small\item\em Desaloca a memoria ocupada pela estrutura ProdP. \end{DoxyCompactList}\item 
+void \hyperlink{filial_8c_aca09ee09defcd1dfd7c5e1099d2b8807}{free\+A\+V\+LP} (A\+VL $\ast$f)
+\begin{DoxyCompactList}\small\item\em Desaloca a memoria ocupada pela estrutura A\+VL. \end{DoxyCompactList}\item 
+void \hyperlink{filial_8c_a6361cfa298f0cd36d4d66eb40c28f427}{free\+PpC} (ClieP $\ast$c)
+\begin{DoxyCompactList}\small\item\em Desaloca a memoria ocupada pela estrutura PpC. \end{DoxyCompactList}\item 
+void \hyperlink{filial_8c_ae738b3104b8b457dd80fc1b67d3a8cd4}{free\+A\+V\+LC} (A\+VL $\ast$f)
+\begin{DoxyCompactList}\small\item\em Desaloca a memoria ocupada pela estrutura A\+VL. \end{DoxyCompactList}\item 
+void \hyperlink{filial_8c_aadf0ae17a6136cdf1ad1c73dc469dbcf}{free\+Filial} (Filial $\ast$f)
+\begin{DoxyCompactList}\small\item\em Desaloca a memória ocupada pelos estrutura Filial. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Modulo filial Que inicializa e controi a estrutura. 
+
+
+
+\subsection{Documentação das funções}
+\mbox{\Hypertarget{filial_8c_ae738b3104b8b457dd80fc1b67d3a8cd4}\label{filial_8c_ae738b3104b8b457dd80fc1b67d3a8cd4}} 
+\index{filial.\+c@{filial.\+c}!free\+A\+V\+LC@{free\+A\+V\+LC}}
+\index{free\+A\+V\+LC@{free\+A\+V\+LC}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{free\+A\+V\+L\+C()}{freeAVLC()}}
+{\footnotesize\ttfamily void free\+A\+V\+LC (\begin{DoxyParamCaption}\item[{A\+VL $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Desaloca a memoria ocupada pela estrutura A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}f\mbox{]}} & Estrutura A\+VL \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 386 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+386                       \{
+387   \textcolor{keywordflow}{if}(f)\{
+388     free(\hyperlink{tree_8c_af043329377f4d9303267455cd353fd83}{getKey}(f));
+389     \hyperlink{filial_8c_ae738b3104b8b457dd80fc1b67d3a8cd4}{freeAVLC}(\hyperlink{tree_8c_a055813fad18fbe1331c4568fbb9b53ca}{getLeft}(f));
+390     \hyperlink{filial_8c_ae738b3104b8b457dd80fc1b67d3a8cd4}{freeAVLC}(\hyperlink{tree_8c_aa92a92ff16f40e2381b0452982b620b3}{getRight}(f));
+391     \hyperlink{filial_8c_a6361cfa298f0cd36d4d66eb40c28f427}{freePpC}((ClieP*)(\hyperlink{tree_8c_a1c2789a702672b4fb99d2c622181f949}{getEquals}(f)));
+392     free(f);
+393     f = NULL;
+394   \}
+395 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_aca09ee09defcd1dfd7c5e1099d2b8807}\label{filial_8c_aca09ee09defcd1dfd7c5e1099d2b8807}} 
+\index{filial.\+c@{filial.\+c}!free\+A\+V\+LP@{free\+A\+V\+LP}}
+\index{free\+A\+V\+LP@{free\+A\+V\+LP}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{free\+A\+V\+L\+P()}{freeAVLP()}}
+{\footnotesize\ttfamily void free\+A\+V\+LP (\begin{DoxyParamCaption}\item[{A\+VL $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Desaloca a memoria ocupada pela estrutura A\+VL. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}f\mbox{]}} & Estrutura A\+VL \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 353 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+353                       \{
+354   \textcolor{keywordflow}{if}(f)\{
+355     free(\hyperlink{tree_8c_af043329377f4d9303267455cd353fd83}{getKey}(f));
+356     \hyperlink{filial_8c_aca09ee09defcd1dfd7c5e1099d2b8807}{freeAVLP}(\hyperlink{tree_8c_a055813fad18fbe1331c4568fbb9b53ca}{getLeft}(f));
+357     \hyperlink{filial_8c_aca09ee09defcd1dfd7c5e1099d2b8807}{freeAVLP}(\hyperlink{tree_8c_aa92a92ff16f40e2381b0452982b620b3}{getRight}(f));
+358     \hyperlink{filial_8c_a43e361699bd8afee43475f3cb2159368}{freeProdP}((ProdP*)(\hyperlink{tree_8c_a1c2789a702672b4fb99d2c622181f949}{getEquals}(f)));
+359     free(f);
+360     f = NULL;
+361   \}
+362 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_aadf0ae17a6136cdf1ad1c73dc469dbcf}\label{filial_8c_aadf0ae17a6136cdf1ad1c73dc469dbcf}} 
+\index{filial.\+c@{filial.\+c}!free\+Filial@{free\+Filial}}
+\index{free\+Filial@{free\+Filial}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{free\+Filial()}{freeFilial()}}
+{\footnotesize\ttfamily void free\+Filial (\begin{DoxyParamCaption}\item[{Filial $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Desaloca a memória ocupada pelos estrutura Filial. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}f\mbox{]}} & Estrutura Filial \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 403 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+403                           \{
+404   \hyperlink{filial_8c_aca09ee09defcd1dfd7c5e1099d2b8807}{freeAVLP}(f->produtos);
+405   \hyperlink{filial_8c_ae738b3104b8b457dd80fc1b67d3a8cd4}{freeAVLC}(f->clientes);
+406   free(f);
+407   f = NULL;
+408 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_a6361cfa298f0cd36d4d66eb40c28f427}\label{filial_8c_a6361cfa298f0cd36d4d66eb40c28f427}} 
+\index{filial.\+c@{filial.\+c}!free\+PpC@{free\+PpC}}
+\index{free\+PpC@{free\+PpC}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{free\+Pp\+C()}{freePpC()}}
+{\footnotesize\ttfamily void free\+PpC (\begin{DoxyParamCaption}\item[{ClieP $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Desaloca a memoria ocupada pela estrutura PpC. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}p\mbox{]}} & Estrutura PpC \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 371 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+371                       \{
+372   \textcolor{keywordtype}{int} i;
+373   \textcolor{keywordflow}{for}(i=0; i < c->ocupados; i++)\{
+374     free(c->produtosPorCliente[i]->nome);
+375     free(c->produtosPorCliente[i]);
+376   \}
+377   free(c->produtosPorCliente);
+378   free(c);
+379 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_a43e361699bd8afee43475f3cb2159368}\label{filial_8c_a43e361699bd8afee43475f3cb2159368}} 
+\index{filial.\+c@{filial.\+c}!free\+ProdP@{free\+ProdP}}
+\index{free\+ProdP@{free\+ProdP}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{free\+Prod\+P()}{freeProdP()}}
+{\footnotesize\ttfamily void free\+ProdP (\begin{DoxyParamCaption}\item[{ProdP $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Desaloca a memoria ocupada pela estrutura ProdP. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}p\mbox{]}} & Estrutura ProdP \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 343 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+343                          \{
+344   \hyperlink{clientes_8c_ab0e31c59339ab5320753ed2e47b91a86}{freeDados}((Dados*) p->clienteN);
+345   \hyperlink{clientes_8c_ab0e31c59339ab5320753ed2e47b91a86}{freeDados}((Dados*) p->clienteP);
+346   free(p);
+347 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_a33d812a6f723a8fe3db03a2dc8c73110}\label{filial_8c_a33d812a6f723a8fe3db03a2dc8c73110}} 
+\index{filial.\+c@{filial.\+c}!get\+A\+V\+L\+Clientes@{get\+A\+V\+L\+Clientes}}
+\index{get\+A\+V\+L\+Clientes@{get\+A\+V\+L\+Clientes}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{get\+A\+V\+L\+Clientes()}{getAVLClientes()}}
+{\footnotesize\ttfamily A\+VL$\ast$ get\+A\+V\+L\+Clientes (\begin{DoxyParamCaption}\item[{Filial $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Funcao que obtem a A\+VL de cliente. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}f\mbox{]}} & Filial onde vamos buscar a A\+VL cliente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a A\+VL cliente; 
+\end{DoxyReturn}
+
+
+Definido na linha 335 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+335                                \{
+336   \textcolor{keywordflow}{return} f->clientes;
+337 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_a3ee1ffa99747304fdf7aa19e1ff58ad5}\label{filial_8c_a3ee1ffa99747304fdf7aa19e1ff58ad5}} 
+\index{filial.\+c@{filial.\+c}!get\+A\+V\+L\+Produtos@{get\+A\+V\+L\+Produtos}}
+\index{get\+A\+V\+L\+Produtos@{get\+A\+V\+L\+Produtos}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{get\+A\+V\+L\+Produtos()}{getAVLProdutos()}}
+{\footnotesize\ttfamily A\+VL$\ast$ get\+A\+V\+L\+Produtos (\begin{DoxyParamCaption}\item[{Filial $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Funcao que obtem a A\+VL de produtos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}f\mbox{]}} & Filial onde vamos buscar a A\+VL produtos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a A\+VL produtos; 
+\end{DoxyReturn}
+
+
+Definido na linha 326 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+326                                \{
+327   \textcolor{keywordflow}{return} f->produtos;
+328 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_a0922d9ad281ff82fb29d30ef315e40a4}\label{filial_8c_a0922d9ad281ff82fb29d30ef315e40a4}} 
+\index{filial.\+c@{filial.\+c}!get\+Codigos\+ClientsN@{get\+Codigos\+ClientsN}}
+\index{get\+Codigos\+ClientsN@{get\+Codigos\+ClientsN}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{get\+Codigos\+Clients\+N()}{getCodigosClientsN()}}
+{\footnotesize\ttfamily Dados$\ast$ get\+Codigos\+ClientsN (\begin{DoxyParamCaption}\item[{A\+VL $\ast$}]{f,  }\item[{char $\ast$}]{product\+ID }\end{DoxyParamCaption})}
+
+
+
+Obtem os clientes que compraram o produto correspondente ao codigo dado em promoção tipo N. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}f\mbox{]}} & Estrutura A\+VL onde vai ser procurado o produtos \\
+\hline
+{\em \mbox{[}product\+I\+D\mbox{]}} & Produto que queremos encontrar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a estrutura dados clienteN 
+\end{DoxyReturn}
+
+
+Definido na linha 282 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+282                                                  \{
+283   \textcolor{keywordflow}{if}(\hyperlink{tree_8c_a56e7dddb3c67ac22f3373a010c1c9e21}{searchAVL}(f,productID))\{
+284     AVL* tmp = f;
+285     \textcolor{keywordflow}{while}(strcmp(\hyperlink{tree_8c_af043329377f4d9303267455cd353fd83}{getKey}(tmp),productID)!= 0)\{
+286       \textcolor{keywordflow}{if}(strcmp(\hyperlink{tree_8c_af043329377f4d9303267455cd353fd83}{getKey}(tmp),productID) > 0)\{
+287         tmp = \hyperlink{tree_8c_a055813fad18fbe1331c4568fbb9b53ca}{getLeft}(tmp);
+288       \}
+289       \textcolor{keywordflow}{else}\{
+290         tmp = \hyperlink{tree_8c_aa92a92ff16f40e2381b0452982b620b3}{getRight}(tmp);
+291       \}
+292     \}
+293 
+294     \textcolor{keywordflow}{return} ((ProdP*)\hyperlink{tree_8c_a1c2789a702672b4fb99d2c622181f949}{getEquals}(tmp))->clienteN;
+295   \}
+296   \textcolor{keywordflow}{return} NULL;
+297 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_ac5196dc8257c2d5205b5e9b8361da483}\label{filial_8c_ac5196dc8257c2d5205b5e9b8361da483}} 
+\index{filial.\+c@{filial.\+c}!get\+Codigos\+ClientsP@{get\+Codigos\+ClientsP}}
+\index{get\+Codigos\+ClientsP@{get\+Codigos\+ClientsP}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{get\+Codigos\+Clients\+P()}{getCodigosClientsP()}}
+{\footnotesize\ttfamily Dados$\ast$ get\+Codigos\+ClientsP (\begin{DoxyParamCaption}\item[{A\+VL $\ast$}]{f,  }\item[{char $\ast$}]{product\+ID }\end{DoxyParamCaption})}
+
+
+
+Obtem os clientes que compraram o produto correspondente ao codigo dado em promoção tipo P. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}f\mbox{]}} & Estrutura A\+VL onde vai ser procurado o produtos \\
+\hline
+{\em \mbox{[}product\+I\+D\mbox{]}} & Produto que queremos encontrar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a estrutura dados clienteP 
+\end{DoxyReturn}
+
+
+Definido na linha 305 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+305                                                  \{
+306   \textcolor{keywordflow}{if}(\hyperlink{tree_8c_a56e7dddb3c67ac22f3373a010c1c9e21}{searchAVL}(f,productID))\{
+307     AVL* tmp = f;
+308     \textcolor{keywordflow}{while}(strcmp(\hyperlink{tree_8c_af043329377f4d9303267455cd353fd83}{getKey}(tmp),productID)!= 0)\{
+309       \textcolor{keywordflow}{if}(strcmp(\hyperlink{tree_8c_af043329377f4d9303267455cd353fd83}{getKey}(tmp),productID) > 0)\{
+310         tmp = \hyperlink{tree_8c_a055813fad18fbe1331c4568fbb9b53ca}{getLeft}(tmp);
+311       \}
+312       \textcolor{keywordflow}{else}\{
+313         tmp = \hyperlink{tree_8c_aa92a92ff16f40e2381b0452982b620b3}{getRight}(tmp);
+314       \}
+315     \}
+316     \textcolor{keywordflow}{return} ((ProdP*)\hyperlink{tree_8c_a1c2789a702672b4fb99d2c622181f949}{getEquals}(tmp))->clienteP;
+317   \}
+318   \textcolor{keywordflow}{return} NULL;
+319 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_ae7d0235c998eeafc6972fdca030937a5}\label{filial_8c_ae7d0235c998eeafc6972fdca030937a5}} 
+\index{filial.\+c@{filial.\+c}!get\+Faturacao\+PpC@{get\+Faturacao\+PpC}}
+\index{get\+Faturacao\+PpC@{get\+Faturacao\+PpC}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{get\+Faturacao\+Pp\+C()}{getFaturacaoPpC()}}
+{\footnotesize\ttfamily int get\+Faturacao\+PpC (\begin{DoxyParamCaption}\item[{PpC $\ast$}]{p,  }\item[{int}]{mes }\end{DoxyParamCaption})}
+
+
+
+Funcao que retorna a faturacao total de um dado mes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}p\mbox{]}} & Estrutura PpC \\
+\hline
+{\em \mbox{[}mes\mbox{]}} & Mes que queremos saber a faturacao \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a faturacao de um dado mes da estrutura PpC 
+\end{DoxyReturn}
+
+
+Definido na linha 115 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+115                                     \{
+116   \textcolor{keywordflow}{return} p->fat[mes];
+117 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_af1df915ae2399e2fbbf0b8aab4f81b55}\label{filial_8c_af1df915ae2399e2fbbf0b8aab4f81b55}} 
+\index{filial.\+c@{filial.\+c}!get\+Nome\+PpC@{get\+Nome\+PpC}}
+\index{get\+Nome\+PpC@{get\+Nome\+PpC}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{get\+Nome\+Pp\+C()}{getNomePpC()}}
+{\footnotesize\ttfamily char$\ast$ get\+Nome\+PpC (\begin{DoxyParamCaption}\item[{PpC $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Funcao que retorna o nome de um dado PpC. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}p\mbox{]}} & Estrutura PpC \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o nome do produto da estrutura PpC 
+\end{DoxyReturn}
+
+
+Definido na linha 95 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+95                          \{
+96   \textcolor{keywordflow}{return} strdup(p->nome);
+97 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_a5fc5839f7bc4f8514af51e42e1d14f3d}\label{filial_8c_a5fc5839f7bc4f8514af51e42e1d14f3d}} 
+\index{filial.\+c@{filial.\+c}!get\+Ocupados\+ClieP@{get\+Ocupados\+ClieP}}
+\index{get\+Ocupados\+ClieP@{get\+Ocupados\+ClieP}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{get\+Ocupados\+Clie\+P()}{getOcupadosClieP()}}
+{\footnotesize\ttfamily int get\+Ocupados\+ClieP (\begin{DoxyParamCaption}\item[{ClieP $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Funcao que obtem o numero de ocupados da estrutura Pp\+C$\ast$$\ast$ na estrutura ClieP. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}c\mbox{]}} & Estrutura ClieP \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o numero de ocupados da estrutura Pp\+C$\ast$$\ast$ 
+\end{DoxyReturn}
+
+
+Definido na linha 175 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+175                               \{
+176   \textcolor{keywordflow}{return} c->ocupados;
+177 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_aa975b8bb76ccf055ec06abf0a10b43d2}\label{filial_8c_aa975b8bb76ccf055ec06abf0a10b43d2}} 
+\index{filial.\+c@{filial.\+c}!get\+Pp\+C\+ClieP@{get\+Pp\+C\+ClieP}}
+\index{get\+Pp\+C\+ClieP@{get\+Pp\+C\+ClieP}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{get\+Pp\+C\+Clie\+P()}{getPpCClieP()}}
+{\footnotesize\ttfamily PpC$\ast$ get\+Pp\+C\+ClieP (\begin{DoxyParamCaption}\item[{ClieP $\ast$}]{c,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Funcao que obtem uma estrutura PpC a partir de uma estrutura ClieP. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}c\mbox{]}} & Estrutura ClieP \\
+\hline
+{\em \mbox{[}i\mbox{]}} & Indice i onde encontramos a estrutura PpC \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Estrutura PpC 
+\end{DoxyReturn}
+
+
+Definido na linha 195 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+195                                 \{
+196   \textcolor{keywordflow}{return} c->produtosPorCliente[i];
+197 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_add54712c6a4b7c3b1119c443443c99b7}\label{filial_8c_add54712c6a4b7c3b1119c443443c99b7}} 
+\index{filial.\+c@{filial.\+c}!get\+Quantidade\+ClieP@{get\+Quantidade\+ClieP}}
+\index{get\+Quantidade\+ClieP@{get\+Quantidade\+ClieP}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{get\+Quantidade\+Clie\+P()}{getQuantidadeClieP()}}
+{\footnotesize\ttfamily int get\+Quantidade\+ClieP (\begin{DoxyParamCaption}\item[{ClieP $\ast$}]{c,  }\item[{int}]{mes }\end{DoxyParamCaption})}
+
+
+
+Funcao que obtem a quantidade total de produtos comprados num dado mes de um dado cliente. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}c\mbox{]}} & Estrutura ClieP \\
+\hline
+{\em \mbox{[}mes\mbox{]}} & Mes em que quer a quantidade \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Quantidade total de produtos comprados num dados mes 
+\end{DoxyReturn}
+
+
+Definido na linha 185 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+185                                           \{
+186   \textcolor{keywordflow}{return} c->quant[mes-1];
+187 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_a614abd74004225a52fb5fb43ad07ac33}\label{filial_8c_a614abd74004225a52fb5fb43ad07ac33}} 
+\index{filial.\+c@{filial.\+c}!get\+Quantidade\+PpC@{get\+Quantidade\+PpC}}
+\index{get\+Quantidade\+PpC@{get\+Quantidade\+PpC}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{get\+Quantidade\+Pp\+C()}{getQuantidadePpC()}}
+{\footnotesize\ttfamily int get\+Quantidade\+PpC (\begin{DoxyParamCaption}\item[{PpC $\ast$}]{p,  }\item[{int}]{mes }\end{DoxyParamCaption})}
+
+
+
+Funcao que retorna a quantidade total de um dado mes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}p\mbox{]}} & Estrutura PpC \\
+\hline
+{\em \mbox{[}mes\mbox{]}} & Mes que queremos saber a quantidade \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a quantidade de um dado mes da estrutura PpC 
+\end{DoxyReturn}
+
+
+Definido na linha 105 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+105                                      \{
+106   \textcolor{keywordflow}{return} p->quant[mes];
+107 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_ae174c41861edf4c914c7af7ad1d47c90}\label{filial_8c_ae174c41861edf4c914c7af7ad1d47c90}} 
+\index{filial.\+c@{filial.\+c}!get\+Quant\+Prod\+Mes\+Cliente@{get\+Quant\+Prod\+Mes\+Cliente}}
+\index{get\+Quant\+Prod\+Mes\+Cliente@{get\+Quant\+Prod\+Mes\+Cliente}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{get\+Quant\+Prod\+Mes\+Cliente()}{getQuantProdMesCliente()}}
+{\footnotesize\ttfamily int get\+Quant\+Prod\+Mes\+Cliente (\begin{DoxyParamCaption}\item[{A\+VL $\ast$}]{f,  }\item[{char $\ast$}]{cliente,  }\item[{int}]{mes }\end{DoxyParamCaption})}
+
+
+
+Obtem a quantidade de produtos comprados dado o cliente e o mês. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}f\mbox{]}} & Estrutura avl onde vai ser procurado o cliente \\
+\hline
+{\em \mbox{[}cliente\mbox{]}} & Cliente que queremos encontrar \\
+\hline
+{\em \mbox{[}mes\mbox{]}} & Mes que o utilizador deseja informacoes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a quantidade de produtos comprados 
+\end{DoxyReturn}
+
+
+Definido na linha 262 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+262                                                          \{
+263   \textcolor{keywordflow}{if}(\hyperlink{tree_8c_a56e7dddb3c67ac22f3373a010c1c9e21}{searchAVL}(f,cliente))\{
+264     AVL* aux = f;
+265     \textcolor{keywordflow}{while}(strcmp(\hyperlink{tree_8c_af043329377f4d9303267455cd353fd83}{getKey}(aux),cliente)!= 0)\{
+266       \textcolor{keywordflow}{if}(strcmp(\hyperlink{tree_8c_af043329377f4d9303267455cd353fd83}{getKey}(aux),cliente) > 0)
+267         aux = \hyperlink{tree_8c_a055813fad18fbe1331c4568fbb9b53ca}{getLeft}(aux);
+268       \textcolor{keywordflow}{else}
+269         aux = \hyperlink{tree_8c_aa92a92ff16f40e2381b0452982b620b3}{getRight}(aux);
+270     \}
+271     \textcolor{keywordflow}{return} ((ClieP*)\hyperlink{tree_8c_a1c2789a702672b4fb99d2c622181f949}{getEquals}(aux))->quant[mes];
+272   \}
+273   \textcolor{keywordflow}{return} 0;
+274 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_abfa50b3106ed7468daf928e3fede1c03}\label{filial_8c_abfa50b3106ed7468daf928e3fede1c03}} 
+\index{filial.\+c@{filial.\+c}!init\+Codigo\+Clientes@{init\+Codigo\+Clientes}}
+\index{init\+Codigo\+Clientes@{init\+Codigo\+Clientes}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{init\+Codigo\+Clientes()}{initCodigoClientes()}}
+{\footnotesize\ttfamily ClieP$\ast$ init\+Codigo\+Clientes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicialização da estrutura ClieP. 
+
+\begin{DoxyReturn}{Retorna}
+Estrutura inicializada ClieP 
+\end{DoxyReturn}
+
+
+Definido na linha 124 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+124                             \{
+125   ClieP* c = malloc(\textcolor{keyword}{sizeof}(ClieP));
+126   c->ocupados = 0;
+127   \textcolor{keywordtype}{int} i;
+128   \textcolor{keywordflow}{for}(i = 0; i < 12; i++)\{
+129     c->quant[i] = 0;
+130   \}
+131   c->produtosPorCliente = NULL;
+132   \textcolor{keywordflow}{return} c;
+133 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_a8edbe2744a9bab627599f1b7bbd0a23c}\label{filial_8c_a8edbe2744a9bab627599f1b7bbd0a23c}} 
+\index{filial.\+c@{filial.\+c}!init\+Codigo\+Produto@{init\+Codigo\+Produto}}
+\index{init\+Codigo\+Produto@{init\+Codigo\+Produto}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{init\+Codigo\+Produto()}{initCodigoProduto()}}
+{\footnotesize\ttfamily ProdP$\ast$ init\+Codigo\+Produto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicialização da estrutura ProdP e da estrutura dados. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna a nova estrutura ProdP 
+\end{DoxyReturn}
+
+
+Definido na linha 35 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+35                            \{
+36   ProdP* p = malloc(\textcolor{keyword}{sizeof}(ProdP));
+37   p->clienteN = \hyperlink{clientes_8c_ab5e7eab04f090f920f5ea98c6cb1a505}{initDados}();
+38   p->clienteP = \hyperlink{clientes_8c_ab5e7eab04f090f920f5ea98c6cb1a505}{initDados}();
+39   \textcolor{keywordflow}{return} p;
+40 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_a5727000000ceab10ee0e17bcad54b96e}\label{filial_8c_a5727000000ceab10ee0e17bcad54b96e}} 
+\index{filial.\+c@{filial.\+c}!init\+Filial@{init\+Filial}}
+\index{init\+Filial@{init\+Filial}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{init\+Filial()}{initFilial()}}
+{\footnotesize\ttfamily Filial$\ast$ init\+Filial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funcao que inicializa uma estrutura Filial. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna a estrutura Filial inicializada 
+\end{DoxyReturn}
+
+
+Definido na linha 203 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+203                     \{
+204   Filial* f = malloc(\textcolor{keyword}{sizeof}(Filial));
+205   f->produtos = NULL;
+206   f->clientes = NULL;
+207   \textcolor{keywordflow}{return} f;
+208 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_a0cb138d733f904c8b89a81c0becda750}\label{filial_8c_a0cb138d733f904c8b89a81c0becda750}} 
+\index{filial.\+c@{filial.\+c}!init\+Produto\+Cliente@{init\+Produto\+Cliente}}
+\index{init\+Produto\+Cliente@{init\+Produto\+Cliente}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{init\+Produto\+Cliente()}{initProdutoCliente()}}
+{\footnotesize\ttfamily PpC$\ast$ init\+Produto\+Cliente (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa a estrutura PpC. 
+
+\begin{DoxyReturn}{Retorna}
+Estrutura PpC inicializada 
+\end{DoxyReturn}
+
+
+Definido na linha 66 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+66                           \{
+67   \textcolor{keywordtype}{int} i;
+68   PpC* p = malloc(\textcolor{keyword}{sizeof}(PpC));
+69   p->nome = NULL;
+70   \textcolor{keywordflow}{for}(i = 0; i < 12; i++)\{
+71     p->quant[i] = 0;
+72   \}
+73   \textcolor{keywordflow}{for}(i = 0; i < 12; i++)\{
+74     p->fat[i] = 0;
+75   \}
+76   \textcolor{keywordflow}{return} p;
+77 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_aa9b7e4c3da81187ae211e029ae7abfb8}\label{filial_8c_aa9b7e4c3da81187ae211e029ae7abfb8}} 
+\index{filial.\+c@{filial.\+c}!insere\+ClienteP@{insere\+ClienteP}}
+\index{insere\+ClienteP@{insere\+ClienteP}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{insere\+Cliente\+P()}{insereClienteP()}}
+{\footnotesize\ttfamily void insere\+ClienteP (\begin{DoxyParamCaption}\item[{Venda $\ast$}]{v,  }\item[{ProdP $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Insere os dados referentes à struct ProdP. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}v\mbox{]}} & Venda utilizada para inserir o cliente \\
+\hline
+{\em \mbox{[}p\mbox{]}} & Estrutura ProdP onde vai ser inserida o cliente \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 47 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+47                                        \{
+48   \textcolor{keywordflow}{if}(\hyperlink{vendas_8c_ac48ab849f5af46f09394a208f41029e6}{getPromocao}(v) == \textcolor{charliteral}{'N'})\{
+49     \textcolor{keywordflow}{if}(p->clienteN->size == p->clienteN->ocupados)\{
+50       \hyperlink{clientes_8c_ab93f3f48a62ea57a21aa91347dc699c7}{reallocDados}(p->clienteN);
+51     \}
+52     p->clienteN->str[p->clienteN->ocupados++] = \hyperlink{vendas_8c_a6a66082eb395bd8876be3504c51aa264}{getCliente}(v);
+53   \}
+54   \textcolor{keywordflow}{else} \{
+55     \textcolor{keywordflow}{if}(p->clienteP->size == p->clienteP->ocupados)\{
+56       \hyperlink{clientes_8c_ab93f3f48a62ea57a21aa91347dc699c7}{reallocDados}(p->clienteP);
+57     \}
+58     p->clienteP->str[p->clienteP->ocupados++] = \hyperlink{vendas_8c_a6a66082eb395bd8876be3504c51aa264}{getCliente}(v);
+59   \}
+60 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_a92a7bc5d0f5d99498afa909eaffe2ef8}\label{filial_8c_a92a7bc5d0f5d99498afa909eaffe2ef8}} 
+\index{filial.\+c@{filial.\+c}!insere\+Codigo\+Cliente@{insere\+Codigo\+Cliente}}
+\index{insere\+Codigo\+Cliente@{insere\+Codigo\+Cliente}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{insere\+Codigo\+Cliente()}{insereCodigoCliente()}}
+{\footnotesize\ttfamily void insere\+Codigo\+Cliente (\begin{DoxyParamCaption}\item[{Venda $\ast$}]{v,  }\item[{ClieP $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Funcao que insere os dados uma venda numa estrutura ClieP. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}v\mbox{]}} & Venda utilizada para obter os dados \\
+\hline
+{\em \mbox{[}c\mbox{]}} & Estrutura onde vão ser inseridos os dados \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 151 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+151                                             \{
+152 
+153   PpC** aux = c->produtosPorCliente;
+154   \textcolor{keywordtype}{int} i = 0;
+155   \textcolor{keywordtype}{char}* prod = \hyperlink{vendas_8c_a44aa4bbfb64f14bb33fefaeb575c00e1}{getProduto}(v);
+156   \textcolor{keywordflow}{while}(i < c->ocupados && (strcmp(aux[i]->nome,prod) != 0)) i++;
+157   \textcolor{keywordflow}{if}(i == c->ocupados)\{
+158     \textcolor{keywordtype}{int} size = (i*2)+1;
+159     c->produtosPorCliente = realloc(c->produtosPorCliente,size*\textcolor{keyword}{sizeof}(PpC*));
+160     c->produtosPorCliente[c->ocupados] = \hyperlink{filial_8c_a0cb138d733f904c8b89a81c0becda750}{initProdutoCliente}();
+161     \hyperlink{filial_8c_a0f9d16e5faca61b0081bc8fd43e8f984}{insereProdutoCliente}(v,c->produtosPorCliente[c->ocupados++]);
+162     c->quant[\hyperlink{vendas_8c_a1178cf1dea33bcb6c9612d46f7534f33}{getData}(v)-1] += \hyperlink{vendas_8c_ae3196cffdcf5289440c1ee56ed5ee0d7}{getQuantidade}(v);
+163   \}
+164   \textcolor{keywordflow}{else}\{
+165     \hyperlink{filial_8c_a69eb0edc8e3ec7640d317a251ed115c2}{updateCodigoCliente}(v,aux[i]);
+166   \}
+167   free(prod);
+168 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_a6b81df6ede58686e2c36a56486cd56e4}\label{filial_8c_a6b81df6ede58686e2c36a56486cd56e4}} 
+\index{filial.\+c@{filial.\+c}!insere\+Filial@{insere\+Filial}}
+\index{insere\+Filial@{insere\+Filial}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{insere\+Filial()}{insereFilial()}}
+{\footnotesize\ttfamily Filial$\ast$ insere\+Filial (\begin{DoxyParamCaption}\item[{Filial $\ast$}]{f,  }\item[{Venda $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Funcao que insere todos os valores da estrutura filial dada uma venda. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}f\mbox{]}} & Filial onde vao ser inseridos os valores de todas as suas estruturas \\
+\hline
+{\em \mbox{[}v\mbox{]}} & Venda utilizada para obter os dados \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a filial com os dados todos inseridos 
+\end{DoxyReturn}
+
+
+Definido na linha 227 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+227                                         \{
+228   \textcolor{keywordtype}{char}* prod = \hyperlink{vendas_8c_a44aa4bbfb64f14bb33fefaeb575c00e1}{getProduto}(v);
+229   \textcolor{keywordtype}{char}* cli = \hyperlink{vendas_8c_a6a66082eb395bd8876be3504c51aa264}{getCliente}(v);
+230   AVL* ap = searchAVLTMP(f->produtos,prod);
+231   \textcolor{keywordflow}{if}(ap != NULL)\{
+232     \hyperlink{filial_8c_aa9b7e4c3da81187ae211e029ae7abfb8}{insereClienteP}(v,(ProdP*) \hyperlink{tree_8c_a1c2789a702672b4fb99d2c622181f949}{getEquals}(ap));
+233   \}
+234   \textcolor{keywordflow}{else}
+235   \{
+236     ProdP* p = \hyperlink{filial_8c_a8edbe2744a9bab627599f1b7bbd0a23c}{initCodigoProduto}();
+237     \hyperlink{filial_8c_aa9b7e4c3da81187ae211e029ae7abfb8}{insereClienteP}(v,p);
+238     f->produtos = \hyperlink{tree_8c_a8792d9847f06c27e4955b63f63239305}{insert}(f->produtos,strdup(prod),p);
+239   \}
+240   AVL* ac = (searchAVLTMP(f->clientes,cli));
+241   \textcolor{keywordflow}{if}(ac != NULL)\{
+242     \hyperlink{filial_8c_a92a7bc5d0f5d99498afa909eaffe2ef8}{insereCodigoCliente}(v,\hyperlink{tree_8c_a1c2789a702672b4fb99d2c622181f949}{getEquals}(ac));
+243   \}
+244   \textcolor{keywordflow}{else} \{
+245     ClieP* c = \hyperlink{filial_8c_abfa50b3106ed7468daf928e3fede1c03}{initCodigoClientes}();
+246     \hyperlink{filial_8c_a92a7bc5d0f5d99498afa909eaffe2ef8}{insereCodigoCliente}(v,c);
+247     f->clientes = \hyperlink{tree_8c_a8792d9847f06c27e4955b63f63239305}{insert}(f->clientes,strdup(cli),c);
+248   \}
+249   free(prod);
+250   free(cli);
+251   \textcolor{keywordflow}{return} f;
+252 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_a0f9d16e5faca61b0081bc8fd43e8f984}\label{filial_8c_a0f9d16e5faca61b0081bc8fd43e8f984}} 
+\index{filial.\+c@{filial.\+c}!insere\+Produto\+Cliente@{insere\+Produto\+Cliente}}
+\index{insere\+Produto\+Cliente@{insere\+Produto\+Cliente}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{insere\+Produto\+Cliente()}{insereProdutoCliente()}}
+{\footnotesize\ttfamily void insere\+Produto\+Cliente (\begin{DoxyParamCaption}\item[{Venda $\ast$}]{v,  }\item[{PpC $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Insere uma venda na estrutura PpC. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}v\mbox{]}} & Venda utilizada para inserir os dados na estrutura \\
+\hline
+{\em \mbox{[}p\mbox{]}} & Estrutura onde vao ser inseridos os dados \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 84 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+84                                            \{
+85   p->nome = \hyperlink{vendas_8c_a44aa4bbfb64f14bb33fefaeb575c00e1}{getProduto}(v);
+86   p->quant[\hyperlink{vendas_8c_a1178cf1dea33bcb6c9612d46f7534f33}{getData}(v)-1] += \hyperlink{vendas_8c_ae3196cffdcf5289440c1ee56ed5ee0d7}{getQuantidade}(v);
+87   p->fat[\hyperlink{vendas_8c_a1178cf1dea33bcb6c9612d46f7534f33}{getData}(v)-1] += \hyperlink{vendas_8c_a9cde304721e7cf45c51ec95bcf625de4}{getPreco}(v)*\hyperlink{vendas_8c_ae3196cffdcf5289440c1ee56ed5ee0d7}{getQuantidade}(v);
+88 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{filial_8c_a69eb0edc8e3ec7640d317a251ed115c2}\label{filial_8c_a69eb0edc8e3ec7640d317a251ed115c2}} 
+\index{filial.\+c@{filial.\+c}!update\+Codigo\+Cliente@{update\+Codigo\+Cliente}}
+\index{update\+Codigo\+Cliente@{update\+Codigo\+Cliente}!filial.\+c@{filial.\+c}}
+\subsubsection{\texorpdfstring{update\+Codigo\+Cliente()}{updateCodigoCliente()}}
+{\footnotesize\ttfamily void update\+Codigo\+Cliente (\begin{DoxyParamCaption}\item[{Venda $\ast$}]{v,  }\item[{PpC $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Atualizacao dos dados da estrutura PpC utilizando uma venda. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}v\mbox{]}} & Venda utilizada para atualizar os valores da estrutura PpC \\
+\hline
+{\em \mbox{[}p\mbox{]}} & Estrutura PpC que vai ser atualizada \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 141 do ficheiro filial.\+c.
+
+
+\begin{DoxyCode}
+141                                           \{
+142   p->quant[\hyperlink{vendas_8c_a1178cf1dea33bcb6c9612d46f7534f33}{getData}(v)-1] += \hyperlink{vendas_8c_ae3196cffdcf5289440c1ee56ed5ee0d7}{getQuantidade}(v);
+143   p->fat[\hyperlink{vendas_8c_a1178cf1dea33bcb6c9612d46f7534f33}{getData}(v)-1] += \hyperlink{vendas_8c_a9cde304721e7cf45c51ec95bcf625de4}{getPreco}(v);
+144 \}
+\end{DoxyCode}

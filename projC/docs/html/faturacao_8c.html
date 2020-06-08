@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema de gestão de Vendas: Referência ao ficheiro faturacao.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sistema de gestão de Vendas
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Estruturas de Dados</a> &#124;
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência ao ficheiro faturacao.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Modulo que inicializa e controi a estrutura faturacao.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &quot;faturacao.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Diagrama de dependências de inclusão para faturacao.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="faturacao_8c__incl.png" border="0" usemap="#faturacao_8c" alt=""/></div>
+<map name="faturacao_8c" id="faturacao_8c">
+</map>
+</div>
+</div>
+<p><a href="faturacao_8c_source.html">Ir para o código fonte deste ficheiro.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Estruturas de Dados</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfatura.html">fatura</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:af10828b406e4e74b89b821e189452bc3"><td class="memItemLeft" align="right" valign="top"><a id="af10828b406e4e74b89b821e189452bc3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>freeNodoAVLFatura</b> (Fatura *f)</td></tr>
+<tr class="separator:af10828b406e4e74b89b821e189452bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ac6ba9606cd84ea8d0b137b059f8756"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="faturacao_8c.html#a4ac6ba9606cd84ea8d0b137b059f8756">insereFatura</a> (Fatura *f, Venda *v)</td></tr>
+<tr class="memdesc:a4ac6ba9606cd84ea8d0b137b059f8756"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insere uma venda numa fatura.  <a href="#a4ac6ba9606cd84ea8d0b137b059f8756">Mais...</a><br /></td></tr>
+<tr class="separator:a4ac6ba9606cd84ea8d0b137b059f8756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb686b9175c00f86f3bce095854aa18a"><td class="memItemLeft" align="right" valign="top">Fatura *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="faturacao_8c.html#abb686b9175c00f86f3bce095854aa18a">initFatura</a> ()</td></tr>
+<tr class="memdesc:abb686b9175c00f86f3bce095854aa18a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicialização das faturas.  <a href="#abb686b9175c00f86f3bce095854aa18a">Mais...</a><br /></td></tr>
+<tr class="separator:abb686b9175c00f86f3bce095854aa18a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7976d6439bd69bcce0b52d3fe05a8a2d"><td class="memItemLeft" align="right" valign="top">Fatura *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="faturacao_8c.html#a7976d6439bd69bcce0b52d3fe05a8a2d">cloneFaturas</a> (Fatura *f)</td></tr>
+<tr class="memdesc:a7976d6439bd69bcce0b52d3fe05a8a2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um clone de uma fatura.  <a href="#a7976d6439bd69bcce0b52d3fe05a8a2d">Mais...</a><br /></td></tr>
+<tr class="separator:a7976d6439bd69bcce0b52d3fe05a8a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad55844e4e49d564972bb0a537b4ad23b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="faturacao_8c.html#ad55844e4e49d564972bb0a537b4ad23b">getProdutoFatura</a> (Fatura *f)</td></tr>
+<tr class="memdesc:ad55844e4e49d564972bb0a537b4ad23b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o produto de uma fatura.  <a href="#ad55844e4e49d564972bb0a537b4ad23b">Mais...</a><br /></td></tr>
+<tr class="separator:ad55844e4e49d564972bb0a537b4ad23b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb82689eef0b05cad519049a05d50eeb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="faturacao_8c.html#afb82689eef0b05cad519049a05d50eeb">getNumeroTotalVendas</a> (Fatura *f, int <a class="el" href="structfilial.html">filial</a>, int mes, int prom)</td></tr>
+<tr class="memdesc:afb82689eef0b05cad519049a05d50eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtem o numero total de vendas dado o mês, a filial e o tipo de promoção.  <a href="#afb82689eef0b05cad519049a05d50eeb">Mais...</a><br /></td></tr>
+<tr class="separator:afb82689eef0b05cad519049a05d50eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e2ddbc2467f7b0df879e5f0e84878ef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="faturacao_8c.html#a5e2ddbc2467f7b0df879e5f0e84878ef">getQuantidadePFilial</a> (Fatura *f, int <a class="el" href="structfilial.html">filial</a>)</td></tr>
+<tr class="memdesc:a5e2ddbc2467f7b0df879e5f0e84878ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtem a quantidade total dada a filial.  <a href="#a5e2ddbc2467f7b0df879e5f0e84878ef">Mais...</a><br /></td></tr>
+<tr class="separator:a5e2ddbc2467f7b0df879e5f0e84878ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23224f16d2f9428fbff8de49592c0f9e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="faturacao_8c.html#a23224f16d2f9428fbff8de49592c0f9e">getFaturacao</a> (Fatura *f, int <a class="el" href="structfilial.html">filial</a>, int mes, int prom)</td></tr>
+<tr class="memdesc:a23224f16d2f9428fbff8de49592c0f9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtem a faturacao total dado o mês, a filial e o tipo de promoção.  <a href="#a23224f16d2f9428fbff8de49592c0f9e">Mais...</a><br /></td></tr>
+<tr class="separator:a23224f16d2f9428fbff8de49592c0f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Modulo que inicializa e controi a estrutura faturacao. </p>
+
+<p class="definition">Definido no ficheiro <a class="el" href="faturacao_8c_source.html">faturacao.c</a>.</p>
+</div><h2 class="groupheader">Documentação das funções</h2>
+<a id="a7976d6439bd69bcce0b52d3fe05a8a2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7976d6439bd69bcce0b52d3fe05a8a2d">&#9670;&nbsp;</a></span>cloneFaturas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Fatura* cloneFaturas </td>
+          <td>(</td>
+          <td class="paramtype">Fatura *&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cria um clone de uma fatura. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[f]</td><td>Fatura que vai ser clonizada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Fatura clone </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="faturacao_8c_source.html#l00063">63</a> do ficheiro <a class="el" href="faturacao_8c_source.html">faturacao.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                               {</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  Fatura* a = malloc(<span class="keyword">sizeof</span>(Fatura));</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">int</span> i, j, k;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  a-&gt;produto = strdup(f-&gt;produto);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordflow">for</span>(i = 0; i &lt; 3; i++){</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    a-&gt;quantPorFilial[i] = f-&gt;quantPorFilial[i];</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">for</span>(j = 0; j &lt; 12; j++){</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keywordflow">for</span>(k = 0; k &lt; 2; k++){</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        a-&gt;numeroTotalVendas[i][j][k] = f-&gt;numeroTotalVendas[i][j][k];</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        a-&gt;faturaTotal[i][j][k] = f-&gt;faturaTotal[i][j][k];</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      }</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordflow">return</span> a;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a23224f16d2f9428fbff8de49592c0f9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23224f16d2f9428fbff8de49592c0f9e">&#9670;&nbsp;</a></span>getFaturacao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double getFaturacao </td>
+          <td>(</td>
+          <td class="paramtype">Fatura *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>filial</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtem a faturacao total dado o mês, a filial e o tipo de promoção. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[f]</td><td>Estrutura fatura </td></tr>
+    <tr><td class="paramname">[filial]</td><td>Inteiro que determina a filial (filial = 0 -&gt; todas as filials) </td></tr>
+    <tr><td class="paramname">[mes]</td><td>Inteiro que determina o mes </td></tr>
+    <tr><td class="paramname">[prom]</td><td>Inteiro que determina a tipo de promocao (prom = 0 -&gt; N e prom = 1 -&gt; P) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna a faturacao total </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="faturacao_8c_source.html#l00123">123</a> do ficheiro <a class="el" href="faturacao_8c_source.html">faturacao.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                                                              {</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="structfilial.html">filial</a> == 0)</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">return</span> f-&gt;faturaTotal[0][mes-1][prom] + f-&gt;faturaTotal[1][mes-1][prom] + f-&gt;faturaTotal[2][mes-1][prom];</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordflow">return</span> f-&gt;faturaTotal[<a class="code" href="structfilial.html">filial</a>-1][mes-1][prom];</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div><div class="ttc" id="structfilial_html"><div class="ttname"><a href="structfilial.html">filial</a></div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00008">filial.c:8</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afb82689eef0b05cad519049a05d50eeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb82689eef0b05cad519049a05d50eeb">&#9670;&nbsp;</a></span>getNumeroTotalVendas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getNumeroTotalVendas </td>
+          <td>(</td>
+          <td class="paramtype">Fatura *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>filial</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtem o numero total de vendas dado o mês, a filial e o tipo de promoção. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[f]</td><td>Estrutura fatura </td></tr>
+    <tr><td class="paramname">[filial]</td><td>Inteiro que determina a filial (filial = 0 -&gt; todas as filials) </td></tr>
+    <tr><td class="paramname">[mes]</td><td>Inteiro que determina o mes </td></tr>
+    <tr><td class="paramname">[prom]</td><td>Inteiro que determina a tipo de promocao (prom = 0 -&gt; N e prom = 1 -&gt; P) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna o numero total de vendas </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="faturacao_8c_source.html#l00096">96</a> do ficheiro <a class="el" href="faturacao_8c_source.html">faturacao.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                                                                   {</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="structfilial.html">filial</a> == 0)</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> f-&gt;numeroTotalVendas[0][mes-1][prom]+f-&gt;numeroTotalVendas[1][mes-1][prom]+ f-&gt;numeroTotalVendas[2][mes-1][prom];</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordflow">return</span> f-&gt;numeroTotalVendas[<a class="code" href="structfilial.html">filial</a>-1][mes-1][prom];</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div><div class="ttc" id="structfilial_html"><div class="ttname"><a href="structfilial.html">filial</a></div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00008">filial.c:8</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad55844e4e49d564972bb0a537b4ad23b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad55844e4e49d564972bb0a537b4ad23b">&#9670;&nbsp;</a></span>getProdutoFatura()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* getProdutoFatura </td>
+          <td>(</td>
+          <td class="paramtype">Fatura *&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o produto de uma fatura. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[f]</td><td>Estrutura fatura </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Produto de uma fatura </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="faturacao_8c_source.html#l00084">84</a> do ficheiro <a class="el" href="faturacao_8c_source.html">faturacao.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                 {</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordflow">return</span> f-&gt;produto;</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a5e2ddbc2467f7b0df879e5f0e84878ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e2ddbc2467f7b0df879e5f0e84878ef">&#9670;&nbsp;</a></span>getQuantidadePFilial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getQuantidadePFilial </td>
+          <td>(</td>
+          <td class="paramtype">Fatura *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>filial</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtem a quantidade total dada a filial. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[f]</td><td>Estrutura fatura </td></tr>
+    <tr><td class="paramname">[filial]</td><td>Inteiro que determina a filial (filial = 0 -&gt; todas as filials) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna a faturacao total </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="faturacao_8c_source.html#l00109">109</a> do ficheiro <a class="el" href="faturacao_8c_source.html">faturacao.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                                               {</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="structfilial.html">filial</a> == 0)</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">return</span> f-&gt;quantPorFilial[0]+f-&gt;quantPorFilial[1]+f-&gt;quantPorFilial[2];</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordflow">return</span> f-&gt;quantPorFilial[<a class="code" href="structfilial.html">filial</a>-1];</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div><div class="ttc" id="structfilial_html"><div class="ttname"><a href="structfilial.html">filial</a></div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00008">filial.c:8</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abb686b9175c00f86f3bce095854aa18a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb686b9175c00f86f3bce095854aa18a">&#9670;&nbsp;</a></span>initFatura()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Fatura* initFatura </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicialização das faturas. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Nova fatura </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="faturacao_8c_source.html#l00043">43</a> do ficheiro <a class="el" href="faturacao_8c_source.html">faturacao.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                     {</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">int</span> i,j,k;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  Fatura* f = malloc(<span class="keyword">sizeof</span>(Fatura));</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">for</span>(i = 0; i &lt; 3; i++){</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    f-&gt;quantPorFilial[i] = 0;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">for</span>(j = 0; j &lt; 12; j++){</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keywordflow">for</span>(k = 0; k &lt; 2; k++){</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        f-&gt;numeroTotalVendas[i][j][k] = 0;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        f-&gt;faturaTotal[i][j][k] = 0;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      }</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  }</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordflow">return</span> f;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a4ac6ba9606cd84ea8d0b137b059f8756"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ac6ba9606cd84ea8d0b137b059f8756">&#9670;&nbsp;</a></span>insereFatura()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void insereFatura </td>
+          <td>(</td>
+          <td class="paramtype">Fatura *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Venda *&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Insere uma venda numa fatura. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[f]</td><td>Estrutura fatura </td></tr>
+    <tr><td class="paramname">[v]</td><td>Estrutura venda que vai ser inserida. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definido na linha <a class="el" href="faturacao_8c_source.html#l00028">28</a> do ficheiro <a class="el" href="faturacao_8c_source.html">faturacao.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                       {</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordtype">int</span> data,<a class="code" href="structfilial.html">filial</a>,prom;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  data = <a class="code" href="vendas_8c.html#a1178cf1dea33bcb6c9612d46f7534f33">getData</a>(v);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  filial = <a class="code" href="vendas_8c.html#a7381c97aa7302d679514ddbeabb1753f">getFilial</a>(v);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  prom = <a class="code" href="vendas_8c.html#ac48ab849f5af46f09394a208f41029e6">getPromocao</a>(v);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  f-&gt;produto = <a class="code" href="vendas_8c.html#a44aa4bbfb64f14bb33fefaeb575c00e1">getProduto</a>(v);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  f-&gt;numeroTotalVendas[filial-1][data-1][prom]++;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  f-&gt;quantPorFilial[filial-1] += <a class="code" href="vendas_8c.html#ae3196cffdcf5289440c1ee56ed5ee0d7">getQuantidade</a>(v);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  f-&gt;faturaTotal[filial-1][data-1][prom] += <a class="code" href="vendas_8c.html#a9cde304721e7cf45c51ec95bcf625de4">getPreco</a>(v)*<a class="code" href="vendas_8c.html#ae3196cffdcf5289440c1ee56ed5ee0d7">getQuantidade</a>(v);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div><div class="ttc" id="vendas_8c_html_a9cde304721e7cf45c51ec95bcf625de4"><div class="ttname"><a href="vendas_8c.html#a9cde304721e7cf45c51ec95bcf625de4">getPreco</a></div><div class="ttdeci">double getPreco(Venda *v)</div><div class="ttdoc">Acesso à componente preço. </div><div class="ttdef"><b>Definition:</b> <a href="vendas_8c_source.html#l00248">vendas.c:248</a></div></div>
+<div class="ttc" id="vendas_8c_html_a44aa4bbfb64f14bb33fefaeb575c00e1"><div class="ttname"><a href="vendas_8c.html#a44aa4bbfb64f14bb33fefaeb575c00e1">getProduto</a></div><div class="ttdeci">char * getProduto(Venda *v)</div><div class="ttdoc">Acesso à componente produto. </div><div class="ttdef"><b>Definition:</b> <a href="vendas_8c_source.html#l00238">vendas.c:238</a></div></div>
+<div class="ttc" id="vendas_8c_html_a1178cf1dea33bcb6c9612d46f7534f33"><div class="ttname"><a href="vendas_8c.html#a1178cf1dea33bcb6c9612d46f7534f33">getData</a></div><div class="ttdeci">int getData(Venda *v)</div><div class="ttdoc">Acesso à componente data. </div><div class="ttdef"><b>Definition:</b> <a href="vendas_8c_source.html#l00293">vendas.c:293</a></div></div>
+<div class="ttc" id="vendas_8c_html_ac48ab849f5af46f09394a208f41029e6"><div class="ttname"><a href="vendas_8c.html#ac48ab849f5af46f09394a208f41029e6">getPromocao</a></div><div class="ttdeci">int getPromocao(Venda *v)</div><div class="ttdoc">Acesso à componente promoção. </div><div class="ttdef"><b>Definition:</b> <a href="vendas_8c_source.html#l00268">vendas.c:268</a></div></div>
+<div class="ttc" id="structfilial_html"><div class="ttname"><a href="structfilial.html">filial</a></div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00008">filial.c:8</a></div></div>
+<div class="ttc" id="vendas_8c_html_a7381c97aa7302d679514ddbeabb1753f"><div class="ttname"><a href="vendas_8c.html#a7381c97aa7302d679514ddbeabb1753f">getFilial</a></div><div class="ttdeci">int getFilial(Venda *v)</div><div class="ttdoc">Acesso à componente filial. </div><div class="ttdef"><b>Definition:</b> <a href="vendas_8c_source.html#l00303">vendas.c:303</a></div></div>
+<div class="ttc" id="vendas_8c_html_ae3196cffdcf5289440c1ee56ed5ee0d7"><div class="ttname"><a href="vendas_8c.html#ae3196cffdcf5289440c1ee56ed5ee0d7">getQuantidade</a></div><div class="ttdeci">int getQuantidade(Venda *v)</div><div class="ttdoc">Acesso à componente quantidade. </div><div class="ttdef"><b>Definition:</b> <a href="vendas_8c_source.html#l00258">vendas.c:258</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

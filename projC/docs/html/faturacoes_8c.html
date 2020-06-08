@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema de gestão de Vendas: Referência ao ficheiro faturacoes.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sistema de gestão de Vendas
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência ao ficheiro faturacoes.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Modulo que inicializa e insere as estruturas faturas numa estrutura AVL.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &quot;faturacoes.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Diagrama de dependências de inclusão para faturacoes.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="faturacoes_8c__incl.png" border="0" usemap="#faturacoes_8c" alt=""/></div>
+<map name="faturacoes_8c" id="faturacoes_8c">
+</map>
+</div>
+</div>
+<p><a href="faturacoes_8c_source.html">Ir para o código fonte deste ficheiro.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:aa5fa05d951aa26b59256eb8fd0cd23b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="faturacoes_8c.html#aa5fa05d951aa26b59256eb8fd0cd23b4">freeAVLFatura</a> (AVL *f)</td></tr>
+<tr class="memdesc:aa5fa05d951aa26b59256eb8fd0cd23b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desaloca a memória ocupada por faturas em AVL.  <a href="#aa5fa05d951aa26b59256eb8fd0cd23b4">Mais...</a><br /></td></tr>
+<tr class="separator:aa5fa05d951aa26b59256eb8fd0cd23b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa807d9f5269922f16e4c4c4747b94ad6"><td class="memItemLeft" align="right" valign="top">AVL *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="faturacoes_8c.html#aa807d9f5269922f16e4c4c4747b94ad6">insereFaturaAVL</a> (VT *v, AVL *t)</td></tr>
+<tr class="memdesc:aa807d9f5269922f16e4c4c4747b94ad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insere a estrutura fatura numa AVL.  <a href="#aa807d9f5269922f16e4c4c4747b94ad6">Mais...</a><br /></td></tr>
+<tr class="separator:aa807d9f5269922f16e4c4c4747b94ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0ab422afb76b46b337198cd6ac3d1dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="faturacoes_8c.html#ad0ab422afb76b46b337198cd6ac3d1dc">getNumeroTVendAVL</a> (AVL *a, char *prod, int <a class="el" href="structfilial.html">filial</a>, int mes, int prom)</td></tr>
+<tr class="memdesc:ad0ab422afb76b46b337198cd6ac3d1dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtem o numero total de vendas dado o mês, a filial e o tipo de promoção recorrendo a AVL.  <a href="#ad0ab422afb76b46b337198cd6ac3d1dc">Mais...</a><br /></td></tr>
+<tr class="separator:ad0ab422afb76b46b337198cd6ac3d1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace1cdc0f36557bd0b611ecfc71c987bb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="faturacoes_8c.html#ace1cdc0f36557bd0b611ecfc71c987bb">getQuantidadePFilialAVL</a> (AVL *a, char *prod, int <a class="el" href="structfilial.html">filial</a>)</td></tr>
+<tr class="memdesc:ace1cdc0f36557bd0b611ecfc71c987bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtem a quantidade total de produtos vendidos dado o mês, a filial e o tipo de promoção recorrendo a AVL.  <a href="#ace1cdc0f36557bd0b611ecfc71c987bb">Mais...</a><br /></td></tr>
+<tr class="separator:ace1cdc0f36557bd0b611ecfc71c987bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43188dee2f6d08c9d153fb918bf28a33"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="faturacoes_8c.html#a43188dee2f6d08c9d153fb918bf28a33">getFaturacaoAVL</a> (AVL *a, char *prod, int <a class="el" href="structfilial.html">filial</a>, int mes, int prom)</td></tr>
+<tr class="memdesc:a43188dee2f6d08c9d153fb918bf28a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtem a faturacao total de vendas dado o mês, a filial e o tipo de promoção recorrendo a AVL.  <a href="#a43188dee2f6d08c9d153fb918bf28a33">Mais...</a><br /></td></tr>
+<tr class="separator:a43188dee2f6d08c9d153fb918bf28a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7fa5bf2aa878f4f9f9a7576ce7be824"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="faturacoes_8c.html#af7fa5bf2aa878f4f9f9a7576ce7be824">faturacaoTAVL</a> (AVL *<a class="el" href="structfatura.html">fatura</a>, int minMonth, int maxMonth)</td></tr>
+<tr class="memdesc:af7fa5bf2aa878f4f9f9a7576ce7be824"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica-nos a faturação dado um intervalo fechado de meses.  <a href="#af7fa5bf2aa878f4f9f9a7576ce7be824">Mais...</a><br /></td></tr>
+<tr class="separator:af7fa5bf2aa878f4f9f9a7576ce7be824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a818fac565930eaab175228a1cf519e3e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="faturacoes_8c.html#a818fac565930eaab175228a1cf519e3e">quantidadeTAVL</a> (AVL *<a class="el" href="structfatura.html">fatura</a>, int minMonth, int maxMonth)</td></tr>
+<tr class="memdesc:a818fac565930eaab175228a1cf519e3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica-nos a quantidade dado um intervalo fechado de meses.  <a href="#a818fac565930eaab175228a1cf519e3e">Mais...</a><br /></td></tr>
+<tr class="separator:a818fac565930eaab175228a1cf519e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Modulo que inicializa e insere as estruturas faturas numa estrutura AVL. </p>
+
+<p class="definition">Definido no ficheiro <a class="el" href="faturacoes_8c_source.html">faturacoes.c</a>.</p>
+</div><h2 class="groupheader">Documentação das funções</h2>
+<a id="af7fa5bf2aa878f4f9f9a7576ce7be824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7fa5bf2aa878f4f9f9a7576ce7be824">&#9670;&nbsp;</a></span>faturacaoTAVL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double faturacaoTAVL </td>
+          <td>(</td>
+          <td class="paramtype">AVL *&#160;</td>
+          <td class="paramname"><em>fatura</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minMonth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxMonth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indica-nos a faturação dado um intervalo fechado de meses. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[fatura]</td><td>Estrutura AVL </td></tr>
+    <tr><td class="paramname">[minMonth]</td><td>Limite inferior </td></tr>
+    <tr><td class="paramname">[maxMonth]</td><td>Limite superior </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna a faturacao total no intervalo fechado de meses </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="faturacoes_8c_source.html#l00129">129</a> do ficheiro <a class="el" href="faturacoes_8c_source.html">faturacoes.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                                                             {</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordtype">double</span> valor = 0;</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordtype">int</span> j,k;</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="structfatura.html">fatura</a> != NULL){</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">for</span>(j = minMonth; j &lt;= maxMonth; j++){</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      <span class="keywordflow">for</span>(k = 0; k &lt; 2; k++)</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        valor += <a class="code" href="faturacao_8c.html#a23224f16d2f9428fbff8de49592c0f9e">getFaturacao</a>(<a class="code" href="tree_8c.html#a1c2789a702672b4fb99d2c622181f949">getEquals</a>(<a class="code" href="structfatura.html">fatura</a>),0,j,k);</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">return</span> valor + <a class="code" href="faturacoes_8c.html#af7fa5bf2aa878f4f9f9a7576ce7be824">faturacaoTAVL</a>(<a class="code" href="tree_8c.html#a055813fad18fbe1331c4568fbb9b53ca">getLeft</a>(<a class="code" href="structfatura.html">fatura</a>),minMonth,maxMonth) + <a class="code" href="faturacoes_8c.html#af7fa5bf2aa878f4f9f9a7576ce7be824">faturacaoTAVL</a>(<a class="code" href="tree_8c.html#aa92a92ff16f40e2381b0452982b620b3">getRight</a>(<a class="code" href="structfatura.html">fatura</a>),minMonth,maxMonth);</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  }</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div><div class="ttc" id="tree_8c_html_a055813fad18fbe1331c4568fbb9b53ca"><div class="ttname"><a href="tree_8c.html#a055813fad18fbe1331c4568fbb9b53ca">getLeft</a></div><div class="ttdeci">AVL * getLeft(AVL *a)</div><div class="ttdoc">Função que devolve a esquerda de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00245">tree.c:245</a></div></div>
+<div class="ttc" id="structfatura_html"><div class="ttname"><a href="structfatura.html">fatura</a></div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00009">faturacao.c:9</a></div></div>
+<div class="ttc" id="tree_8c_html_a1c2789a702672b4fb99d2c622181f949"><div class="ttname"><a href="tree_8c.html#a1c2789a702672b4fb99d2c622181f949">getEquals</a></div><div class="ttdeci">void * getEquals(AVL *a)</div><div class="ttdoc">Função que devolve o equals de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00236">tree.c:236</a></div></div>
+<div class="ttc" id="faturacao_8c_html_a23224f16d2f9428fbff8de49592c0f9e"><div class="ttname"><a href="faturacao_8c.html#a23224f16d2f9428fbff8de49592c0f9e">getFaturacao</a></div><div class="ttdeci">double getFaturacao(Fatura *f, int filial, int mes, int prom)</div><div class="ttdoc">Obtem a faturacao total dado o mês, a filial e o tipo de promoção. </div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00123">faturacao.c:123</a></div></div>
+<div class="ttc" id="faturacoes_8c_html_af7fa5bf2aa878f4f9f9a7576ce7be824"><div class="ttname"><a href="faturacoes_8c.html#af7fa5bf2aa878f4f9f9a7576ce7be824">faturacaoTAVL</a></div><div class="ttdeci">double faturacaoTAVL(AVL *fatura, int minMonth, int maxMonth)</div><div class="ttdoc">Indica-nos a faturação dado um intervalo fechado de meses. </div><div class="ttdef"><b>Definition:</b> <a href="faturacoes_8c_source.html#l00129">faturacoes.c:129</a></div></div>
+<div class="ttc" id="tree_8c_html_aa92a92ff16f40e2381b0452982b620b3"><div class="ttname"><a href="tree_8c.html#aa92a92ff16f40e2381b0452982b620b3">getRight</a></div><div class="ttdeci">AVL * getRight(AVL *a)</div><div class="ttdoc">Função que devolve a direita de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00254">tree.c:254</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa5fa05d951aa26b59256eb8fd0cd23b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5fa05d951aa26b59256eb8fd0cd23b4">&#9670;&nbsp;</a></span>freeAVLFatura()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void freeAVLFatura </td>
+          <td>(</td>
+          <td class="paramtype">AVL *&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Desaloca a memória ocupada por faturas em AVL. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[f]</td><td>Estrutura AVL que vai ser desalocada </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definido na linha <a class="el" href="faturacoes_8c_source.html#l00012">12</a> do ficheiro <a class="el" href="faturacoes_8c_source.html">faturacoes.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                           {</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordflow">if</span>(f){</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    free(<a class="code" href="tree_8c.html#af043329377f4d9303267455cd353fd83">getKey</a>(f));</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    freeNodoAVLFatura((Fatura*)(<a class="code" href="tree_8c.html#a1c2789a702672b4fb99d2c622181f949">getEquals</a>(f)));</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="faturacoes_8c.html#aa5fa05d951aa26b59256eb8fd0cd23b4">freeAVLFatura</a>(<a class="code" href="tree_8c.html#aa92a92ff16f40e2381b0452982b620b3">getRight</a>(f));</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="faturacoes_8c.html#aa5fa05d951aa26b59256eb8fd0cd23b4">freeAVLFatura</a>(<a class="code" href="tree_8c.html#a055813fad18fbe1331c4568fbb9b53ca">getLeft</a>(f));</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    free(f);</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    f = NULL;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  }</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div><div class="ttc" id="tree_8c_html_af043329377f4d9303267455cd353fd83"><div class="ttname"><a href="tree_8c.html#af043329377f4d9303267455cd353fd83">getKey</a></div><div class="ttdeci">char * getKey(AVL *a)</div><div class="ttdoc">Função que devolve a key de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00227">tree.c:227</a></div></div>
+<div class="ttc" id="tree_8c_html_a055813fad18fbe1331c4568fbb9b53ca"><div class="ttname"><a href="tree_8c.html#a055813fad18fbe1331c4568fbb9b53ca">getLeft</a></div><div class="ttdeci">AVL * getLeft(AVL *a)</div><div class="ttdoc">Função que devolve a esquerda de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00245">tree.c:245</a></div></div>
+<div class="ttc" id="tree_8c_html_a1c2789a702672b4fb99d2c622181f949"><div class="ttname"><a href="tree_8c.html#a1c2789a702672b4fb99d2c622181f949">getEquals</a></div><div class="ttdeci">void * getEquals(AVL *a)</div><div class="ttdoc">Função que devolve o equals de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00236">tree.c:236</a></div></div>
+<div class="ttc" id="faturacoes_8c_html_aa5fa05d951aa26b59256eb8fd0cd23b4"><div class="ttname"><a href="faturacoes_8c.html#aa5fa05d951aa26b59256eb8fd0cd23b4">freeAVLFatura</a></div><div class="ttdeci">void freeAVLFatura(AVL *f)</div><div class="ttdoc">Desaloca a memória ocupada por faturas em AVL. </div><div class="ttdef"><b>Definition:</b> <a href="faturacoes_8c_source.html#l00012">faturacoes.c:12</a></div></div>
+<div class="ttc" id="tree_8c_html_aa92a92ff16f40e2381b0452982b620b3"><div class="ttname"><a href="tree_8c.html#aa92a92ff16f40e2381b0452982b620b3">getRight</a></div><div class="ttdeci">AVL * getRight(AVL *a)</div><div class="ttdoc">Função que devolve a direita de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00254">tree.c:254</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a43188dee2f6d08c9d153fb918bf28a33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43188dee2f6d08c9d153fb918bf28a33">&#9670;&nbsp;</a></span>getFaturacaoAVL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getFaturacaoAVL </td>
+          <td>(</td>
+          <td class="paramtype">AVL *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>prod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>filial</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtem a faturacao total de vendas dado o mês, a filial e o tipo de promoção recorrendo a AVL. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[a]</td><td>Estrutura AVL utilizada para obter a faturacao total </td></tr>
+    <tr><td class="paramname">[prod]</td><td>Produto na qual desejamos saber o numero de vendas </td></tr>
+    <tr><td class="paramname">[filial]</td><td>Filial desejada </td></tr>
+    <tr><td class="paramname">[mes]</td><td>Mes desejado </td></tr>
+    <tr><td class="paramname">[prom]</td><td>Promocao desejada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna a faturacao total </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="faturacoes_8c_source.html#l00106">106</a> do ficheiro <a class="el" href="faturacoes_8c_source.html">faturacoes.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                                                                      {</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="tree_8c.html#a56e7dddb3c67ac22f3373a010c1c9e21">searchAVL</a>(a,prod)){</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    AVL* tmp = a;</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">while</span>(strcmp(<a class="code" href="tree_8c.html#af043329377f4d9303267455cd353fd83">getKey</a>(tmp),prod)!=0){</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      <span class="keywordflow">if</span>((strcmp(<a class="code" href="tree_8c.html#af043329377f4d9303267455cd353fd83">getKey</a>(tmp),prod)) &lt; 0){</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        tmp = <a class="code" href="tree_8c.html#aa92a92ff16f40e2381b0452982b620b3">getRight</a>(tmp);</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      }</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <span class="keywordflow">else</span>{</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        tmp = <a class="code" href="tree_8c.html#a055813fad18fbe1331c4568fbb9b53ca">getLeft</a>(tmp);</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      }</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="faturacao_8c.html#a23224f16d2f9428fbff8de49592c0f9e">getFaturacao</a>(<a class="code" href="tree_8c.html#a1c2789a702672b4fb99d2c622181f949">getEquals</a>(tmp),<a class="code" href="structfilial.html">filial</a>,mes,prom);</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  }</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div><div class="ttc" id="tree_8c_html_af043329377f4d9303267455cd353fd83"><div class="ttname"><a href="tree_8c.html#af043329377f4d9303267455cd353fd83">getKey</a></div><div class="ttdeci">char * getKey(AVL *a)</div><div class="ttdoc">Função que devolve a key de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00227">tree.c:227</a></div></div>
+<div class="ttc" id="tree_8c_html_a56e7dddb3c67ac22f3373a010c1c9e21"><div class="ttname"><a href="tree_8c.html#a56e7dddb3c67ac22f3373a010c1c9e21">searchAVL</a></div><div class="ttdeci">int searchAVL(AVL *node, char *key)</div><div class="ttdoc">Função que procura um elemento na árvore. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00208">tree.c:208</a></div></div>
+<div class="ttc" id="tree_8c_html_a055813fad18fbe1331c4568fbb9b53ca"><div class="ttname"><a href="tree_8c.html#a055813fad18fbe1331c4568fbb9b53ca">getLeft</a></div><div class="ttdeci">AVL * getLeft(AVL *a)</div><div class="ttdoc">Função que devolve a esquerda de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00245">tree.c:245</a></div></div>
+<div class="ttc" id="tree_8c_html_a1c2789a702672b4fb99d2c622181f949"><div class="ttname"><a href="tree_8c.html#a1c2789a702672b4fb99d2c622181f949">getEquals</a></div><div class="ttdeci">void * getEquals(AVL *a)</div><div class="ttdoc">Função que devolve o equals de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00236">tree.c:236</a></div></div>
+<div class="ttc" id="faturacao_8c_html_a23224f16d2f9428fbff8de49592c0f9e"><div class="ttname"><a href="faturacao_8c.html#a23224f16d2f9428fbff8de49592c0f9e">getFaturacao</a></div><div class="ttdeci">double getFaturacao(Fatura *f, int filial, int mes, int prom)</div><div class="ttdoc">Obtem a faturacao total dado o mês, a filial e o tipo de promoção. </div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00123">faturacao.c:123</a></div></div>
+<div class="ttc" id="structfilial_html"><div class="ttname"><a href="structfilial.html">filial</a></div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00008">filial.c:8</a></div></div>
+<div class="ttc" id="tree_8c_html_aa92a92ff16f40e2381b0452982b620b3"><div class="ttname"><a href="tree_8c.html#aa92a92ff16f40e2381b0452982b620b3">getRight</a></div><div class="ttdeci">AVL * getRight(AVL *a)</div><div class="ttdoc">Função que devolve a direita de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00254">tree.c:254</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad0ab422afb76b46b337198cd6ac3d1dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0ab422afb76b46b337198cd6ac3d1dc">&#9670;&nbsp;</a></span>getNumeroTVendAVL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getNumeroTVendAVL </td>
+          <td>(</td>
+          <td class="paramtype">AVL *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>prod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>filial</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtem o numero total de vendas dado o mês, a filial e o tipo de promoção recorrendo a AVL. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[a]</td><td>Estrutura AVL utilizada para obter o numero total de vendas </td></tr>
+    <tr><td class="paramname">[prod]</td><td>Produto na qual desejamos saber o numero de vendas </td></tr>
+    <tr><td class="paramname">[filial]</td><td>Filial desejada </td></tr>
+    <tr><td class="paramname">[mes]</td><td>Mes desejado </td></tr>
+    <tr><td class="paramname">[prom]</td><td>Promocao desejada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna o numero total de vendas </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="faturacoes_8c_source.html#l00058">58</a> do ficheiro <a class="el" href="faturacoes_8c_source.html">faturacoes.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                                                      {</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="tree_8c.html#a56e7dddb3c67ac22f3373a010c1c9e21">searchAVL</a>(a,prod)){</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    AVL* tmp = a;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">while</span>(strcmp(<a class="code" href="tree_8c.html#af043329377f4d9303267455cd353fd83">getKey</a>(tmp),prod)!=0){</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">if</span>((strcmp(<a class="code" href="tree_8c.html#af043329377f4d9303267455cd353fd83">getKey</a>(tmp),prod)) &lt; 0){</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        tmp = <a class="code" href="tree_8c.html#aa92a92ff16f40e2381b0452982b620b3">getRight</a>(tmp);</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      }</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordflow">else</span>{</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        tmp = <a class="code" href="tree_8c.html#a055813fad18fbe1331c4568fbb9b53ca">getLeft</a>(tmp);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      }</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="faturacao_8c.html#afb82689eef0b05cad519049a05d50eeb">getNumeroTotalVendas</a>(<a class="code" href="tree_8c.html#a1c2789a702672b4fb99d2c622181f949">getEquals</a>(tmp),<a class="code" href="structfilial.html">filial</a>,mes,prom);</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div><div class="ttc" id="tree_8c_html_af043329377f4d9303267455cd353fd83"><div class="ttname"><a href="tree_8c.html#af043329377f4d9303267455cd353fd83">getKey</a></div><div class="ttdeci">char * getKey(AVL *a)</div><div class="ttdoc">Função que devolve a key de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00227">tree.c:227</a></div></div>
+<div class="ttc" id="tree_8c_html_a56e7dddb3c67ac22f3373a010c1c9e21"><div class="ttname"><a href="tree_8c.html#a56e7dddb3c67ac22f3373a010c1c9e21">searchAVL</a></div><div class="ttdeci">int searchAVL(AVL *node, char *key)</div><div class="ttdoc">Função que procura um elemento na árvore. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00208">tree.c:208</a></div></div>
+<div class="ttc" id="tree_8c_html_a055813fad18fbe1331c4568fbb9b53ca"><div class="ttname"><a href="tree_8c.html#a055813fad18fbe1331c4568fbb9b53ca">getLeft</a></div><div class="ttdeci">AVL * getLeft(AVL *a)</div><div class="ttdoc">Função que devolve a esquerda de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00245">tree.c:245</a></div></div>
+<div class="ttc" id="tree_8c_html_a1c2789a702672b4fb99d2c622181f949"><div class="ttname"><a href="tree_8c.html#a1c2789a702672b4fb99d2c622181f949">getEquals</a></div><div class="ttdeci">void * getEquals(AVL *a)</div><div class="ttdoc">Função que devolve o equals de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00236">tree.c:236</a></div></div>
+<div class="ttc" id="structfilial_html"><div class="ttname"><a href="structfilial.html">filial</a></div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00008">filial.c:8</a></div></div>
+<div class="ttc" id="tree_8c_html_aa92a92ff16f40e2381b0452982b620b3"><div class="ttname"><a href="tree_8c.html#aa92a92ff16f40e2381b0452982b620b3">getRight</a></div><div class="ttdeci">AVL * getRight(AVL *a)</div><div class="ttdoc">Função que devolve a direita de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00254">tree.c:254</a></div></div>
+<div class="ttc" id="faturacao_8c_html_afb82689eef0b05cad519049a05d50eeb"><div class="ttname"><a href="faturacao_8c.html#afb82689eef0b05cad519049a05d50eeb">getNumeroTotalVendas</a></div><div class="ttdeci">int getNumeroTotalVendas(Fatura *f, int filial, int mes, int prom)</div><div class="ttdoc">Obtem o numero total de vendas dado o mês, a filial e o tipo de promoção. </div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00096">faturacao.c:96</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ace1cdc0f36557bd0b611ecfc71c987bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace1cdc0f36557bd0b611ecfc71c987bb">&#9670;&nbsp;</a></span>getQuantidadePFilialAVL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getQuantidadePFilialAVL </td>
+          <td>(</td>
+          <td class="paramtype">AVL *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>prod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>filial</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtem a quantidade total de produtos vendidos dado o mês, a filial e o tipo de promoção recorrendo a AVL. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[a]</td><td>Estrutura AVL utilizada para obter a quantidade total de produtos vendidos </td></tr>
+    <tr><td class="paramname">[prod]</td><td>Produto na qual desejamos saber o numero de vendas </td></tr>
+    <tr><td class="paramname">[filial]</td><td>Filial desejada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna a quantidade total de produtos vendidos </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="faturacoes_8c_source.html#l00081">81</a> do ficheiro <a class="el" href="faturacoes_8c_source.html">faturacoes.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                                                           {</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="tree_8c.html#a56e7dddb3c67ac22f3373a010c1c9e21">searchAVL</a>(a,prod)){</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    AVL* tmp = a;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">while</span>(strcmp(<a class="code" href="tree_8c.html#af043329377f4d9303267455cd353fd83">getKey</a>(tmp),prod)!=0){</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="keywordflow">if</span>((strcmp(<a class="code" href="tree_8c.html#af043329377f4d9303267455cd353fd83">getKey</a>(tmp),prod)) &lt; 0){</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        tmp = <a class="code" href="tree_8c.html#aa92a92ff16f40e2381b0452982b620b3">getRight</a>(tmp);</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      }</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keywordflow">else</span>{</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        tmp = <a class="code" href="tree_8c.html#a055813fad18fbe1331c4568fbb9b53ca">getLeft</a>(tmp);</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      }</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="faturacao_8c.html#a5e2ddbc2467f7b0df879e5f0e84878ef">getQuantidadePFilial</a>(<a class="code" href="tree_8c.html#a1c2789a702672b4fb99d2c622181f949">getEquals</a>(tmp),<a class="code" href="structfilial.html">filial</a>);</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  }</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div><div class="ttc" id="tree_8c_html_af043329377f4d9303267455cd353fd83"><div class="ttname"><a href="tree_8c.html#af043329377f4d9303267455cd353fd83">getKey</a></div><div class="ttdeci">char * getKey(AVL *a)</div><div class="ttdoc">Função que devolve a key de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00227">tree.c:227</a></div></div>
+<div class="ttc" id="tree_8c_html_a56e7dddb3c67ac22f3373a010c1c9e21"><div class="ttname"><a href="tree_8c.html#a56e7dddb3c67ac22f3373a010c1c9e21">searchAVL</a></div><div class="ttdeci">int searchAVL(AVL *node, char *key)</div><div class="ttdoc">Função que procura um elemento na árvore. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00208">tree.c:208</a></div></div>
+<div class="ttc" id="tree_8c_html_a055813fad18fbe1331c4568fbb9b53ca"><div class="ttname"><a href="tree_8c.html#a055813fad18fbe1331c4568fbb9b53ca">getLeft</a></div><div class="ttdeci">AVL * getLeft(AVL *a)</div><div class="ttdoc">Função que devolve a esquerda de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00245">tree.c:245</a></div></div>
+<div class="ttc" id="tree_8c_html_a1c2789a702672b4fb99d2c622181f949"><div class="ttname"><a href="tree_8c.html#a1c2789a702672b4fb99d2c622181f949">getEquals</a></div><div class="ttdeci">void * getEquals(AVL *a)</div><div class="ttdoc">Função que devolve o equals de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00236">tree.c:236</a></div></div>
+<div class="ttc" id="faturacao_8c_html_a5e2ddbc2467f7b0df879e5f0e84878ef"><div class="ttname"><a href="faturacao_8c.html#a5e2ddbc2467f7b0df879e5f0e84878ef">getQuantidadePFilial</a></div><div class="ttdeci">int getQuantidadePFilial(Fatura *f, int filial)</div><div class="ttdoc">Obtem a quantidade total dada a filial. </div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00109">faturacao.c:109</a></div></div>
+<div class="ttc" id="structfilial_html"><div class="ttname"><a href="structfilial.html">filial</a></div><div class="ttdef"><b>Definition:</b> <a href="filial_8c_source.html#l00008">filial.c:8</a></div></div>
+<div class="ttc" id="tree_8c_html_aa92a92ff16f40e2381b0452982b620b3"><div class="ttname"><a href="tree_8c.html#aa92a92ff16f40e2381b0452982b620b3">getRight</a></div><div class="ttdeci">AVL * getRight(AVL *a)</div><div class="ttdoc">Função que devolve a direita de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00254">tree.c:254</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa807d9f5269922f16e4c4c4747b94ad6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa807d9f5269922f16e4c4c4747b94ad6">&#9670;&nbsp;</a></span>insereFaturaAVL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AVL* insereFaturaAVL </td>
+          <td>(</td>
+          <td class="paramtype">VT *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AVL *&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Insere a estrutura fatura numa AVL. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[v]</td><td>Estrutura VT que irá fornecer as vendas para inicializar a estrutura faturas </td></tr>
+    <tr><td class="paramname">[t]</td><td>Estrutura AVL onde vão ser inseridas as faturas </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna a estrutura AVL com as faturas </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="faturacoes_8c_source.html#l00029">29</a> do ficheiro <a class="el" href="faturacoes_8c_source.html">faturacoes.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                    {</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">int</span> i;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">for</span>(i = 0; i &lt; <a class="code" href="vendas_8c.html#aba67c7ea52fab81d42a891082b59ef72">getOcupadosV</a>(v); i++){</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    Venda* vendas = <a class="code" href="vendas_8c.html#ab7121d1c08c763f3f6f3ab5902682ecd">getVenda</a>(v,i);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">char</span>* prod = <a class="code" href="vendas_8c.html#a44aa4bbfb64f14bb33fefaeb575c00e1">getProduto</a>(vendas);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    AVL* tmp = searchAVLTMP(t,prod);</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">if</span>(tmp != NULL){</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      Fatura* e = (Fatura*)<a class="code" href="tree_8c.html#a1c2789a702672b4fb99d2c622181f949">getEquals</a>(tmp);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <a class="code" href="faturacao_8c.html#a4ac6ba9606cd84ea8d0b137b059f8756">insereFatura</a>(e,vendas);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">else</span> {</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      Fatura* f = <a class="code" href="faturacao_8c.html#abb686b9175c00f86f3bce095854aa18a">initFatura</a>();</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <a class="code" href="faturacao_8c.html#a4ac6ba9606cd84ea8d0b137b059f8756">insereFatura</a>(f,vendas);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      t = <a class="code" href="tree_8c.html#a8792d9847f06c27e4955b63f63239305">insert</a>(t,strdup(prod),f);</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    free(prod);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  }</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">return</span> t;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div><div class="ttc" id="faturacao_8c_html_abb686b9175c00f86f3bce095854aa18a"><div class="ttname"><a href="faturacao_8c.html#abb686b9175c00f86f3bce095854aa18a">initFatura</a></div><div class="ttdeci">Fatura * initFatura()</div><div class="ttdoc">Inicialização das faturas. </div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00043">faturacao.c:43</a></div></div>
+<div class="ttc" id="faturacao_8c_html_a4ac6ba9606cd84ea8d0b137b059f8756"><div class="ttname"><a href="faturacao_8c.html#a4ac6ba9606cd84ea8d0b137b059f8756">insereFatura</a></div><div class="ttdeci">void insereFatura(Fatura *f, Venda *v)</div><div class="ttdoc">Insere uma venda numa fatura. </div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00028">faturacao.c:28</a></div></div>
+<div class="ttc" id="tree_8c_html_a8792d9847f06c27e4955b63f63239305"><div class="ttname"><a href="tree_8c.html#a8792d9847f06c27e4955b63f63239305">insert</a></div><div class="ttdeci">struct Node * insert(struct Node *node, char *key, void *equals)</div><div class="ttdoc">Função que insere um elemento na árvore. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00149">tree.c:149</a></div></div>
+<div class="ttc" id="vendas_8c_html_a44aa4bbfb64f14bb33fefaeb575c00e1"><div class="ttname"><a href="vendas_8c.html#a44aa4bbfb64f14bb33fefaeb575c00e1">getProduto</a></div><div class="ttdeci">char * getProduto(Venda *v)</div><div class="ttdoc">Acesso à componente produto. </div><div class="ttdef"><b>Definition:</b> <a href="vendas_8c_source.html#l00238">vendas.c:238</a></div></div>
+<div class="ttc" id="tree_8c_html_a1c2789a702672b4fb99d2c622181f949"><div class="ttname"><a href="tree_8c.html#a1c2789a702672b4fb99d2c622181f949">getEquals</a></div><div class="ttdeci">void * getEquals(AVL *a)</div><div class="ttdoc">Função que devolve o equals de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00236">tree.c:236</a></div></div>
+<div class="ttc" id="vendas_8c_html_aba67c7ea52fab81d42a891082b59ef72"><div class="ttname"><a href="vendas_8c.html#aba67c7ea52fab81d42a891082b59ef72">getOcupadosV</a></div><div class="ttdeci">int getOcupadosV(VT *vendas)</div><div class="ttdoc">Função que devolve o espaço ocupado pelas vendas na string. </div><div class="ttdef"><b>Definition:</b> <a href="vendas_8c_source.html#l00356">vendas.c:356</a></div></div>
+<div class="ttc" id="vendas_8c_html_ab7121d1c08c763f3f6f3ab5902682ecd"><div class="ttname"><a href="vendas_8c.html#ab7121d1c08c763f3f6f3ab5902682ecd">getVenda</a></div><div class="ttdeci">Venda * getVenda(VT *vendas, int i)</div><div class="ttdoc">Função que devolve um array com as vendas. </div><div class="ttdef"><b>Definition:</b> <a href="vendas_8c_source.html#l00377">vendas.c:377</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a818fac565930eaab175228a1cf519e3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a818fac565930eaab175228a1cf519e3e">&#9670;&nbsp;</a></span>quantidadeTAVL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int quantidadeTAVL </td>
+          <td>(</td>
+          <td class="paramtype">AVL *&#160;</td>
+          <td class="paramname"><em>fatura</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minMonth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxMonth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indica-nos a quantidade dado um intervalo fechado de meses. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[fatura]</td><td>Estrutura AVL </td></tr>
+    <tr><td class="paramname">[minMonth]</td><td>Limite inferior </td></tr>
+    <tr><td class="paramname">[maxMonth]</td><td>Limite superior </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna a quantidade total no intervalo fechado de meses. </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="faturacoes_8c_source.html#l00149">149</a> do ficheiro <a class="el" href="faturacoes_8c_source.html">faturacoes.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                                                           {</div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keywordtype">int</span> valor = 0;</div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keywordtype">int</span> i,j,k;</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="structfatura.html">fatura</a> != NULL){</div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">for</span>(i = 1; i &lt;= 3; i++){</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;      <span class="keywordflow">for</span>(j = minMonth; j &lt;= maxMonth; j++){</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">for</span>(k = 0; k &lt; 2; k++)</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;          valor += <a class="code" href="faturacao_8c.html#afb82689eef0b05cad519049a05d50eeb">getNumeroTotalVendas</a>(<a class="code" href="tree_8c.html#a1c2789a702672b4fb99d2c622181f949">getEquals</a>(<a class="code" href="structfatura.html">fatura</a>),i,j,k);</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;      }</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">return</span> valor + <a class="code" href="faturacoes_8c.html#a818fac565930eaab175228a1cf519e3e">quantidadeTAVL</a>(<a class="code" href="tree_8c.html#a055813fad18fbe1331c4568fbb9b53ca">getLeft</a>(<a class="code" href="structfatura.html">fatura</a>),minMonth,maxMonth) + <a class="code" href="faturacoes_8c.html#a818fac565930eaab175228a1cf519e3e">quantidadeTAVL</a>(<a class="code" href="tree_8c.html#aa92a92ff16f40e2381b0452982b620b3">getRight</a>(<a class="code" href="structfatura.html">fatura</a>),minMonth,maxMonth);</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  }</div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div><div class="ttc" id="tree_8c_html_a055813fad18fbe1331c4568fbb9b53ca"><div class="ttname"><a href="tree_8c.html#a055813fad18fbe1331c4568fbb9b53ca">getLeft</a></div><div class="ttdeci">AVL * getLeft(AVL *a)</div><div class="ttdoc">Função que devolve a esquerda de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00245">tree.c:245</a></div></div>
+<div class="ttc" id="structfatura_html"><div class="ttname"><a href="structfatura.html">fatura</a></div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00009">faturacao.c:9</a></div></div>
+<div class="ttc" id="tree_8c_html_a1c2789a702672b4fb99d2c622181f949"><div class="ttname"><a href="tree_8c.html#a1c2789a702672b4fb99d2c622181f949">getEquals</a></div><div class="ttdeci">void * getEquals(AVL *a)</div><div class="ttdoc">Função que devolve o equals de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00236">tree.c:236</a></div></div>
+<div class="ttc" id="faturacoes_8c_html_a818fac565930eaab175228a1cf519e3e"><div class="ttname"><a href="faturacoes_8c.html#a818fac565930eaab175228a1cf519e3e">quantidadeTAVL</a></div><div class="ttdeci">int quantidadeTAVL(AVL *fatura, int minMonth, int maxMonth)</div><div class="ttdoc">Indica-nos a quantidade dado um intervalo fechado de meses. </div><div class="ttdef"><b>Definition:</b> <a href="faturacoes_8c_source.html#l00149">faturacoes.c:149</a></div></div>
+<div class="ttc" id="tree_8c_html_aa92a92ff16f40e2381b0452982b620b3"><div class="ttname"><a href="tree_8c.html#aa92a92ff16f40e2381b0452982b620b3">getRight</a></div><div class="ttdeci">AVL * getRight(AVL *a)</div><div class="ttdoc">Função que devolve a direita de a. </div><div class="ttdef"><b>Definition:</b> <a href="tree_8c_source.html#l00254">tree.c:254</a></div></div>
+<div class="ttc" id="faturacao_8c_html_afb82689eef0b05cad519049a05d50eeb"><div class="ttname"><a href="faturacao_8c.html#afb82689eef0b05cad519049a05d50eeb">getNumeroTotalVendas</a></div><div class="ttdeci">int getNumeroTotalVendas(Fatura *f, int filial, int mes, int prom)</div><div class="ttdoc">Obtem o numero total de vendas dado o mês, a filial e o tipo de promoção. </div><div class="ttdef"><b>Definition:</b> <a href="faturacao_8c_source.html#l00096">faturacao.c:96</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

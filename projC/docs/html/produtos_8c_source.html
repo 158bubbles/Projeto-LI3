@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema de gestão de Vendas: Código-Fonte de produtos.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sistema de gestão de Vendas
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">produtos.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="produtos_8c.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;produtos.h&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="produtos_8c.html#a3fd719b07970fa788d3ad51440484d1e">   14</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="produtos_8c.html#a3fd719b07970fa788d3ad51440484d1e">valid_Produtos</a> (<span class="keywordtype">char</span>* str){</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordtype">int</span> i,r = 1;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordtype">int</span> l = strlen(str);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordflow">if</span> (l == 6 &amp;&amp; (isupper(str[0])) &gt; 0 &amp;&amp; (isupper(str[1])) &gt; 0) {</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">for</span> (i = 2; i &lt; l-2; i++){</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      <span class="keywordflow">if</span> (!(isdigit(str[i]))){</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;          <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      }</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  }</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">else</span> r = 0;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordflow">return</span> r;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="produtos_8c.html#ac0ee60ad5a3fab414fc2e7470e43e15f">   34</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="produtos_8c.html#ac0ee60ad5a3fab414fc2e7470e43e15f">read_Produtos</a> (Dados* produtos, <span class="keywordtype">char</span>* filePath){</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  FILE* f = fopen(filePath, <span class="stringliteral">&quot;r&quot;</span>);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">if</span> (f == NULL){</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    printf(<span class="stringliteral">&quot;Ficheiro produtos inexistente\n&quot;</span>);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  }</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">char</span> str[1024];</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">while</span>(fgets(str,1024,f)){</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    produtos-&gt;lidas++;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="produtos_8c.html#a3fd719b07970fa788d3ad51440484d1e">valid_Produtos</a>(strtok(str,<span class="stringliteral">&quot;\r\n&quot;</span>))){</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keywordflow">if</span>(produtos-&gt;size == produtos-&gt;ocupados){</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="clientes_8c.html#ab93f3f48a62ea57a21aa91347dc699c7">reallocDados</a>(produtos);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      }</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      produtos-&gt;str[produtos-&gt;ocupados] = strdup(str);</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      produtos-&gt;ocupados++;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  qsort(produtos-&gt;str,produtos-&gt;ocupados,<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*),<a class="code" href="clientes_8c.html#a6f76df6572f78ed7afe910732203b41f">myCompare</a>);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  fclose(f);</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="produtos_8c.html#a7c722b918c15082ce56ff92ab07a47e5">   61</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="produtos_8c.html#a7c722b918c15082ce56ff92ab07a47e5">getOcupadosP</a> (Dados* produtos){</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">return</span> produtos-&gt;ocupados;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div><div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="produtos_8c.html#a05943ed85340c50750c61a556ad205b7">   71</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="produtos_8c.html#a05943ed85340c50750c61a556ad205b7">getLidasP</a> (Dados* produtos){</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordflow">return</span> produtos-&gt;lidas;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div><div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="produtos_8c.html#a469255f6be632c57839aa91f2e5040d1">   82</a></span>&#160;<span class="keywordtype">char</span>* <a class="code" href="produtos_8c.html#a469255f6be632c57839aa91f2e5040d1">getProdutoP</a> (<span class="keywordtype">int</span> i,Dados* produtos){</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordflow">return</span> strdup(produtos-&gt;str[i]);</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div><div class="ttc" id="produtos_8c_html_ac0ee60ad5a3fab414fc2e7470e43e15f"><div class="ttname"><a href="produtos_8c.html#ac0ee60ad5a3fab414fc2e7470e43e15f">read_Produtos</a></div><div class="ttdeci">void read_Produtos(Dados *produtos, char *filePath)</div><div class="ttdoc">Função que lê um ficheiro .txt com a informacao relativa aos produtos. </div><div class="ttdef"><b>Definition:</b> <a href="produtos_8c_source.html#l00034">produtos.c:34</a></div></div>
+<div class="ttc" id="produtos_8c_html_a469255f6be632c57839aa91f2e5040d1"><div class="ttname"><a href="produtos_8c.html#a469255f6be632c57839aa91f2e5040d1">getProdutoP</a></div><div class="ttdeci">char * getProdutoP(int i, Dados *produtos)</div><div class="ttdoc">Função que devolve um array com os produtos. </div><div class="ttdef"><b>Definition:</b> <a href="produtos_8c_source.html#l00082">produtos.c:82</a></div></div>
+<div class="ttc" id="clientes_8c_html_a6f76df6572f78ed7afe910732203b41f"><div class="ttname"><a href="clientes_8c.html#a6f76df6572f78ed7afe910732203b41f">myCompare</a></div><div class="ttdeci">int myCompare(const void *a, const void *b)</div><div class="ttdoc">Função que compara duas constantes. </div><div class="ttdef"><b>Definition:</b> <a href="clientes_8c_source.html#l00081">clientes.c:81</a></div></div>
+<div class="ttc" id="clientes_8c_html_ab93f3f48a62ea57a21aa91347dc699c7"><div class="ttname"><a href="clientes_8c.html#ab93f3f48a62ea57a21aa91347dc699c7">reallocDados</a></div><div class="ttdeci">void reallocDados(Dados *lista)</div><div class="ttdoc">Função que realoca a memoria ocupada pelos Dados. </div><div class="ttdef"><b>Definition:</b> <a href="clientes_8c_source.html#l00063">clientes.c:63</a></div></div>
+<div class="ttc" id="produtos_8c_html_a3fd719b07970fa788d3ad51440484d1e"><div class="ttname"><a href="produtos_8c.html#a3fd719b07970fa788d3ad51440484d1e">valid_Produtos</a></div><div class="ttdeci">int valid_Produtos(char *str)</div><div class="ttdoc">Valida os produtos. </div><div class="ttdef"><b>Definition:</b> <a href="produtos_8c_source.html#l00014">produtos.c:14</a></div></div>
+<div class="ttc" id="produtos_8c_html_a7c722b918c15082ce56ff92ab07a47e5"><div class="ttname"><a href="produtos_8c.html#a7c722b918c15082ce56ff92ab07a47e5">getOcupadosP</a></div><div class="ttdeci">int getOcupadosP(Dados *produtos)</div><div class="ttdoc">Função que devolve o espaço ocupado pelos produtos na string. </div><div class="ttdef"><b>Definition:</b> <a href="produtos_8c_source.html#l00061">produtos.c:61</a></div></div>
+<div class="ttc" id="produtos_8c_html_a05943ed85340c50750c61a556ad205b7"><div class="ttname"><a href="produtos_8c.html#a05943ed85340c50750c61a556ad205b7">getLidasP</a></div><div class="ttdeci">int getLidasP(Dados *produtos)</div><div class="ttdoc">Função que devolve os produtos lidos. </div><div class="ttdef"><b>Definition:</b> <a href="produtos_8c_source.html#l00071">produtos.c:71</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

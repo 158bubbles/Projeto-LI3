@@ -1,0 +1,292 @@
+\hypertarget{faturacao_8c}{}\section{Referência ao ficheiro faturacao.\+c}
+\label{faturacao_8c}\index{faturacao.\+c@{faturacao.\+c}}
+
+
+Modulo que inicializa e controi a estrutura faturacao.  
+
+
+{\ttfamily \#include \char`\"{}faturacao.\+h\char`\"{}}\newline
+Diagrama de dependências de inclusão para faturacao.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{faturacao_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structfatura}{fatura}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{faturacao_8c_af10828b406e4e74b89b821e189452bc3}\label{faturacao_8c_af10828b406e4e74b89b821e189452bc3}} 
+void {\bfseries free\+Nodo\+A\+V\+L\+Fatura} (Fatura $\ast$f)
+\item 
+void \hyperlink{faturacao_8c_a4ac6ba9606cd84ea8d0b137b059f8756}{insere\+Fatura} (Fatura $\ast$f, Venda $\ast$v)
+\begin{DoxyCompactList}\small\item\em Insere uma venda numa fatura. \end{DoxyCompactList}\item 
+Fatura $\ast$ \hyperlink{faturacao_8c_abb686b9175c00f86f3bce095854aa18a}{init\+Fatura} ()
+\begin{DoxyCompactList}\small\item\em Inicialização das faturas. \end{DoxyCompactList}\item 
+Fatura $\ast$ \hyperlink{faturacao_8c_a7976d6439bd69bcce0b52d3fe05a8a2d}{clone\+Faturas} (Fatura $\ast$f)
+\begin{DoxyCompactList}\small\item\em Cria um clone de uma fatura. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{faturacao_8c_ad55844e4e49d564972bb0a537b4ad23b}{get\+Produto\+Fatura} (Fatura $\ast$f)
+\begin{DoxyCompactList}\small\item\em Retorna o produto de uma fatura. \end{DoxyCompactList}\item 
+int \hyperlink{faturacao_8c_afb82689eef0b05cad519049a05d50eeb}{get\+Numero\+Total\+Vendas} (Fatura $\ast$f, int \hyperlink{structfilial}{filial}, int mes, int prom)
+\begin{DoxyCompactList}\small\item\em Obtem o numero total de vendas dado o mês, a filial e o tipo de promoção. \end{DoxyCompactList}\item 
+int \hyperlink{faturacao_8c_a5e2ddbc2467f7b0df879e5f0e84878ef}{get\+Quantidade\+P\+Filial} (Fatura $\ast$f, int \hyperlink{structfilial}{filial})
+\begin{DoxyCompactList}\small\item\em Obtem a quantidade total dada a filial. \end{DoxyCompactList}\item 
+double \hyperlink{faturacao_8c_a23224f16d2f9428fbff8de49592c0f9e}{get\+Faturacao} (Fatura $\ast$f, int \hyperlink{structfilial}{filial}, int mes, int prom)
+\begin{DoxyCompactList}\small\item\em Obtem a faturacao total dado o mês, a filial e o tipo de promoção. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Modulo que inicializa e controi a estrutura faturacao. 
+
+
+
+\subsection{Documentação das funções}
+\mbox{\Hypertarget{faturacao_8c_a7976d6439bd69bcce0b52d3fe05a8a2d}\label{faturacao_8c_a7976d6439bd69bcce0b52d3fe05a8a2d}} 
+\index{faturacao.\+c@{faturacao.\+c}!clone\+Faturas@{clone\+Faturas}}
+\index{clone\+Faturas@{clone\+Faturas}!faturacao.\+c@{faturacao.\+c}}
+\subsubsection{\texorpdfstring{clone\+Faturas()}{cloneFaturas()}}
+{\footnotesize\ttfamily Fatura$\ast$ clone\+Faturas (\begin{DoxyParamCaption}\item[{Fatura $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Cria um clone de uma fatura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}f\mbox{]}} & Fatura que vai ser clonizada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Fatura clone 
+\end{DoxyReturn}
+
+
+Definido na linha 63 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}
+63                                \{
+64   Fatura* a = malloc(\textcolor{keyword}{sizeof}(Fatura));
+65   \textcolor{keywordtype}{int} i, j, k;
+66   a->produto = strdup(f->produto);
+67   \textcolor{keywordflow}{for}(i = 0; i < 3; i++)\{
+68     a->quantPorFilial[i] = f->quantPorFilial[i];
+69     \textcolor{keywordflow}{for}(j = 0; j < 12; j++)\{
+70       \textcolor{keywordflow}{for}(k = 0; k < 2; k++)\{
+71         a->numeroTotalVendas[i][j][k] = f->numeroTotalVendas[i][j][k];
+72         a->faturaTotal[i][j][k] = f->faturaTotal[i][j][k];
+73       \}
+74     \}
+75   \}
+76   \textcolor{keywordflow}{return} a;
+77 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_a23224f16d2f9428fbff8de49592c0f9e}\label{faturacao_8c_a23224f16d2f9428fbff8de49592c0f9e}} 
+\index{faturacao.\+c@{faturacao.\+c}!get\+Faturacao@{get\+Faturacao}}
+\index{get\+Faturacao@{get\+Faturacao}!faturacao.\+c@{faturacao.\+c}}
+\subsubsection{\texorpdfstring{get\+Faturacao()}{getFaturacao()}}
+{\footnotesize\ttfamily double get\+Faturacao (\begin{DoxyParamCaption}\item[{Fatura $\ast$}]{f,  }\item[{int}]{filial,  }\item[{int}]{mes,  }\item[{int}]{prom }\end{DoxyParamCaption})}
+
+
+
+Obtem a faturacao total dado o mês, a filial e o tipo de promoção. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}f\mbox{]}} & Estrutura fatura \\
+\hline
+{\em \mbox{[}filial\mbox{]}} & Inteiro que determina a filial (filial = 0 -\/$>$ todas as filials) \\
+\hline
+{\em \mbox{[}mes\mbox{]}} & Inteiro que determina o mes \\
+\hline
+{\em \mbox{[}prom\mbox{]}} & Inteiro que determina a tipo de promocao (prom = 0 -\/$>$ N e prom = 1 -\/$>$ P) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a faturacao total 
+\end{DoxyReturn}
+
+
+Definido na linha 123 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}
+123                                                               \{
+124   \textcolor{keywordflow}{if}(\hyperlink{structfilial}{filial} == 0)
+125     \textcolor{keywordflow}{return} f->faturaTotal[0][mes-1][prom] + f->faturaTotal[1][mes-1][prom] + f->faturaTotal[2][mes-1][prom]
+      ;
+126 
+127   \textcolor{keywordflow}{return} f->faturaTotal[\hyperlink{structfilial}{filial}-1][mes-1][prom];
+128 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_afb82689eef0b05cad519049a05d50eeb}\label{faturacao_8c_afb82689eef0b05cad519049a05d50eeb}} 
+\index{faturacao.\+c@{faturacao.\+c}!get\+Numero\+Total\+Vendas@{get\+Numero\+Total\+Vendas}}
+\index{get\+Numero\+Total\+Vendas@{get\+Numero\+Total\+Vendas}!faturacao.\+c@{faturacao.\+c}}
+\subsubsection{\texorpdfstring{get\+Numero\+Total\+Vendas()}{getNumeroTotalVendas()}}
+{\footnotesize\ttfamily int get\+Numero\+Total\+Vendas (\begin{DoxyParamCaption}\item[{Fatura $\ast$}]{f,  }\item[{int}]{filial,  }\item[{int}]{mes,  }\item[{int}]{prom }\end{DoxyParamCaption})}
+
+
+
+Obtem o numero total de vendas dado o mês, a filial e o tipo de promoção. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}f\mbox{]}} & Estrutura fatura \\
+\hline
+{\em \mbox{[}filial\mbox{]}} & Inteiro que determina a filial (filial = 0 -\/$>$ todas as filials) \\
+\hline
+{\em \mbox{[}mes\mbox{]}} & Inteiro que determina o mes \\
+\hline
+{\em \mbox{[}prom\mbox{]}} & Inteiro que determina a tipo de promocao (prom = 0 -\/$>$ N e prom = 1 -\/$>$ P) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o numero total de vendas 
+\end{DoxyReturn}
+
+
+Definido na linha 96 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}
+96                                                                    \{
+97   \textcolor{keywordflow}{if}(\hyperlink{structfilial}{filial} == 0)
+98     \textcolor{keywordflow}{return} f->numeroTotalVendas[0][mes-1][prom]+f->numeroTotalVendas[1][mes-1][prom]+ f->numeroTotalVendas[
+      2][mes-1][prom];
+99   \textcolor{keywordflow}{return} f->numeroTotalVendas[\hyperlink{structfilial}{filial}-1][mes-1][prom];
+100 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_ad55844e4e49d564972bb0a537b4ad23b}\label{faturacao_8c_ad55844e4e49d564972bb0a537b4ad23b}} 
+\index{faturacao.\+c@{faturacao.\+c}!get\+Produto\+Fatura@{get\+Produto\+Fatura}}
+\index{get\+Produto\+Fatura@{get\+Produto\+Fatura}!faturacao.\+c@{faturacao.\+c}}
+\subsubsection{\texorpdfstring{get\+Produto\+Fatura()}{getProdutoFatura()}}
+{\footnotesize\ttfamily char$\ast$ get\+Produto\+Fatura (\begin{DoxyParamCaption}\item[{Fatura $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Retorna o produto de uma fatura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}f\mbox{]}} & Estrutura fatura \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Produto de uma fatura 
+\end{DoxyReturn}
+
+
+Definido na linha 84 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}
+84                                  \{
+85   \textcolor{keywordflow}{return} f->produto;
+86 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_a5e2ddbc2467f7b0df879e5f0e84878ef}\label{faturacao_8c_a5e2ddbc2467f7b0df879e5f0e84878ef}} 
+\index{faturacao.\+c@{faturacao.\+c}!get\+Quantidade\+P\+Filial@{get\+Quantidade\+P\+Filial}}
+\index{get\+Quantidade\+P\+Filial@{get\+Quantidade\+P\+Filial}!faturacao.\+c@{faturacao.\+c}}
+\subsubsection{\texorpdfstring{get\+Quantidade\+P\+Filial()}{getQuantidadePFilial()}}
+{\footnotesize\ttfamily int get\+Quantidade\+P\+Filial (\begin{DoxyParamCaption}\item[{Fatura $\ast$}]{f,  }\item[{int}]{filial }\end{DoxyParamCaption})}
+
+
+
+Obtem a quantidade total dada a filial. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}f\mbox{]}} & Estrutura fatura \\
+\hline
+{\em \mbox{[}filial\mbox{]}} & Inteiro que determina a filial (filial = 0 -\/$>$ todas as filials) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a faturacao total 
+\end{DoxyReturn}
+
+
+Definido na linha 109 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}
+109                                                \{
+110   \textcolor{keywordflow}{if} (\hyperlink{structfilial}{filial} == 0)
+111     \textcolor{keywordflow}{return} f->quantPorFilial[0]+f->quantPorFilial[1]+f->quantPorFilial[2];
+112   \textcolor{keywordflow}{return} f->quantPorFilial[\hyperlink{structfilial}{filial}-1];
+113 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_abb686b9175c00f86f3bce095854aa18a}\label{faturacao_8c_abb686b9175c00f86f3bce095854aa18a}} 
+\index{faturacao.\+c@{faturacao.\+c}!init\+Fatura@{init\+Fatura}}
+\index{init\+Fatura@{init\+Fatura}!faturacao.\+c@{faturacao.\+c}}
+\subsubsection{\texorpdfstring{init\+Fatura()}{initFatura()}}
+{\footnotesize\ttfamily Fatura$\ast$ init\+Fatura (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicialização das faturas. 
+
+\begin{DoxyReturn}{Retorna}
+Nova fatura 
+\end{DoxyReturn}
+
+
+Definido na linha 43 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}
+43                      \{
+44   \textcolor{keywordtype}{int} i,j,k;
+45   Fatura* f = malloc(\textcolor{keyword}{sizeof}(Fatura));
+46   \textcolor{keywordflow}{for}(i = 0; i < 3; i++)\{
+47     f->quantPorFilial[i] = 0;
+48     \textcolor{keywordflow}{for}(j = 0; j < 12; j++)\{
+49       \textcolor{keywordflow}{for}(k = 0; k < 2; k++)\{
+50         f->numeroTotalVendas[i][j][k] = 0;
+51         f->faturaTotal[i][j][k] = 0;
+52       \}
+53     \}
+54   \}
+55   \textcolor{keywordflow}{return} f;
+56 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{faturacao_8c_a4ac6ba9606cd84ea8d0b137b059f8756}\label{faturacao_8c_a4ac6ba9606cd84ea8d0b137b059f8756}} 
+\index{faturacao.\+c@{faturacao.\+c}!insere\+Fatura@{insere\+Fatura}}
+\index{insere\+Fatura@{insere\+Fatura}!faturacao.\+c@{faturacao.\+c}}
+\subsubsection{\texorpdfstring{insere\+Fatura()}{insereFatura()}}
+{\footnotesize\ttfamily void insere\+Fatura (\begin{DoxyParamCaption}\item[{Fatura $\ast$}]{f,  }\item[{Venda $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Insere uma venda numa fatura. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{[}f\mbox{]}} & Estrutura fatura \\
+\hline
+{\em \mbox{[}v\mbox{]}} & Estrutura venda que vai ser inserida. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 28 do ficheiro faturacao.\+c.
+
+
+\begin{DoxyCode}
+28                                        \{
+29   \textcolor{keywordtype}{int} data,\hyperlink{structfilial}{filial},prom;
+30   data = \hyperlink{vendas_8c_a1178cf1dea33bcb6c9612d46f7534f33}{getData}(v);
+31   filial = \hyperlink{vendas_8c_a7381c97aa7302d679514ddbeabb1753f}{getFilial}(v);
+32   prom = \hyperlink{vendas_8c_ac48ab849f5af46f09394a208f41029e6}{getPromocao}(v);
+33   f->produto = \hyperlink{vendas_8c_a44aa4bbfb64f14bb33fefaeb575c00e1}{getProduto}(v);
+34   f->numeroTotalVendas[filial-1][data-1][prom]++;
+35   f->quantPorFilial[filial-1] += \hyperlink{vendas_8c_ae3196cffdcf5289440c1ee56ed5ee0d7}{getQuantidade}(v);
+36   f->faturaTotal[filial-1][data-1][prom] += \hyperlink{vendas_8c_a9cde304721e7cf45c51ec95bcf625de4}{getPreco}(v)*\hyperlink{vendas_8c_ae3196cffdcf5289440c1ee56ed5ee0d7}{getQuantidade}(v);
+37 \}
+\end{DoxyCode}
